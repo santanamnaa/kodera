@@ -17,7 +17,7 @@ const AboutPage: React.FC = () => {
   
   useEffect(() => {
     // Update page title
-    document.title = 'About Us - Boomerang IT Solutions';
+    document.title = 'About Us - AITI Solutions';
   }, []);
   
   const teamMembers: TeamMember[] = [

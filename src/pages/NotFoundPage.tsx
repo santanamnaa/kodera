@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const NotFoundPage: React.FC = () => {
   useEffect(() => {
     // Update page title
-    document.title = 'Page Not Found - Boomerang IT Solutions';
+    document.title = 'Page Not Found - AITI Solutions';
   }, []);
 
   return (

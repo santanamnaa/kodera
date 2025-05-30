@@ -64,7 +64,7 @@ const ServicesPage: React.FC = () => {
   const location = useLocation();
 
   useEffect(() => {
-    document.title = 'Services - Boomerang IT Solutions';
+    document.title = 'Services - AITI Solutions';
   }, []);
 
   useEffect(() => {

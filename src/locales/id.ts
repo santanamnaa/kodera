@@ -134,17 +134,17 @@ export default {
 
   // Halaman Tentang Kami
   'aboutPage.ourStoryTitle': 'Kisah Kami',
-  'aboutPage.ourStoryPara1': 'Didirikan pada tahun 2015, Boomerang IT Solutions telah berkembang dari startup kecil menjadi penyedia layanan IT terkemuka. Perjalanan kami dimulai dengan misi sederhana: membantu bisnis memanfaatkan kekuatan teknologi untuk mendorong pertumbuhan dan inovasi.',
+  'aboutPage.ourStoryPara1': 'Didirikan pada tahun 2015, AITI Solutions telah berkembang dari startup kecil menjadi penyedia layanan IT terkemuka. Perjalanan kami dimulai dengan misi sederhana: membantu bisnis memanfaatkan kekuatan teknologi untuk mendorong pertumbuhan dan inovasi.',
   'aboutPage.ourStoryPara2': 'Selama bertahun-tahun, kami telah memperluas layanan dan tim kami, namun komitmen kami terhadap keunggulan dan kepuasan pelanggan tetap tidak berubah. Hari ini, kami melayani klien di berbagai industri, dari startup hingga perusahaan besar, memberikan solusi yang mengatasi tantangan unik mereka.',
   'aboutPage.ourStoryImageAlt': 'Tim Kami',
   'aboutPage.missionTitle': 'Misi Kami',
   'aboutPage.visionTitle': 'Visi Kami',
   'aboutPage.teamTitle': 'Tim Kepemimpinan Kami',
-  'aboutPage.teamSubtitle': 'Temui para ahli di balik Boomerang IT Solutions',
+  'aboutPage.teamSubtitle': 'Temui para ahli di balik AITI Solutions',
   'aboutPage.teamMember.alexjohnson.imageAlt': 'Alex Johnson',
   'aboutPage.teamMember.alexjohnson.name': 'Alex Johnson',
   'aboutPage.teamMember.alexjohnson.position': 'CEO & Pendiri',
-  'aboutPage.teamMember.alexjohnson.bio': 'Alex adalah pemimpin visioner dengan lebih dari 15 tahun pengalaman di industri IT. Beliau mendirikan Boomerang IT Solutions dengan misi membantu bisnis memanfaatkan teknologi untuk mencapai tujuan mereka.',
+  'aboutPage.teamMember.alexjohnson.bio': 'Alex adalah pemimpin visioner dengan lebih dari 15 tahun pengalaman di industri IT. Beliau mendirikan AITI Solutions dengan misi membantu bisnis memanfaatkan teknologi untuk mencapai tujuan mereka.',
   'aboutPage.teamMember.sarahchen.imageAlt': 'Sarah Chen',
   'aboutPage.teamMember.sarahchen.name': 'Sarah Chen',
   'aboutPage.teamMember.sarahchen.position': 'CTO',
@@ -159,7 +159,7 @@ export default {
   'aboutPage.teamMember.emilypatel.bio': 'Emily memimpin tim desain kami, menciptakan pengalaman pengguna yang intuitif dan indah. Semangatnya untuk desain yang berpusat pada pengguna memastikan bahwa aplikasi kami tidak hanya fungsional tetapi juga menyenangkan untuk digunakan.',
 
   // Halaman Karir
-  'careersPage.whyJoinUsTitle': 'Mengapa Bergabung dengan Boomerang IT Solutions?',
+  'careersPage.whyJoinUsTitle': 'Mengapa Bergabung dengan AITI Solutions?',
   'careersPage.whyJoinUsSubtitle': 'Jadilah bagian dari tim yang membentuk masa depan teknologi',
   'careersPage.innovativeProjectsTitle': 'Proyek Inovatif',
   'careersPage.innovativeProjectsText': 'Kerjakan teknologi dan proyek terkini yang memberikan dampak nyata di berbagai industri.',

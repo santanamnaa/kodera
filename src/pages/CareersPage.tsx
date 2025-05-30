@@ -17,7 +17,7 @@ const CareersPage: React.FC = () => {
   
   useEffect(() => {
     // Update page title
-    document.title = 'Careers - Boomerang IT Solutions';
+    document.title = 'Careers - AITI Solutions';
   }, []);
   
   const jobPostings: JobPosting[] = [

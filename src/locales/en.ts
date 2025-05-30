@@ -134,17 +134,17 @@ export default {
 
   // About Page
   'aboutPage.ourStoryTitle': 'Our Story',
-  'aboutPage.ourStoryPara1': 'Founded in 2015, Boomerang IT Solutions has grown from a small startup to a leading IT services provider. Our journey began with a simple mission: to help businesses harness the power of technology to drive growth and innovation.',
+  'aboutPage.ourStoryPara1': 'Founded in 2015, AITI Solutions has grown from a small startup to a leading IT services provider. Our journey began with a simple mission: to help businesses harness the power of technology to drive growth and innovation.',
   'aboutPage.ourStoryPara2': 'Over the years, we\'ve expanded our services and team, but our commitment to excellence and customer satisfaction remains unchanged. Today, we serve clients across various industries, from startups to large enterprises, delivering solutions that address their unique challenges.',
   'aboutPage.ourStoryImageAlt': 'Our Team',
   'aboutPage.missionTitle': 'Our Mission',
   'aboutPage.visionTitle': 'Our Vision',
   'aboutPage.teamTitle': 'Our Leadership Team',
-  'aboutPage.teamSubtitle': 'Meet the experts behind Boomerang IT Solutions',
+  'aboutPage.teamSubtitle': 'Meet the experts behind AITI Solutions',
   'aboutPage.teamMember.alexjohnson.imageAlt': 'Alex Johnson',
   'aboutPage.teamMember.alexjohnson.name': 'Alex Johnson',
   'aboutPage.teamMember.alexjohnson.position': 'CEO & Founder',
-  'aboutPage.teamMember.alexjohnson.bio': 'Alex is a visionary leader with over 15 years of experience in the IT industry. He founded Boomerang IT Solutions with the mission of helping businesses leverage technology to achieve their goals.',
+  'aboutPage.teamMember.alexjohnson.bio': 'Alex is a visionary leader with over 15 years of experience in the IT industry. He founded AITI Solutions with the mission of helping businesses leverage technology to achieve their goals.',
   'aboutPage.teamMember.sarahchen.imageAlt': 'Sarah Chen',
   'aboutPage.teamMember.sarahchen.name': 'Sarah Chen',
   'aboutPage.teamMember.sarahchen.position': 'CTO',
@@ -159,7 +159,7 @@ export default {
   'aboutPage.teamMember.emilypatel.bio': 'Emily leads our design team, creating intuitive and beautiful user experiences. Her passion for user-centered design ensures that our applications are not only functional but also a joy to use.',
 
   // Careers Page
-  'careersPage.whyJoinUsTitle': 'Why Join Boomerang IT Solutions?',
+  'careersPage.whyJoinUsTitle': 'Why Join AITI Solutions?',
   'careersPage.whyJoinUsSubtitle': 'Be part of a team that\'s shaping the future of technology',
   'careersPage.innovativeProjectsTitle': 'Innovative Projects',
   'careersPage.innovativeProjectsText': 'Work on cutting-edge technologies and projects that make a real impact in various industries.',

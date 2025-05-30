@@ -18,7 +18,7 @@ const ProductsPage: React.FC = () => {
   
   useEffect(() => {
     // Update page title
-    document.title = 'Products - Boomerang IT Solutions';
+    document.title = 'Products - AITI Solutions';
   }, []);
   
   const products: Product[] = [
