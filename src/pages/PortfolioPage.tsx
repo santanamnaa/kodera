@@ -31,7 +31,7 @@ const PortfolioPage: React.FC = () => {
       title: 'E-commerce Web Platform',
       description: 'A comprehensive e-commerce platform with product management, shopping cart, payment integration, and customer dashboard.',
       category: 'web',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       client: 'RetailMax Inc.',
       date: 'January 2023',
       link: '#'
@@ -41,7 +41,7 @@ const PortfolioPage: React.FC = () => {
       title: 'Banking Mobile App',
       description: 'Secure mobile banking application with account management, transaction history, bill payments, and biometric authentication.',
       category: 'mobile',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       client: 'SecureBank Ltd.',
       date: 'March 2023',
       link: '#'
@@ -51,7 +51,7 @@ const PortfolioPage: React.FC = () => {
       title: 'Inventory Management System',
       description: 'Desktop application for inventory tracking, supplier management, order processing, and reporting.',
       category: 'desktop',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       client: 'GlobalTrade Ltd.',
       date: 'May 2023',
       link: '#'
@@ -61,7 +61,7 @@ const PortfolioPage: React.FC = () => {
       title: 'Travel Booking Website',
       description: 'Travel booking platform featuring flight and hotel reservations, package deals, and itinerary management.',
       category: 'web',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       client: 'TravelEase',
       date: 'July 2023',
       link: '#'
@@ -71,7 +71,7 @@ const PortfolioPage: React.FC = () => {
       title: 'Fitness Tracking App',
       description: 'Mobile application for tracking workouts, nutrition, and health metrics with personalized coaching features.',
       category: 'mobile',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       client: 'FitLife Health',
       date: 'September 2023',
       link: '#'
@@ -81,7 +81,7 @@ const PortfolioPage: React.FC = () => {
       title: 'Point of Sale System',
       description: 'Comprehensive POS system with inventory management, sales tracking, employee management, and reporting.',
       category: 'desktop',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       client: 'RetailPro',
       date: 'November 2023',
       link: '#'
@@ -91,7 +91,7 @@ const PortfolioPage: React.FC = () => {
       title: 'Educational Learning Platform',
       description: 'Online learning platform with course management, video lectures, assessments, and student progress tracking.',
       category: 'web',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       client: 'EduSmart',
       date: 'February 2024',
       link: '#'
@@ -101,7 +101,7 @@ const PortfolioPage: React.FC = () => {
       title: 'Real Estate Management App',
       description: 'Mobile application for property listings, virtual tours, appointment scheduling, and document management.',
       category: 'mobile',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       client: 'PropertyPro',
       date: 'April 2024',
       link: '#'
@@ -111,7 +111,7 @@ const PortfolioPage: React.FC = () => {
       title: 'Healthcare Management System',
       description: 'Desktop application for patient records, appointment scheduling, billing, and medical inventory management.',
       category: 'desktop',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       client: 'MediCare Solutions',
       date: 'June 2024',
       link: '#'

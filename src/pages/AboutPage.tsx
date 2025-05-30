@@ -27,25 +27,25 @@ const AboutPage: React.FC = () => {
     {
       name: 'Alex Johnson',
       position: 'CEO & Founder',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       bio: 'Alex is a visionary leader with over 15 years of experience in the IT industry. He founded Boomerang IT Solutions with the mission of helping businesses leverage technology to achieve their goals.'
     },
     {
       name: 'Sarah Chen',
       position: 'CTO',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       bio: 'Sarah leads our technical team with her expertise in software architecture and emerging technologies. She ensures that our solutions are built on solid technical foundations and aligned with industry best practices.'
     },
     {
       name: 'Michael Rodriguez',
       position: 'Head of Development',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       bio: 'Michael oversees all development projects, ensuring high-quality code and timely delivery. With his background in both web and mobile development, he brings a holistic approach to our development process.'
     },
     {
       name: 'Emily Patel',
       position: 'UX/UI Director',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       bio: 'Emily leads our design team, creating intuitive and beautiful user experiences. Her passion for user-centered design ensures that our applications are not only functional but also a joy to use.'
     }
   ];
@@ -83,7 +83,7 @@ const AboutPage: React.FC = () => {
             
             <div>
               <img 
-                src="public/images/imagehere.png" 
+                src="/images/imagehere.png" 
                 alt="Our Team" 
                 className="rounded-lg shadow-xl w-full"
               />
@@ -145,7 +145,7 @@ const AboutPage: React.FC = () => {
                 className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               >
                 <img 
-                  src={member.image} 
+                  src="/images/imagehere.png" 
                   alt={member.name} 
                   className="w-full h-64 object-cover"
                 />

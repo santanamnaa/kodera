@@ -34,7 +34,7 @@ const ProductsPage: React.FC = () => {
         'Reporting and analytics',
         'Mobile access and collaboration tools'
       ],
-      image: 'public/images/imagehere.png'
+      image: '/images/imagehere.png'
     },
     {
       id: 'crm',
@@ -48,7 +48,7 @@ const ProductsPage: React.FC = () => {
         'Performance analytics and reporting',
         'Integration with email and communication tools'
       ],
-      image: 'public/images/imagehere.png'
+      image: '/images/imagehere.png'
     },
     {
       id: 'project',
@@ -62,7 +62,7 @@ const ProductsPage: React.FC = () => {
         'Document management and collaboration',
         'Project portfolio management'
       ],
-      image: 'public/images/imagehere.png'
+      image: '/images/imagehere.png'
     },
     {
       id: 'hr',
@@ -76,7 +76,7 @@ const ProductsPage: React.FC = () => {
         'Payroll and benefits administration',
         'Employee self-service portal'
       ],
-      image: 'public/images/imagehere.png'
+      image: '/images/imagehere.png'
     }
   ];
   

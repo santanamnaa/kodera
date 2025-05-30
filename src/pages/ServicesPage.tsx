@@ -93,7 +93,7 @@ const ServicesPage: React.FC = () => {
         'Progressive Web Apps (PWAs)',
         'Web portal development'
       ],
-      image: 'public/images/imagehere.png'
+      image: '/images/imagehere.png'
     },
     {
       id: 'mobile',
@@ -108,7 +108,7 @@ const ServicesPage: React.FC = () => {
         'App store optimization and deployment',
         'Ongoing maintenance and support'
       ],
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       isReversed: true
     },
     {
@@ -124,7 +124,7 @@ const ServicesPage: React.FC = () => {
         'Performance optimization',
         'Comprehensive documentation and training'
       ],
-      image: 'public/images/imagehere.png'
+      image: '/images/imagehere.png'
     },
     {
       id: 'consulting',
@@ -139,7 +139,7 @@ const ServicesPage: React.FC = () => {
         'Technical due diligence',
         'Cloud migration strategy'
       ],
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       isReversed: true
     },
     {
@@ -155,7 +155,7 @@ const ServicesPage: React.FC = () => {
         'Business intelligence and analytics',
         'Inventory management solutions'
       ],
-      image: 'public/images/imagehere.png'
+      image: '/images/imagehere.png'
     },
     {
       id: 'support',
@@ -170,7 +170,7 @@ const ServicesPage: React.FC = () => {
         'Performance optimization',
         'User training and documentation'
       ],
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       isReversed: true
     }
   ];

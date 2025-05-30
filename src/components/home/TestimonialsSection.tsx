@@ -24,7 +24,7 @@ const TestimonialsSection: React.FC = () => {
       name: 'John Smith',
       position: 'CEO',
       company: 'TechCorp Inc.',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       content: 'Boomerang IT Solutions transformed our business with their innovative web platform. Their attention to detail and technical expertise exceeded our expectations. We look forward to continuing our partnership on future projects.'
     },
     {
@@ -32,7 +32,7 @@ const TestimonialsSection: React.FC = () => {
       name: 'Maria Rodriguez',
       position: 'CTO',
       company: 'InnovateNow',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       content: 'The mobile application developed by Boomerang IT Solutions helped us increase customer engagement by 200%. Their team was professional, responsive, and delivered the project on time and within budget.'
     },
     {
@@ -40,7 +40,7 @@ const TestimonialsSection: React.FC = () => {
       name: 'David Chen',
       position: 'Operations Director',
       company: 'GlobalTrade Ltd.',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       content: 'Implementing the inventory management system from Boomerang IT Solutions has streamlined our operations and reduced costs significantly. Their support team is always available and responsive to our needs.'
     },
   ];

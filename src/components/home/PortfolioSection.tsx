@@ -27,42 +27,42 @@ const PortfolioSection: React.FC = () => {
       id: 1,
       title: 'E-commerce Web Platform',
       category: 'web',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       link: '#'
     },
     {
       id: 2,
       title: 'Banking Mobile App',
       category: 'mobile',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       link: '#'
     },
     {
       id: 3,
       title: 'Inventory Management System',
       category: 'desktop',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       link: '#'
     },
     {
       id: 4,
       title: 'Travel Booking Website',
       category: 'web',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       link: '#'
     },
     {
       id: 5,
       title: 'Fitness Tracking App',
       category: 'mobile',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       link: '#'
     },
     {
       id: 6,
       title: 'Point of Sale System',
       category: 'desktop',
-      image: 'public/images/imagehere.png',
+      image: '/images/imagehere.png',
       link: '#'
     }
   ];
