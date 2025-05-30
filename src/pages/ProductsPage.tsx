@@ -24,57 +24,57 @@ const ProductsPage: React.FC = () => {
   const products: Product[] = [
     {
       id: 'erp',
-      title: 'BoomerangERP',
-      description: 'A comprehensive enterprise resource planning solution designed to streamline business operations and improve efficiency. BoomerangERP integrates key business functions including finance, HR, inventory, and sales in a single platform.',
+      title: t('products.erpTitle'),
+      description: t('products.erpDescription'),
       features: [
-        'Financial management and accounting',
-        'Human resource management',
-        'Inventory and supply chain management',
-        'Sales and customer relationship management',
-        'Reporting and analytics',
-        'Mobile access and collaboration tools'
+        t('products.erpFeature1'),
+        t('products.erpFeature2'),
+        t('products.erpFeature3'),
+        t('products.erpFeature4'),
+        t('products.erpFeature5'),
+        t('products.erpFeature6')
       ],
       image: '/images/imagehere.png'
     },
     {
       id: 'crm',
-      title: 'BoomerangCRM',
-      description: 'A powerful customer relationship management system that helps businesses build stronger customer relationships and drive sales growth. BoomerangCRM provides a 360-degree view of customer interactions and streamlines sales processes.',
+      title: t('products.crmTitle'),
+      description: t('products.crmDescription'),
       features: [
-        'Contact and lead management',
-        'Sales pipeline tracking',
-        'Marketing campaign management',
-        'Customer service and support',
-        'Performance analytics and reporting',
-        'Integration with email and communication tools'
+        t('products.crmFeature1'),
+        t('products.crmFeature2'),
+        t('products.crmFeature3'),
+        t('products.crmFeature4'),
+        t('products.crmFeature5'),
+        t('products.crmFeature6')
       ],
       image: '/images/imagehere.png'
     },
     {
       id: 'project',
-      title: 'BoomerangProject',
-      description: 'A project management solution that enables teams to plan, track, and deliver projects on time and within budget. BoomerangProject provides the tools needed to manage resources, tasks, and timelines effectively.',
+      title: t('products.projectTitle'),
+      description: t('products.projectDescription'),
       features: [
-        'Task and subtask management',
-        'Gantt charts and project timelines',
-        'Resource allocation and tracking',
-        'Time and expense tracking',
-        'Document management and collaboration',
-        'Project portfolio management'
+        t('products.projectFeature1'),
+        t('products.projectFeature2'),
+        t('products.projectFeature3'),
+        t('products.projectFeature4'),
+        t('products.projectFeature5'),
+        t('products.projectFeature6')
       ],
       image: '/images/imagehere.png'
     },
     {
       id: 'hr',
-      title: 'BoomerangHR',
-      description: 'A human resource management system that simplifies HR processes and enhances employee experience. BoomerangHR helps organizations manage the employee lifecycle from recruitment to retirement.',
+      title: t('products.hrTitle'),
+      description: t('products.hrDescription'),
       features: [
-        'Recruitment and applicant tracking',
-        'Employee onboarding and offboarding',
-        'Performance management',
-        'Time and attendance tracking',
-        'Payroll and benefits administration',
-        'Employee self-service portal'
+        t('products.hrFeature1'),
+        t('products.hrFeature2'),
+        t('products.hrFeature3'),
+        t('products.hrFeature4'),
+        t('products.hrFeature5'),
+        t('products.hrFeature6')
       ],
       image: '/images/imagehere.png'
     }
@@ -86,10 +86,10 @@ const ProductsPage: React.FC = () => {
       <section className="pt-32 pb-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Our Products
+            {t('productsPage.heroTitle')}
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Powerful software solutions designed to drive business growth and efficiency
+            {t('productsPage.heroSubtitle')}
           </p>
         </div>
       </section>
@@ -98,8 +98,8 @@ const ProductsPage: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <SectionHeader 
-            title="Software Products" 
-            subtitle="Our suite of ready-to-use software solutions for various business needs" 
+            title={t('productsPage.sectionTitle')} 
+            subtitle={t('productsPage.sectionSubtitle')} 
           />
           
           <div className="space-y-24">
@@ -137,7 +137,7 @@ const ProductsPage: React.FC = () => {
                     </div>
                     
                     <button className="btn btn-primary mt-8">
-                      Learn More
+                      {t('productsPage.learnMoreButton')}
                     </button>
                   </div>
                   

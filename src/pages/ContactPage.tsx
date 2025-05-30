@@ -99,7 +99,7 @@ const ContactPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Contact info */}
             <div className="lg:col-span-1 bg-white rounded-lg shadow-md p-8">
-              <h3 className="text-2xl font-semibold text-primary mb-6">Get In Touch</h3>
+              <h3 className="text-2xl font-semibold text-primary mb-6">{t('contactPage.getInTouchTitle')}</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start">
@@ -108,7 +108,7 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-primary mb-1">{t('contact.address')}</h4>
-                    <p className="text-neutral">123 Tech Boulevard, Silicon Valley, CA 94043, USA</p>
+                    <p className="text-neutral">{t('contactPage.addressLine')}</p>
                   </div>
                 </div>
                 
@@ -148,11 +148,11 @@ const ContactPage: React.FC = () => {
             
             {/* Contact form */}
             <div className="lg:col-span-2 bg-white rounded-lg shadow-md p-8">
-              <h3 className="text-2xl font-semibold text-primary mb-6">Send Us a Message</h3>
+              <h3 className="text-2xl font-semibold text-primary mb-6">{t('contactPage.sendMessageTitle')}</h3>
               
               {isSuccess && (
                 <div className="bg-success bg-opacity-10 text-success p-4 rounded-lg mb-6">
-                  Thank you for your message! We'll get back to you as soon as possible.
+                  {t('contactPage.successMessage')}
                 </div>
               )}
               
@@ -173,7 +173,7 @@ const ContactPage: React.FC = () => {
                       }`}
                     />
                     {errors.name && (
-                      <p className="mt-1 text-sm text-error">{errors.name}</p>
+                      <p className="mt-1 text-sm text-error">{t('contactPage.validation.nameRequired')}</p>
                     )}
                   </div>
                   
@@ -192,7 +192,7 @@ const ContactPage: React.FC = () => {
                       }`}
                     />
                     {errors.email && (
-                      <p className="mt-1 text-sm text-error">{errors.email}</p>
+                      <p className="mt-1 text-sm text-error">{t(errors.email === 'Email is required' ? 'contactPage.validation.emailRequired' : 'contactPage.validation.emailInvalid')}</p>
                     )}
                   </div>
                 </div>
@@ -242,7 +242,7 @@ const ContactPage: React.FC = () => {
                     }`}
                   ></textarea>
                   {errors.message && (
-                    <p className="mt-1 text-sm text-error">{errors.message}</p>
+                    <p className="mt-1 text-sm text-error">{t('contactPage.validation.messageRequired')}</p>
                   )}
                 </div>
                 
@@ -254,7 +254,7 @@ const ContactPage: React.FC = () => {
                   {isSubmitting ? (
                     <>
                       <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></span>
-                      Sending...
+                      {t('contactPage.sendingButtonText')}
                     </>
                   ) : (
                     <>

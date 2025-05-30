@@ -83,30 +83,30 @@ const ServicesPage: React.FC = () => {
     {
       id: 'web',
       title: t('services.web.title'),
-      description: 'We create stunning, responsive web applications that provide exceptional user experiences. Our web development team combines modern design principles with cutting-edge technology to build solutions that drive business growth.',
+      description: t('services.web.description'),
       icon: <Globe className="w-8 h-8" />,
       features: [
-        'Responsive web design that works on all devices',
-        'Custom web application development',
-        'E-commerce platforms and solutions',
-        'Content management systems (CMS)',
-        'Progressive Web Apps (PWAs)',
-        'Web portal development'
+        t('services.web.features.0'),
+        t('services.web.features.1'),
+        t('services.web.features.2'),
+        t('services.web.features.3'),
+        t('services.web.features.4'),
+        t('services.web.features.5')
       ],
       image: '/images/imagehere.png'
     },
     {
       id: 'mobile',
       title: t('services.mobile.title'),
-      description: 'Our mobile development team creates intuitive, high-performance applications for iOS and Android platforms. We focus on delivering seamless user experiences with robust functionality.',
+      description: t('services.mobile.description'),
       icon: <Smartphone className="w-8 h-8" />,
       features: [
-        'Native iOS and Android app development',
-        'Cross-platform development with React Native and Flutter',
-        'Mobile app UI/UX design',
-        'App testing and quality assurance',
-        'App store optimization and deployment',
-        'Ongoing maintenance and support'
+        t('services.mobile.features.0'),
+        t('services.mobile.features.1'),
+        t('services.mobile.features.2'),
+        t('services.mobile.features.3'),
+        t('services.mobile.features.4'),
+        t('services.mobile.features.5')
       ],
       image: '/images/imagehere.png',
       isReversed: true
@@ -114,30 +114,30 @@ const ServicesPage: React.FC = () => {
     {
       id: 'desktop',
       title: t('services.desktop.title'),
-      description: 'We develop powerful desktop applications for Windows, macOS, and Linux platforms. Our desktop solutions are designed to maximize productivity and streamline complex business processes.',
+      description: t('services.desktop.description'),
       icon: <Monitor className="w-8 h-8" />,
       features: [
-        'Cross-platform desktop applications',
-        'Enterprise software solutions',
-        'Legacy system modernization',
-        'Integration with existing systems',
-        'Performance optimization',
-        'Comprehensive documentation and training'
+        t('services.desktop.features.0'),
+        t('services.desktop.features.1'),
+        t('services.desktop.features.2'),
+        t('services.desktop.features.3'),
+        t('services.desktop.features.4'),
+        t('services.desktop.features.5')
       ],
       image: '/images/imagehere.png'
     },
     {
       id: 'consulting',
       title: t('services.consulting.title'),
-      description: 'Our IT consulting services provide strategic guidance to help organizations optimize their technology investments. We analyze your business needs and develop tailored solutions to achieve your goals.',
+      description: t('services.consulting.description'),
       icon: <HelpingHand className="w-8 h-8" />,
       features: [
-        'Technology assessment and roadmap development',
-        'Digital transformation strategy',
-        'IT infrastructure planning',
-        'Software architecture design',
-        'Technical due diligence',
-        'Cloud migration strategy'
+        t('services.consulting.features.0'),
+        t('services.consulting.features.1'),
+        t('services.consulting.features.2'),
+        t('services.consulting.features.3'),
+        t('services.consulting.features.4'),
+        t('services.consulting.features.5')
       ],
       image: '/images/imagehere.png',
       isReversed: true
@@ -145,30 +145,30 @@ const ServicesPage: React.FC = () => {
     {
       id: 'products',
       title: t('services.products.title'),
-      description: 'We offer a range of ready-to-use software products designed to address common business challenges. Our products are scalable, secure, and continuously updated with new features.',
+      description: t('services.products.description'),
       icon: <Package className="w-8 h-8" />,
       features: [
-        'Enterprise resource planning (ERP) solutions',
-        'Customer relationship management (CRM) systems',
-        'Project management tools',
-        'Human resource management systems',
-        'Business intelligence and analytics',
-        'Inventory management solutions'
+        t('services.products.features.0'),
+        t('services.products.features.1'),
+        t('services.products.features.2'),
+        t('services.products.features.3'),
+        t('services.products.features.4'),
+        t('services.products.features.5')
       ],
       image: '/images/imagehere.png'
     },
     {
       id: 'support',
       title: t('services.support.title'),
-      description: 'We provide comprehensive technical support services to ensure your systems run smoothly. Our support team is available 24/7 to address any issues and minimize downtime.',
+      description: t('services.support.description'),
       icon: <Headset className="w-8 h-8" />,
       features: [
-        '24/7 technical support',
-        'Proactive system monitoring',
-        'Regular maintenance and updates',
-        'Troubleshooting and issue resolution',
-        'Performance optimization',
-        'User training and documentation'
+        t('services.support.features.0'),
+        t('services.support.features.1'),
+        t('services.support.features.2'),
+        t('services.support.features.3'),
+        t('services.support.features.4'),
+        t('services.support.features.5')
       ],
       image: '/images/imagehere.png',
       isReversed: true

@@ -149,8 +149,8 @@ const CareersPage: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <SectionHeader 
-            title="Why Join Boomerang IT Solutions?" 
-            subtitle="Be part of a team that's shaping the future of technology" 
+            title={t('careersPage.whyJoinUsTitle')} 
+            subtitle={t('careersPage.whyJoinUsSubtitle')} 
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -162,8 +162,8 @@ const CareersPage: React.FC = () => {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">Innovative Projects</h3>
-              <p className="text-neutral">Work on cutting-edge technologies and projects that make a real impact in various industries.</p>
+              <h3 className="text-xl font-bold text-primary mb-3">{t('careersPage.innovativeProjectsTitle')}</h3>
+              <p className="text-neutral">{t('careersPage.innovativeProjectsText')}</p>
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-md">
@@ -174,8 +174,8 @@ const CareersPage: React.FC = () => {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">Professional Growth</h3>
-              <p className="text-neutral">Continuous learning opportunities, mentorship programs, and clear career advancement paths.</p>
+              <h3 className="text-xl font-bold text-primary mb-3">{t('careersPage.professionalGrowthTitle')}</h3>
+              <p className="text-neutral">{t('careersPage.professionalGrowthText')}</p>
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-md">
@@ -186,8 +186,8 @@ const CareersPage: React.FC = () => {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">Collaborative Culture</h3>
-              <p className="text-neutral">Join a diverse team of professionals who value collaboration, creativity, and mutual respect.</p>
+              <h3 className="text-xl font-bold text-primary mb-3">{t('careersPage.collaborativeCultureTitle')}</h3>
+              <p className="text-neutral">{t('careersPage.collaborativeCultureText')}</p>
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-md">
@@ -198,8 +198,8 @@ const CareersPage: React.FC = () => {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">Work-Life Balance</h3>
-              <p className="text-neutral">Flexible work arrangements, generous PTO, and policies that prioritize your well-being.</p>
+              <h3 className="text-xl font-bold text-primary mb-3">{t('careersPage.workLifeBalanceTitle')}</h3>
+              <p className="text-neutral">{t('careersPage.workLifeBalanceText')}</p>
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-md">
@@ -210,8 +210,8 @@ const CareersPage: React.FC = () => {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">Comprehensive Benefits</h3>
-              <p className="text-neutral">Health insurance, retirement plans, and additional perks to support you and your family.</p>
+              <h3 className="text-xl font-bold text-primary mb-3">{t('careersPage.comprehensiveBenefitsTitle')}</h3>
+              <p className="text-neutral">{t('careersPage.comprehensiveBenefitsText')}</p>
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-md">
@@ -222,8 +222,8 @@ const CareersPage: React.FC = () => {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">Global Opportunities</h3>
-              <p className="text-neutral">Work with clients and team members from around the world, gaining global experience and perspective.</p>
+              <h3 className="text-xl font-bold text-primary mb-3">{t('careersPage.globalOpportunitiesTitle')}</h3>
+              <p className="text-neutral">{t('careersPage.globalOpportunitiesText')}</p>
             </div>
           </div>
         </div>
@@ -236,8 +236,8 @@ const CareersPage: React.FC = () => {
       >
         <div className="container mx-auto px-4">
           <SectionHeader 
-            title="Open Positions" 
-            subtitle="Explore our current job openings and find your next career opportunity" 
+            title={t('careersPage.openPositionsTitle')} 
+            subtitle={t('careersPage.openPositionsSubtitle')} 
           />
           
           <div className="space-y-6 max-w-4xl mx-auto">
@@ -253,33 +253,33 @@ const CareersPage: React.FC = () => {
                 }}
               >
                 <div className="p-6 border-b">
-                  <h3 className="text-xl font-bold text-primary">{job.title}</h3>
-                  <p className="text-secondary">{job.department}</p>
+                  <h3 className="text-xl font-bold text-primary">{t(`careersPage.job.${job.id}.title`)}</h3>
+                  <p className="text-secondary">{t(`careersPage.job.${job.id}.department`)}</p>
                 </div>
                 
                 <div className="p-6">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                     <div className="flex items-center">
                       <MapPin className="w-5 h-5 text-neutral mr-2" />
-                      <span>{job.location}</span>
+                      <span>{t(`careersPage.job.${job.id}.location`)}</span>
                     </div>
                     <div className="flex items-center">
                       <Clock className="w-5 h-5 text-neutral mr-2" />
-                      <span>{job.type}</span>
+                      <span>{t(`careersPage.job.${job.id}.type`)}</span>
                     </div>
                     <div className="flex items-center">
                       <DollarSign className="w-5 h-5 text-neutral mr-2" />
-                      <span>{job.salary}</span>
+                      <span>{t(`careersPage.job.${job.id}.salary`)}</span>
                     </div>
                   </div>
                   
-                  <p className="text-neutral mb-6">{job.description}</p>
+                  <p className="text-neutral mb-6">{t(`careersPage.job.${job.id}.description`)}</p>
                   
                   <a 
                     href={`/careers/${job.id}`} 
                     className="flex items-center text-secondary hover:underline"
                   >
-                    View Details
+                    {t('careersPage.viewDetailsButton')}
                     <ChevronRight className="w-4 h-4 ml-1" />
                   </a>
                 </div>
@@ -293,8 +293,8 @@ const CareersPage: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <SectionHeader 
-            title="Our Application Process" 
-            subtitle="A simple and transparent hiring process designed to find the best fit for both you and us" 
+            title={t('careersPage.applicationProcessTitle')} 
+            subtitle={t('careersPage.applicationProcessSubtitle')} 
           />
           
           <div className="max-w-4xl mx-auto">
@@ -307,8 +307,8 @@ const CareersPage: React.FC = () => {
                 {/* Step 1 */}
                 <div className="relative flex flex-col md:flex-row items-center md:items-start">
                   <div className="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-4 md:mt-0">
-                    <h3 className="text-xl font-bold text-primary mb-2">Application Submission</h3>
-                    <p className="text-neutral">Submit your resume and cover letter through our online application system. We review all applications carefully.</p>
+                    <h3 className="text-xl font-bold text-primary mb-2">{t('careersPage.applicationStep1Title')}</h3>
+                    <p className="text-neutral">{t('careersPage.applicationStep1Text')}</p>
                   </div>
                   
                   <div className="z-10 flex items-center justify-center w-16 h-16 bg-secondary text-white rounded-full text-xl font-bold order-1 md:order-2">
@@ -329,16 +329,16 @@ const CareersPage: React.FC = () => {
                   </div>
                   
                   <div className="md:w-1/2 md:pl-12 order-3 mt-4 md:mt-0">
-                    <h3 className="text-xl font-bold text-primary mb-2">Initial Screening</h3>
-                    <p className="text-neutral">Our recruiting team will review your application and reach out for an initial phone or video screening to discuss your background and the role.</p>
+                    <h3 className="text-xl font-bold text-primary mb-2">{t('careersPage.applicationStep2Title')}</h3>
+                    <p className="text-neutral">{t('careersPage.applicationStep2Text')}</p>
                   </div>
                 </div>
                 
                 {/* Step 3 */}
                 <div className="relative flex flex-col md:flex-row items-center md:items-start">
                   <div className="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-4 md:mt-0">
-                    <h3 className="text-xl font-bold text-primary mb-2">Technical Assessment</h3>
-                    <p className="text-neutral">Depending on the role, you may be asked to complete a technical assessment or project to demonstrate your skills and problem-solving abilities.</p>
+                    <h3 className="text-xl font-bold text-primary mb-2">{t('careersPage.applicationStep3Title')}</h3>
+                    <p className="text-neutral">{t('careersPage.applicationStep3Text')}</p>
                   </div>
                   
                   <div className="z-10 flex items-center justify-center w-16 h-16 bg-secondary text-white rounded-full text-xl font-bold order-1 md:order-2">
@@ -359,16 +359,16 @@ const CareersPage: React.FC = () => {
                   </div>
                   
                   <div className="md:w-1/2 md:pl-12 order-3 mt-4 md:mt-0">
-                    <h3 className="text-xl font-bold text-primary mb-2">Team Interviews</h3>
-                    <p className="text-neutral">Meet with potential team members and leaders through a series of interviews to assess both technical and cultural fit.</p>
+                    <h3 className="text-xl font-bold text-primary mb-2">{t('careersPage.applicationStep4Title')}</h3>
+                    <p className="text-neutral">{t('careersPage.applicationStep4Text')}</p>
                   </div>
                 </div>
                 
                 {/* Step 5 */}
                 <div className="relative flex flex-col md:flex-row items-center md:items-start">
                   <div className="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-4 md:mt-0">
-                    <h3 className="text-xl font-bold text-primary mb-2">Final Decision & Offer</h3>
-                    <p className="text-neutral">After completing all interviews, we'll make a decision and extend an offer to the selected candidate, discussing compensation, benefits, and start date.</p>
+                    <h3 className="text-xl font-bold text-primary mb-2">{t('careersPage.applicationStep5Title')}</h3>
+                    <p className="text-neutral">{t('careersPage.applicationStep5Text')}</p>
                   </div>
                   
                   <div className="z-10 flex items-center justify-center w-16 h-16 bg-secondary text-white rounded-full text-xl font-bold order-1 md:order-2">

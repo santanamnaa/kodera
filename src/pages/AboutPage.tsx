@@ -69,12 +69,12 @@ const AboutPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-primary mb-6">Our Story</h2>
+              <h2 className="text-3xl font-bold text-primary mb-6">{t('aboutPage.ourStoryTitle')}</h2>
               <p className="text-neutral mb-6">
-                Founded in 2015, Boomerang IT Solutions has grown from a small startup to a leading IT services provider. Our journey began with a simple mission: to help businesses harness the power of technology to drive growth and innovation.
+                {t('aboutPage.ourStoryPara1')}
               </p>
               <p className="text-neutral mb-6">
-                Over the years, we've expanded our services and team, but our commitment to excellence and customer satisfaction remains unchanged. Today, we serve clients across various industries, from startups to large enterprises, delivering solutions that address their unique challenges.
+                {t('aboutPage.ourStoryPara2')}
               </p>
               <p className="text-neutral">
                 {t('about.description')}
@@ -84,7 +84,7 @@ const AboutPage: React.FC = () => {
             <div>
               <img 
                 src="/images/imagehere.png" 
-                alt="Our Team" 
+                alt={t('aboutPage.ourStoryImageAlt')} 
                 className="rounded-lg shadow-xl w-full"
               />
             </div>
@@ -107,7 +107,7 @@ const AboutPage: React.FC = () => {
                 transition: 'opacity 0.5s ease, transform 0.5s ease'
               }}
             >
-              <h3 className="text-2xl font-bold text-primary mb-4">Our Mission</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4">{t('aboutPage.missionTitle')}</h3>
               <p className="text-neutral">{t('about.mission')}</p>
             </div>
             
@@ -120,7 +120,7 @@ const AboutPage: React.FC = () => {
                 transitionDelay: '0.2s'
               }}
             >
-              <h3 className="text-2xl font-bold text-primary mb-4">Our Vision</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4">{t('aboutPage.visionTitle')}</h3>
               <p className="text-neutral">{t('about.vision')}</p>
             </div>
           </div>
@@ -134,8 +134,8 @@ const AboutPage: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <SectionHeader 
-            title="Our Leadership Team" 
-            subtitle="Meet the experts behind Boomerang IT Solutions" 
+            title={t('aboutPage.teamTitle')} 
+            subtitle={t('aboutPage.teamSubtitle')} 
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -146,13 +146,13 @@ const AboutPage: React.FC = () => {
               >
                 <img 
                   src="/images/imagehere.png" 
-                  alt={member.name} 
+                  alt={t(`aboutPage.teamMember.${member.name.split(' ').join('').toLowerCase()}.imageAlt`)} 
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-1">{member.name}</h3>
-                  <p className="text-secondary font-medium mb-4">{member.position}</p>
-                  <p className="text-neutral">{member.bio}</p>
+                  <h3 className="text-xl font-bold text-primary mb-1">{t(`aboutPage.teamMember.${member.name.split(' ').join('').toLowerCase()}.name`)}</h3>
+                  <p className="text-secondary font-medium mb-4">{t(`aboutPage.teamMember.${member.name.split(' ').join('').toLowerCase()}.position`)}</p>
+                  <p className="text-neutral">{t(`aboutPage.teamMember.${member.name.split(' ').join('').toLowerCase()}.bio`)}</p>
                 </div>
               </div>
             ))}
