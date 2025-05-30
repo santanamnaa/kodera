@@ -116,16 +116,22 @@ const Footer: React.FC = () => {
               <li className="flex">
                 <MapPin className="w-5 h-5 text-secondary mr-3 flex-shrink-0" />
                 <span className="text-gray-300">
-                  Jl. Kopo No. 88, Bandung, Indonesia
+                  <a href="https://g.co/kgs/mqZayvp" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    Jl. Asia Afrika No. 8, Bandung, Indonesia
+                  </a>
                 </span>
               </li>
               <li className="flex">
                 <Phone className="w-5 h-5 text-secondary mr-3 flex-shrink-0" />
-                <span className="text-gray-300">+62 812-3456-7890</span>
+                <span className="text-gray-300">
+                  <a href="tel:+6281234567890" target="_blank" rel="noopener noreferrer" className="hover:underline">+62 812-3456-7890</a>
+                </span>
               </li>
               <li className="flex">
                 <Mail className="w-5 h-5 text-secondary mr-3 flex-shrink-0" />
-                <span className="text-gray-300">info@aiti.co.id</span>
+                <span className="text-gray-300">
+                  <a href="mailto:info@aiti.co.id" target="_blank" rel="noopener noreferrer" className="hover:underline">info@aiti.co.id</a>
+                </span>
               </li>
             </ul>
           </div>

@@ -216,7 +216,9 @@ export default {
 
   // Halaman Kontak
   'contactPage.getInTouchTitle': 'Hubungi Kami',
-  'contactPage.addressLine': '123 Tech Boulevard, Lembah Silikon, CA 94043, USA',
+  'contactPage.addressLine': 'Jl. Kopo No. 88, Bandung, Indonesia',
+  'contactPage.emailValue': 'info@aiti.co.id',
+  'contactPage.phoneValue': '+62 812-3456-7890',
   'contactPage.sendMessageTitle': 'Kirim Pesan kepada Kami',
   'contactPage.successMessage': 'Terima kasih atas pesan Anda! Kami akan segera menghubungi Anda kembali.',
   'contactPage.sendingButtonText': 'Mengirim...',

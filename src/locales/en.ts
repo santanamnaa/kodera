@@ -216,7 +216,9 @@ export default {
 
   // Contact Page
   'contactPage.getInTouchTitle': 'Get In Touch',
-  'contactPage.addressLine': '123 Tech Boulevard, Silicon Valley, CA 94043, USA',
+  'contactPage.addressLine': 'Jl. Kopo No. 88, Bandung, Indonesia',
+  'contactPage.emailValue': 'info@aiti.co.id',
+  'contactPage.phoneValue': '+62 812-3456-7890',
   'contactPage.sendMessageTitle': 'Send Us a Message',
   'contactPage.successMessage': 'Thank you for your message! We\'ll get back to you as soon as possible.',
   'contactPage.sendingButtonText': 'Sending...',
