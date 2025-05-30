@@ -130,6 +130,7 @@ export default {
   'productsPage.heroSubtitle': 'Solusi perangkat lunak canggih yang dirancang untuk mendorong pertumbuhan dan efisiensi bisnis',
   'productsPage.sectionTitle': 'Produk Perangkat Lunak',
   'productsPage.sectionSubtitle': 'Rangkaian solusi perangkat lunak siap pakai kami untuk berbagai kebutuhan bisnis',
+  'productsPage.learnMoreButton': 'Pelajari Lebih Lanjut',
 
   // Halaman Tentang Kami
   'aboutPage.ourStoryTitle': 'Kisah Kami',

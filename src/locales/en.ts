@@ -130,6 +130,7 @@ export default {
   'productsPage.heroSubtitle': 'Powerful software solutions designed to drive business growth and efficiency',
   'productsPage.sectionTitle': 'Software Products',
   'productsPage.sectionSubtitle': 'Our suite of ready-to-use software solutions for various business needs',
+  'productsPage.learnMoreButton': 'Learn More',
 
   // About Page
   'aboutPage.ourStoryTitle': 'Our Story',
