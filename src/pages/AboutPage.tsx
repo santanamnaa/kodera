@@ -6,9 +6,6 @@ import StatsSection from '../components/home/StatsSection';
 
 interface TeamMember {
   name: string;
-  position: string;
-  image: string;
-  bio: string;
 }
 
 const AboutPage: React.FC = () => {
@@ -26,27 +23,15 @@ const AboutPage: React.FC = () => {
   const teamMembers: TeamMember[] = [
     {
       name: 'Alex Johnson',
-      position: 'CEO & Founder',
-      image: '/images/imagehere.png',
-      bio: 'Alex is a visionary leader with over 15 years of experience in the IT industry. He founded Boomerang IT Solutions with the mission of helping businesses leverage technology to achieve their goals.'
     },
     {
       name: 'Sarah Chen',
-      position: 'CTO',
-      image: '/images/imagehere.png',
-      bio: 'Sarah leads our technical team with her expertise in software architecture and emerging technologies. She ensures that our solutions are built on solid technical foundations and aligned with industry best practices.'
     },
     {
       name: 'Michael Rodriguez',
-      position: 'Head of Development',
-      image: '/images/imagehere.png',
-      bio: 'Michael oversees all development projects, ensuring high-quality code and timely delivery. With his background in both web and mobile development, he brings a holistic approach to our development process.'
     },
     {
       name: 'Emily Patel',
-      position: 'UX/UI Director',
-      image: '/images/imagehere.png',
-      bio: 'Emily leads our design team, creating intuitive and beautiful user experiences. Her passion for user-centered design ensures that our applications are not only functional but also a joy to use.'
     }
   ];
   

@@ -6,14 +6,6 @@ import SectionHeader from '../components/common/SectionHeader';
 
 interface JobPosting {
   id: string;
-  title: string;
-  department: string;
-  location: string;
-  type: string;
-  salary: string;
-  description: string;
-  requirements: string[];
-  responsibilities: string[];
 }
 
 const CareersPage: React.FC = () => {
@@ -31,103 +23,15 @@ const CareersPage: React.FC = () => {
   const jobPostings: JobPosting[] = [
     {
       id: 'frontend-developer',
-      title: 'Senior Frontend Developer',
-      department: 'Engineering',
-      location: 'San Francisco, CA (Remote Available)',
-      type: 'Full-time',
-      salary: '$100,000 - $130,000',
-      description: 'We are looking for a Senior Frontend Developer to join our team and help create exceptional user experiences for our clients. In this role, you will work closely with designers and backend developers to implement responsive and interactive web applications.',
-      requirements: [
-        '5+ years of experience in frontend development',
-        'Expertise in React, Vue, or Angular',
-        'Strong knowledge of HTML, CSS, and JavaScript',
-        'Experience with responsive design and cross-browser compatibility',
-        'Familiarity with RESTful APIs and GraphQL',
-        'Bachelor\'s degree in Computer Science or related field (or equivalent experience)'
-      ],
-      responsibilities: [
-        'Develop high-quality, responsive web applications',
-        'Collaborate with designers to implement user interfaces',
-        'Optimize applications for maximum speed and scalability',
-        'Write clean, maintainable, and well-documented code',
-        'Participate in code reviews and mentor junior developers',
-        'Stay up-to-date with emerging trends and best practices in frontend development'
-      ]
     },
     {
       id: 'backend-developer',
-      title: 'Backend Developer',
-      department: 'Engineering',
-      location: 'San Francisco, CA (Remote Available)',
-      type: 'Full-time',
-      salary: '$90,000 - $120,000',
-      description: 'We are seeking a skilled Backend Developer to design, implement, and maintain server-side applications. As a Backend Developer, you will work with our team to build robust and scalable APIs, services, and databases.',
-      requirements: [
-        '3+ years of experience in backend development',
-        'Proficiency in Node.js, Python, or Java',
-        'Experience with databases (SQL and NoSQL)',
-        'Knowledge of RESTful API design',
-        'Familiarity with cloud services (AWS, Azure, or GCP)',
-        'Understanding of security best practices'
-      ],
-      responsibilities: [
-        'Design and implement robust backend services and APIs',
-        'Develop database schemas and data models',
-        'Ensure application performance, security, and reliability',
-        'Write unit and integration tests',
-        'Collaborate with frontend developers to integrate user-facing elements',
-        'Document code and technical specifications'
-      ]
     },
     {
       id: 'mobile-developer',
-      title: 'Mobile Developer',
-      department: 'Engineering',
-      location: 'San Francisco, CA (Remote Available)',
-      type: 'Full-time',
-      salary: '$90,000 - $120,000',
-      description: 'We are looking for a talented Mobile Developer to join our team and help create innovative mobile applications. In this role, you will design, build, and maintain high-performance, reliable iOS and Android applications.',
-      requirements: [
-        '3+ years of experience in mobile app development',
-        'Proficiency in React Native, Flutter, or native iOS/Android development',
-        'Strong understanding of mobile UX/UI design principles',
-        'Experience with RESTful APIs and offline storage',
-        'Knowledge of app store submission processes',
-        'Bachelor\'s degree in Computer Science or related field (or equivalent experience)'
-      ],
-      responsibilities: [
-        'Develop and maintain mobile applications for iOS and Android',
-        'Implement responsive user interfaces following design guidelines',
-        'Optimize applications for performance and usability',
-        'Integrate with backend services and APIs',
-        'Fix bugs and improve application performance',
-        'Stay current with the latest mobile development trends and technologies'
-      ]
     },
     {
       id: 'ux-designer',
-      title: 'UX/UI Designer',
-      department: 'Design',
-      location: 'San Francisco, CA (Remote Available)',
-      type: 'Full-time',
-      salary: '$80,000 - $110,000',
-      description: 'We are seeking a creative and user-focused UX/UI Designer to join our design team. In this role, you will create intuitive and engaging user experiences for web and mobile applications, working closely with developers and product managers.',
-      requirements: [
-        '3+ years of experience in UX/UI design',
-        'Proficiency in design tools such as Figma, Sketch, or Adobe XD',
-        'Strong portfolio demonstrating user-centered design process',
-        'Experience creating wireframes, prototypes, and user flows',
-        'Understanding of accessibility standards and responsive design',
-        'Bachelor\'s degree in Design, HCI, or related field (or equivalent experience)'
-      ],
-      responsibilities: [
-        'Create wireframes, prototypes, and high-fidelity designs',
-        'Conduct user research and usability testing',
-        'Develop user personas and journey maps',
-        'Collaborate with developers to implement designs',
-        'Create and maintain design systems and style guides',
-        'Stay current with design trends and best practices'
-      ]
     }
   ];
   
