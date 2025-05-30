@@ -116,16 +116,16 @@ const Footer: React.FC = () => {
               <li className="flex">
                 <MapPin className="w-5 h-5 text-secondary mr-3 flex-shrink-0" />
                 <span className="text-gray-300">
-                  123 Tech Boulevard, Silicon Valley, CA 94043, USA
+                  Jl. Kopo No. 88, Bandung, Indonesia
                 </span>
               </li>
               <li className="flex">
                 <Phone className="w-5 h-5 text-secondary mr-3 flex-shrink-0" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300">+62 812-3456-7890</span>
               </li>
               <li className="flex">
                 <Mail className="w-5 h-5 text-secondary mr-3 flex-shrink-0" />
-                <span className="text-gray-300">info@boomerangit.com</span>
+                <span className="text-gray-300">info@aiti.co.id</span>
               </li>
             </ul>
           </div>
