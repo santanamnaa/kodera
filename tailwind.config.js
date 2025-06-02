@@ -5,17 +5,17 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#12192c',
+          DEFAULT: '#12192C',
           light: '#1e2a4a',
           dark: '#0a0f1a',
         },
         secondary: {
-          DEFAULT: '#0cc1c0',
+          DEFAULT: '#08C2C1',
           light: '#0fdad9',
-          dark: '#0aa8a7',
+          dark: '#06a9a8',
         },
         neutral: {
-          DEFAULT: '#7b7b7e',
+          DEFAULT: '#7E7E7E',
           light: '#9c9c9f',
           dark: '#5a5a5c',
         },
@@ -40,16 +40,26 @@ export default {
         heading: ['Poppins', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
-        'hero-pattern': "linear-gradient(rgba(18, 25, 44, 0.8), rgba(18, 25, 44, 0.8)), url('/src/assets/images/hero-bg.jpg')",
-        'cta-pattern': "linear-gradient(rgba(18, 25, 44, 0.9), rgba(18, 25, 44, 0.9)), url('/src/assets/images/cta-bg.jpg')",
+        'hero-pattern': "linear-gradient(rgba(18, 25, 44, 0.85), rgba(18, 25, 44, 0.85)), url('/images/01-good.webp')",
+        'cta-pattern': "linear-gradient(rgba(18, 25, 44, 0.9), rgba(18, 25, 44, 0.9)), url('/images/01-good.webp')",
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
+        'slide-up': 'slideUp 0.5s ease-out forwards',
+        'fade-in': 'fadeIn 0.5s ease-in forwards',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
         }
       },
     },

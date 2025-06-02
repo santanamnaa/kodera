@@ -28,11 +28,11 @@
   }
   
   .btn-primary {
-    @apply bg-secondary text-white hover:bg-secondary-dark;
+    @apply bg-secondary text-white hover:bg-secondary-dark shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
   }
   
   .btn-outline {
-    @apply border-2 border-secondary text-secondary hover:bg-secondary hover:text-white;
+    @apply border-2 border-secondary text-secondary hover:bg-secondary hover:text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
   }
   
   .section {
@@ -40,15 +40,29 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-4 text-primary;
+    @apply text-3xl md:text-4xl font-bold mb-4 text-primary relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-20 h-1 bg-secondary;
   }
   
   .section-subtitle {
-    @apply text-lg text-neutral mb-12 max-w-3xl mx-auto;
+    @apply text-lg text-neutral mb-12 max-w-3xl;
   }
   
   .nav-link {
-    @apply text-gray-200 hover:text-white transition-colors duration-300;
+    @apply text-gray-200 hover:text-white transition-colors duration-300 relative;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
   }
   
   .nav-link-dark {
@@ -60,35 +74,29 @@
   }
   
   .service-card {
-    @apply bg-white p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    @apply bg-white p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-gray-100;
   }
   
   .portfolio-item {
-    @apply relative overflow-hidden rounded-lg;
+    @apply relative overflow-hidden rounded-xl;
   }
   
   .portfolio-overlay {
-    @apply absolute inset-0 bg-primary bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4;
+    @apply absolute inset-0 bg-primary bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-6;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
   }
 }
 
-/* Animation classes */
-.fade-in {
-  animation: fadeIn 0.5s ease-in forwards;
-}
-
-.slide-up {
+/* Custom animations */
+.animate-slide-up {
   animation: slideUp 0.5s ease-out forwards;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in forwards;
 }
 
 /* Scrollbar styling */
@@ -97,14 +105,22 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  @apply bg-gray-100;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0cc1c0;
-  border-radius: 4px;
+  @apply bg-secondary rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0aa8a7;
+  @apply bg-secondary-dark;
+}
+
+/* Custom shapes */
+.shape-blob {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.shape-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
