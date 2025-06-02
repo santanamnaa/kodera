@@ -7,6 +7,7 @@ import ProductsPage from './pages/ProductsPage';
 import AboutPage from './pages/AboutPage';
 import CareersPage from './pages/CareersPage';
 import ContactPage from './pages/ContactPage';
+import CompanyProfilePage from './pages/CompanyProfilePage';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="about" element={<AboutPage />} />
         <Route path="careers" element={<CareersPage />} />
         <Route path="contact" element={<ContactPage />} />
+        <Route path="company-profile" element={<CompanyProfilePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
