@@ -1,10 +1,8 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import SectionHeader from '../components/common/SectionHeader';
 
 const CompanyProfilePage: React.FC = () => {
-  const { t } = useTranslation();
 
   return (
     <>
