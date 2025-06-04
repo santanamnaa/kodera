@@ -1,190 +1,147 @@
-import React, { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useInView } from 'react-intersection-observer';
-import { Briefcase, MapPin, Clock, DollarSign, ChevronRight } from 'lucide-react';
-import SectionHeader from '../components/common/SectionHeader';
+import React, { useState } from 'react';
+import { Briefcase, MapPin, Clock, DollarSign, ChevronDown, ChevronUp } from 'lucide-react';
 
-interface JobPosting {
-  id: string;
-}
+const positions = [
+  {
+    id: 'frontend-dev',
+    title: 'Frontend Developer',
+    location: 'Bandung / Remote',
+    type: 'Full-time',
+    salary: 'Kompetitif',
+    desc: 'Bertanggung jawab mengembangkan antarmuka aplikasi web modern dengan React, Tailwind, dan integrasi API.'
+  },
+  {
+    id: 'backend-dev',
+    title: 'Backend Developer',
+    location: 'Bandung / Remote',
+    type: 'Full-time',
+    salary: 'Kompetitif',
+    desc: 'Mengembangkan dan memelihara API, database, serta sistem backend berbasis Node.js, Go, atau Python.'
+  },
+  {
+    id: 'ai-engineer',
+    title: 'AI Engineer',
+    location: 'Bandung / Remote',
+    type: 'Full-time',
+    salary: 'Kompetitif',
+    desc: 'Membangun solusi AI (ML, NLP, Computer Vision) untuk berbagai kebutuhan bisnis dan integrasi produk.'
+  },
+  {
+    id: 'uiux-designer',
+    title: 'UI/UX Designer',
+    location: 'Bandung / Remote',
+    type: 'Full-time',
+    salary: 'Kompetitif',
+    desc: 'Merancang pengalaman pengguna dan antarmuka aplikasi digital yang intuitif dan menarik.'
+  }
+];
+
+const faqs = [
+  {
+    q: 'Bagaimana proses rekrutmen di AITISERVE?',
+    a: 'Proses rekrutmen meliputi seleksi administrasi, wawancara, tes teknis (jika diperlukan), dan penawaran kerja.'
+  },
+  {
+    q: 'Apakah AITISERVE mendukung remote working?',
+    a: 'Ya, sebagian besar posisi mendukung remote working dan fleksibilitas waktu.'
+  },
+  {
+    q: 'Apa saja nilai budaya kerja di AITISERVE?',
+    a: 'Budaya kerja kami berlandaskan nilai TANGGUH: Transformasi, Amanah, Nyata, Gigih, Gesit, Unggul, Harmonis.'
+  },
+  {
+    q: 'Bagaimana cara melamar?',
+    a: 'Kirim CV dan portofolio Anda ke email resmi kami atau melalui form rekrutmen di website.'
+  },
+];
+
+const culture = [
+  {
+    icon: <Briefcase className="w-7 h-7 text-success" />, 
+    title: 'Inovasi & Kolaborasi',
+    desc: 'Kami mendorong inovasi, kolaborasi, dan pengembangan diri di setiap lini perusahaan.'
+  },
+  {
+    icon: <Briefcase className="w-7 h-7 text-success" />, 
+    title: 'Work-Life Balance',
+    desc: 'Fleksibilitas kerja dan keseimbangan antara kehidupan pribadi dan profesional.'
+  },
+  {
+    icon: <Briefcase className="w-7 h-7 text-success" />, 
+    title: 'Pengembangan Karir',
+    desc: 'Dukungan pelatihan, sertifikasi, dan peluang berkembang bersama tim AITISERVE.'
+  },
+  {
+    icon: <Briefcase className="w-7 h-7 text-success" />, 
+    title: 'Benefit Kompetitif',
+    desc: 'Gaji, tunjangan, dan fasilitas kerja yang kompetitif di industri teknologi.'
+  },
+];
 
 const CareersPage: React.FC = () => {
-  const { t } = useTranslation();
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
-  
-  useEffect(() => {
-    // Update page title
-    document.title = 'Careers - AITI Solutions';
-  }, []);
-  
-  const jobPostings: JobPosting[] = [
-    {
-      id: 'frontend-developer',
-    },
-    {
-      id: 'backend-developer',
-    },
-    {
-      id: 'mobile-developer',
-    },
-    {
-      id: 'ux-designer',
-    }
-  ];
-  
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
   return (
     <>
-      {/* Hero */}
-      <section className="pt-32 pb-20 bg-primary">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            {t('career.title')}
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            {t('career.subtitle')}
+      <div className="min-h-[100px] bg-black" />
+      {/* Hero Section */}
+      <section className="bg-black py-24 px-4 text-center">
+        <div className="max-w-2xl mx-auto">
+          <div className="uppercase text-white/70 tracking-widest text-sm mb-4">Careers</div>
+          <h1 className="text-5xl md:text-6xl font-light text-white mb-6">Join AITISERVE</h1>
+          <p className="text-lg text-white/80 mb-2">
+            Bergabunglah bersama tim AITISERVE dan jadilah bagian dari transformasi digital Indonesia.<br />
+            Temukan peluang karir, budaya kerja inovatif, dan pengembangan diri tanpa batas.
           </p>
         </div>
       </section>
-      
-      {/* Why Join Us */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <SectionHeader 
-            title={t('careersPage.whyJoinUsTitle')} 
-            subtitle={t('careersPage.whyJoinUsSubtitle')} 
-          />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="bg-secondary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <div className="text-secondary">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
+
+      {/* Culture Section */}
+      <section className="bg-black py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-light text-white mb-4">Our Culture & Values</h2>
+            <p className="text-white/80 text-lg max-w-2xl mx-auto">
+              Kami percaya bahwa budaya kerja yang sehat dan nilai perusahaan yang kuat adalah kunci keberhasilan bersama. Di AITISERVE, setiap individu didorong untuk tumbuh, berinovasi, dan berkontribusi nyata.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {culture.map((item) => (
+              <div key={item.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col items-center text-center">
+                <div className="mb-3">{item.icon}</div>
+                <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                <p className="text-white/80 text-base">{item.desc}</p>
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">{t('careersPage.innovativeProjectsTitle')}</h3>
-              <p className="text-neutral">{t('careersPage.innovativeProjectsText')}</p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="bg-secondary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <div className="text-secondary">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-                  </svg>
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-primary mb-3">{t('careersPage.professionalGrowthTitle')}</h3>
-              <p className="text-neutral">{t('careersPage.professionalGrowthText')}</p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="bg-secondary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <div className="text-secondary">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-primary mb-3">{t('careersPage.collaborativeCultureTitle')}</h3>
-              <p className="text-neutral">{t('careersPage.collaborativeCultureText')}</p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="bg-secondary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <div className="text-secondary">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-primary mb-3">{t('careersPage.workLifeBalanceTitle')}</h3>
-              <p className="text-neutral">{t('careersPage.workLifeBalanceText')}</p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="bg-secondary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <div className="text-secondary">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-primary mb-3">{t('careersPage.comprehensiveBenefitsTitle')}</h3>
-              <p className="text-neutral">{t('careersPage.comprehensiveBenefitsText')}</p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="bg-secondary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <div className="text-secondary">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h.5A2.5 2.5 0 0020 5.5v-1.565A2.5 2.5 0 0017.5 1h-11A2.5 2.5 0 004 3.935V4" />
-                  </svg>
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-primary mb-3">{t('careersPage.globalOpportunitiesTitle')}</h3>
-              <p className="text-neutral">{t('careersPage.globalOpportunitiesText')}</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
-      
-      {/* Open Positions */}
-      <section 
-        ref={ref}
-        className="py-20 bg-gray-50"
-      >
-        <div className="container mx-auto px-4">
-          <SectionHeader 
-            title={t('careersPage.openPositionsTitle')} 
-            subtitle={t('careersPage.openPositionsSubtitle')} 
-          />
-          
-          <div className="space-y-6 max-w-4xl mx-auto">
-            {jobPostings.map((job, index) => (
-              <div 
-                key={job.id}
-                className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl"
-                style={{ 
-                  opacity: inView ? 1 : 0,
-                  transform: inView ? 'translateY(0)' : 'translateY(20px)',
-                  transition: 'opacity 0.5s ease, transform 0.5s ease',
-                  transitionDelay: `${index * 100}ms`
-                }}
-              >
-                <div className="p-6 border-b">
-                  <h3 className="text-xl font-bold text-primary">{t(`careersPage.job.${job.id}.title`)}</h3>
-                  <p className="text-secondary">{t(`careersPage.job.${job.id}.department`)}</p>
-                </div>
-                
-                <div className="p-6">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                    <div className="flex items-center">
-                      <MapPin className="w-5 h-5 text-neutral mr-2" />
-                      <span>{t(`careersPage.job.${job.id}.location`)}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Clock className="w-5 h-5 text-neutral mr-2" />
-                      <span>{t(`careersPage.job.${job.id}.type`)}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <DollarSign className="w-5 h-5 text-neutral mr-2" />
-                      <span>{t(`careersPage.job.${job.id}.salary`)}</span>
-                    </div>
+
+      {/* Open Positions Section */}
+      <section className="bg-black py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-light text-white mb-4">Open Positions</h2>
+            <p className="text-white/80 text-lg max-w-2xl mx-auto">
+              Temukan posisi yang sesuai dengan minat dan keahlian Anda. Kami mencari talenta terbaik untuk tumbuh bersama AITISERVE.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {positions.map((job) => (
+              <div key={job.id} className="bg-white/5 border border-white/10 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col overflow-hidden group">
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-2xl font-semibold text-white mb-2">{job.title}</h3>
+                  <div className="flex items-center text-white/70 text-sm mb-2 gap-4">
+                    <span className="flex items-center gap-1"><MapPin className="w-4 h-4" />{job.location}</span>
+                    <span className="flex items-center gap-1"><Clock className="w-4 h-4" />{job.type}</span>
+                    <span className="flex items-center gap-1"><DollarSign className="w-4 h-4" />{job.salary}</span>
                   </div>
-                  
-                  <p className="text-neutral mb-6">{t(`careersPage.job.${job.id}.description`)}</p>
-                  
-                  <a 
-                    href={`/careers/${job.id}`} 
-                    className="flex items-center text-secondary hover:underline"
+                  <p className="text-white/80 text-base mb-4 flex-1">{job.desc}</p>
+                  <a
+                    href={`mailto:hr@aitiserve.co.id?subject=Lamaran%20${encodeURIComponent(job.title)}`}
+                    className="inline-block mt-auto text-success-light font-medium border-b border-success-light hover:text-success hover:border-success transition-colors duration-200 text-base"
                   >
-                    {t('careersPage.viewDetailsButton')}
-                    <ChevronRight className="w-4 h-4 ml-1" />
+                    Apply Now <span className="ml-1">↗</span>
                   </a>
                 </div>
               </div>
@@ -192,98 +149,29 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
       </section>
-      
-      {/* Application Process */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <SectionHeader 
-            title={t('careersPage.applicationProcessTitle')} 
-            subtitle={t('careersPage.applicationProcessSubtitle')} 
-          />
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-8 md:left-1/2 transform -translate-x-4 md:-translate-x-1/2 h-full w-0.5 bg-gray-200"></div>
-              
-              {/* Steps */}
-              <div className="space-y-12">
-                {/* Step 1 */}
-                <div className="relative flex flex-col md:flex-row items-center md:items-start">
-                  <div className="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-4 md:mt-0">
-                    <h3 className="text-xl font-bold text-primary mb-2">{t('careersPage.applicationStep1Title')}</h3>
-                    <p className="text-neutral">{t('careersPage.applicationStep1Text')}</p>
-                  </div>
-                  
-                  <div className="z-10 flex items-center justify-center w-16 h-16 bg-secondary text-white rounded-full text-xl font-bold order-1 md:order-2">
-                    1
-                  </div>
-                  
-                  <div className="md:w-1/2 md:pl-12 order-3 mt-4 md:mt-0">
-                  </div>
-                </div>
-                
-                {/* Step 2 */}
-                <div className="relative flex flex-col md:flex-row items-center md:items-start">
-                  <div className="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-4 md:mt-0">
-                  </div>
-                  
-                  <div className="z-10 flex items-center justify-center w-16 h-16 bg-secondary text-white rounded-full text-xl font-bold order-1 md:order-2">
-                    2
-                  </div>
-                  
-                  <div className="md:w-1/2 md:pl-12 order-3 mt-4 md:mt-0">
-                    <h3 className="text-xl font-bold text-primary mb-2">{t('careersPage.applicationStep2Title')}</h3>
-                    <p className="text-neutral">{t('careersPage.applicationStep2Text')}</p>
-                  </div>
-                </div>
-                
-                {/* Step 3 */}
-                <div className="relative flex flex-col md:flex-row items-center md:items-start">
-                  <div className="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-4 md:mt-0">
-                    <h3 className="text-xl font-bold text-primary mb-2">{t('careersPage.applicationStep3Title')}</h3>
-                    <p className="text-neutral">{t('careersPage.applicationStep3Text')}</p>
-                  </div>
-                  
-                  <div className="z-10 flex items-center justify-center w-16 h-16 bg-secondary text-white rounded-full text-xl font-bold order-1 md:order-2">
-                    3
-                  </div>
-                  
-                  <div className="md:w-1/2 md:pl-12 order-3 mt-4 md:mt-0">
-                  </div>
-                </div>
-                
-                {/* Step 4 */}
-                <div className="relative flex flex-col md:flex-row items-center md:items-start">
-                  <div className="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-4 md:mt-0">
-                  </div>
-                  
-                  <div className="z-10 flex items-center justify-center w-16 h-16 bg-secondary text-white rounded-full text-xl font-bold order-1 md:order-2">
-                    4
-                  </div>
-                  
-                  <div className="md:w-1/2 md:pl-12 order-3 mt-4 md:mt-0">
-                    <h3 className="text-xl font-bold text-primary mb-2">{t('careersPage.applicationStep4Title')}</h3>
-                    <p className="text-neutral">{t('careersPage.applicationStep4Text')}</p>
-                  </div>
-                </div>
-                
-                {/* Step 5 */}
-                <div className="relative flex flex-col md:flex-row items-center md:items-start">
-                  <div className="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-4 md:mt-0">
-                    <h3 className="text-xl font-bold text-primary mb-2">{t('careersPage.applicationStep5Title')}</h3>
-                    <p className="text-neutral">{t('careersPage.applicationStep5Text')}</p>
-                  </div>
-                  
-                  <div className="z-10 flex items-center justify-center w-16 h-16 bg-secondary text-white rounded-full text-xl font-bold order-1 md:order-2">
-                    5
-                  </div>
-                  
-                  <div className="md:w-1/2 md:pl-12 order-3 mt-4 md:mt-0">
-                  </div>
-                </div>
+
+      {/* FAQ Section */}
+      <section className="bg-black py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-light text-white mb-4">FAQ</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {faqs.map((faq, idx) => (
+              <div key={faq.q} className="bg-black border-b border-white/10 py-6">
+                <button
+                  className="flex items-center justify-between w-full text-left text-lg text-white/90 font-medium focus:outline-none"
+                  onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                  aria-expanded={openFaq === idx}
+                >
+                  <span>{faq.q}</span>
+                  {openFaq === idx ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                </button>
+                {openFaq === idx && (
+                  <div className="mt-3 text-white/70 text-base">{faq.a}</div>
+                )}
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

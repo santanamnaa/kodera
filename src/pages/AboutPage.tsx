@@ -1,144 +1,121 @@
-import React, { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useInView } from 'react-intersection-observer';
-import SectionHeader from '../components/common/SectionHeader';
-import StatsSection from '../components/home/StatsSection';
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp, Lightbulb, Handshake } from 'lucide-react';
 
-interface TeamMember {
-  name: string;
-}
+const coreValues = [
+  {
+    icon: <Lightbulb className="w-8 h-8 text-primary" />, 
+    title: 'Innovation & Excellence',
+    desc: 'We are committed to delivering cutting-edge solutions and maintaining the highest standards in engineering consulting and telecommunications. Our goal is to drive progress by consistently improving network performance and customer satisfaction.'
+  },
+  {
+    icon: <Handshake className="w-8 h-8 text-primary" />,
+    title: 'Precision & Reliability',
+    desc: 'We ensure accuracy and dependability in every project, from meticulous drive testing to comprehensive benchmarking. Our clients trust us to provide data-driven insights and actionable recommendations that enhance network efficiency.'
+  },
+  // Add more values as needed
+];
+
+const faqs = [
+  {
+    q: 'What services does your company offer?',
+    a: 'We offer end-to-end digital transformation, AI-driven solutions, IT consulting, application development, and technical support.'
+  },
+  {
+    q: 'Who do you work with?',
+    a: 'We partner with businesses, enterprises, and organizations seeking to innovate and excel in the digital era.'
+  },
+  {
+    q: 'Why should I choose your company?',
+    a: 'We combine deep industry expertise, a passion for innovation, and a commitment to delivering measurable results for our clients.'
+  },
+  {
+    q: 'How do your services benefit my business?',
+    a: 'Our solutions drive efficiency, growth, and competitive advantage through technology, automation, and data-driven decision making.'
+  },
+];
 
 const AboutPage: React.FC = () => {
-  const { t } = useTranslation();
-  const { ref: missionRef, inView: missionInView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
-  
-  useEffect(() => {
-    // Update page title
-    document.title = 'About Us - AITI Solutions';
-  }, []);
-  
-  const teamMembers: TeamMember[] = [
-    {
-      name: 'Alex Johnson',
-    },
-    {
-      name: 'Sarah Chen',
-    },
-    {
-      name: 'Michael Rodriguez',
-    },
-    {
-      name: 'Emily Patel',
-    }
-  ];
-  
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
   return (
     <>
-      {/* Hero */}
-      <section className="pt-32 pb-20 bg-primary">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            {t('about.title')}
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            {t('about.subtitle')}
+      {/* Hero Section */}
+      <section className="min-h-screen bg-black flex flex-col justify-center items-center text-center px-4 relative">
+        <div className="max-w-3xl mx-auto pt-30 pb-20">
+          <div className="uppercase text-white/70 tracking-widest text-sm mb-4">About Us</div>
+          <h1 className="text-5xl md:text-6xl font-light text-white mb-6">"Driving Innovation,<br />Together"</h1>
+          <p className="text-lg text-white/80 mb-8">
+            Our mission is to push the boundaries of what's possible, leveraging AI advancements and IT to empower businesses with unparalleled connectivity, automation, and intelligence.
           </p>
+          <a href="/contact" className="inline-block text-white/90 border-b border-white/40 hover:opacity-80 transition text-lg">
+            Contact us here <span className="ml-1">↗</span>
+          </a>
         </div>
       </section>
-      
-      {/* About Content */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      {/* Image Showcase */}
+      <section className="w-full relative">
+        <img src="/images/teamwork-1.png" alt="Showcase" className="w-full h-[60vh] object-cover object-center" />
+        <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black/80 to-transparent" />
+      </section>
+
+      {/* CEO Quote Section */}
+      <section className="bg-black py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <blockquote className="text-2xl md:text-3xl italic text-white font-light mb-8">
+            "In this industry, every innovation stems from technology—our future depends on leveraging AI, data, and cutting-edge networks to reshape customer experiences and uncover new avenues for sustainable growth."
+          </blockquote>
+          <div className="text-white/70 text-lg">Achmad Faizal, CEO &amp; Founder</div>
+        </div>
+      </section>
+
+      {/* Core Values Section */}
+      <section className="bg-black py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-3xl font-bold text-primary mb-6">{t('aboutPage.ourStoryTitle')}</h2>
-              <p className="text-neutral mb-6">
-                {t('aboutPage.ourStoryPara1')}
-              </p>
-              <p className="text-neutral mb-6">
-                {t('aboutPage.ourStoryPara2')}
-              </p>
-              <p className="text-neutral">
-                {t('about.description')}
+              <h2 className="text-4xl font-light text-white mb-6">Our core values</h2>
+              <p className="text-white/80 text-lg mb-10">
+                The foundation of our success lies in the principles that guide everything we do. From delivering innovative solutions to fostering trusted partnerships, our values drive us to excel and empower our clients to achieve their goals.
               </p>
             </div>
-            
-            <div>
-              <img 
-                src="/images/imagehere.png" 
-                alt={t('aboutPage.ourStoryImageAlt')} 
-                className="rounded-lg shadow-xl w-full"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Mission & Vision */}
-      <section 
-        ref={missionRef}
-        className="py-20 bg-gray-50"
-      >
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div 
-              className="bg-white p-8 rounded-lg shadow-md"
-              style={{ 
-                opacity: missionInView ? 1 : 0,
-                transform: missionInView ? 'translateY(0)' : 'translateY(20px)',
-                transition: 'opacity 0.5s ease, transform 0.5s ease'
-              }}
-            >
-              <h3 className="text-2xl font-bold text-primary mb-4">{t('aboutPage.missionTitle')}</h3>
-              <p className="text-neutral">{t('about.mission')}</p>
-            </div>
-            
-            <div 
-              className="bg-white p-8 rounded-lg shadow-md"
-              style={{ 
-                opacity: missionInView ? 1 : 0,
-                transform: missionInView ? 'translateY(0)' : 'translateY(20px)',
-                transition: 'opacity 0.5s ease, transform 0.5s ease',
-                transitionDelay: '0.2s'
-              }}
-            >
-              <h3 className="text-2xl font-bold text-primary mb-4">{t('aboutPage.visionTitle')}</h3>
-              <p className="text-neutral">{t('about.vision')}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Stats */}
-      <StatsSection />
-      
-      {/* Team */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <SectionHeader 
-            title={t('aboutPage.teamTitle')} 
-            subtitle={t('aboutPage.teamSubtitle')} 
-          />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div 
-                key={index} 
-                className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-              >
-                <img 
-                  src="/images/imagehere.png" 
-                  alt={t(`aboutPage.teamMember.${member.name.split(' ').join('').toLowerCase()}.imageAlt`)} 
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-1">{t(`aboutPage.teamMember.${member.name.split(' ').join('').toLowerCase()}.name`)}</h3>
-                  <p className="text-secondary font-medium mb-4">{t(`aboutPage.teamMember.${member.name.split(' ').join('').toLowerCase()}.position`)}</p>
-                  <p className="text-neutral">{t(`aboutPage.teamMember.${member.name.split(' ').join('').toLowerCase()}.bio`)}</p>
+            <div className="space-y-10">
+              {coreValues.map((v, i) => (
+                <div key={v.title} className="flex items-start gap-5">
+                  <div className="flex-shrink-0 mt-1">{v.icon}</div>
+                  <div>
+                    <div className="text-primary font-semibold mb-1">#{(i+1).toString().padStart(2,'0')}</div>
+                    <h3 className="text-xl font-semibold text-white mb-1">{v.title}</h3>
+                    <p className="text-white/80 text-base">{v.desc}</p>
+                  </div>
                 </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="bg-black py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="uppercase text-white/70 tracking-widest text-sm mb-2">FAQ</div>
+            <h2 className="text-4xl font-light text-white mb-4">Commonly asked questions</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {faqs.map((faq, idx) => (
+              <div key={faq.q} className="bg-black border-b border-white/10 py-6">
+                <button
+                  className="flex items-center justify-between w-full text-left text-lg text-white/90 font-medium focus:outline-none"
+                  onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                  aria-expanded={openFaq === idx}
+                >
+                  <span>{faq.q}</span>
+                  {openFaq === idx ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                </button>
+                {openFaq === idx && (
+                  <div className="mt-3 text-white/70 text-base">{faq.a}</div>
+                )}
               </div>
             ))}
           </div>

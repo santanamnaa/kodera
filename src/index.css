@@ -91,9 +91,18 @@
   to { transform: translateY(0); opacity: 1; }
 }
 
+@keyframes scrollText {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scrollText {
+  animation: scrollText 18s linear infinite;
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -101,10 +110,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0cc1c0;
+  background: #000000;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0aa8a7;
+  background: #000000;
 }

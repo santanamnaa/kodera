@@ -34,6 +34,11 @@ export default {
           light: '#f87171',
           dark: '#dc2626',
         },
+        hijau: {
+          DEFAULT: '#0efefe',
+          light: '#5ff6f5',
+          dark: '#0ab3b1',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

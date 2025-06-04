@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import SectionHeader from '../common/SectionHeader';
 
@@ -13,34 +12,33 @@ interface Testimonial {
 }
 
 const TestimonialsSection: React.FC = () => {
-  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      name: t('testimonials.item.1.name'),
-      position: t('testimonials.item.1.position'),
-      company: t('testimonials.item.1.company'),
+      name: 'John Doe',
+      position: 'Software Engineer',
+      company: 'Tech Corp',
       image: '/images/imagehere.png',
-      content: t('testimonials.item.1.content'),
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       id: 2,
-      name: t('testimonials.item.2.name'),
-      position: t('testimonials.item.2.position'),
-      company: t('testimonials.item.2.company'),
+      name: 'Jane Smith',
+      position: 'UX Designer',
+      company: 'Design Studio',
       image: '/images/imagehere.png',
-      content: t('testimonials.item.2.content'),
+      content: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     },
     {
       id: 3,
-      name: t('testimonials.item.3.name'),
-      position: t('testimonials.item.3.position'),
-      company: t('testimonials.item.3.company'),
+      name: 'Bob Johnson',
+      position: 'Product Manager',
+      company: 'Productive Solutions',
       image: '/images/imagehere.png',
-      content: t('testimonials.item.3.content'),
+      content: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
     },
   ];
 
@@ -57,11 +55,11 @@ const TestimonialsSection: React.FC = () => {
   };
 
   return (
-    <section className="section bg-gray-50">
+    <section className="section bg-gray-50 font-sans font-light">
       <div className="container mx-auto px-4">
         <SectionHeader 
-          title={t('testimonials.title')} 
-          subtitle={t('testimonials.subtitle')} 
+          title="Testimonials" 
+          subtitle="What our clients say about us" 
         />
 
         <div className="relative max-w-4xl mx-auto">
@@ -90,7 +88,7 @@ const TestimonialsSection: React.FC = () => {
                 <div key={testimonial.id} className="min-w-full">
                   <div className="bg-white p-8 rounded-lg shadow-md">
                     <Quote className="w-10 h-10 text-secondary opacity-20 mb-4" />
-                    <p className="text-neutral-dark mb-6">{testimonial.content}</p>
+                    <p className="text-neutral-dark mb-6 font-light font-sans">{testimonial.content}</p>
                     <div className="flex items-center">
                       <img
                         src={testimonial.image}
@@ -98,8 +96,8 @@ const TestimonialsSection: React.FC = () => {
                         className="w-14 h-14 rounded-full object-cover"
                       />
                       <div className="ml-4">
-                        <h4 className="text-lg font-semibold text-primary">{testimonial.name}</h4>
-                        <p className="text-neutral text-sm">
+                        <h4 className="text-lg font-normal font-sans text-primary">{testimonial.name}</h4>
+                        <p className="text-neutral text-sm font-light font-sans">
                           {testimonial.position}, {testimonial.company}
                         </p>
                       </div>

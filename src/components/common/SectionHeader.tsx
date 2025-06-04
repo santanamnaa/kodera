@@ -6,13 +6,17 @@ interface SectionHeaderProps {
   subtitle?: string;
   centered?: boolean;
   light?: boolean;
+  titleClassName?: string;
+  subtitleClassName?: string;
 }
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({ 
   title, 
   subtitle, 
   centered = true,
-  light = false 
+  light = false,
+  titleClassName,
+  subtitleClassName
 }) => {
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -29,7 +33,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
           light ? 'text-white' : 'text-primary'
         } text-3xl md:text-4xl font-bold mb-4 ${
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        } transition-all duration-700 ease-out`}
+        } transition-all duration-700 ease-out ${titleClassName ?? ''}`}
       >
         {title}
       </h2>
@@ -39,7 +43,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
             light ? 'text-gray-300' : 'text-neutral'
           } max-w-3xl mx-auto ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          } transition-all duration-700 delay-200 ease-out`}
+          } transition-all duration-700 delay-200 ease-out ${subtitleClassName ?? ''}`}
         >
           {subtitle}
         </p>
