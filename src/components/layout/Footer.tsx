@@ -1,155 +1,72 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
 import Logo from '../common/Logo';
 
+const navLinks = [
+  { label: 'HOME', href: '/' },
+  { label: 'ABOUT US', href: '/about' },
+  { label: 'PORTFOLIO', href: '/portfolio' },
+  { label: 'CAREER', href: '/career' },
+  { label: 'BLOG', href: '/blog' },
+  { label: 'IMPRESSUM', href: '/impressum' },
+  { label: 'CONTACT', href: '/contact' },
+];
+
+const socialLinks = [
+  { label: 'Instagram', href: '#'},
+  { label: 'Youtube', href: '#'},
+  { label: 'LinkedIn', href: '#'},
+];
+
 const Footer: React.FC = () => {
-  const { t } = useTranslation();
-  
   return (
-    <footer className="bg-primary text-white pt-16 pb-8">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* About */}
-          <div>
-            <div className="mb-6">
-              <Logo />
-            </div>
-            <p className="text-gray-300 mb-6">
-              {t('footer.about_description')}
-            </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-secondary transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-secondary transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-secondary transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-secondary transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-            </div>
+    <footer className="bg-black text-white pt-10 pb-4">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col min-h-[60vh]">
+        {/* Top Row: Logo, Nav, Social */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center w-full">
+          {/* Logo */}
+          <div className="flex-1 flex justify-start mb-8 md:mb-0">
+            <Logo />
           </div>
-          
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-xl font-semibold mb-6">{t('footer.links')}</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/" className="text-gray-300 hover:text-secondary transition-colors">
-                  {t('nav.home')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-gray-300 hover:text-secondary transition-colors">
-                  {t('nav.about')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/portfolio" className="text-gray-300 hover:text-secondary transition-colors">
-                  {t('nav.portfolio')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/products" className="text-gray-300 hover:text-secondary transition-colors">
-                  {t('nav.products')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/careers" className="text-gray-300 hover:text-secondary transition-colors">
-                  {t('nav.careers')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-300 hover:text-secondary transition-colors">
-                  {t('nav.contact')}
-                </Link>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Services */}
-          <div>
-            <h3 className="text-xl font-semibold mb-6">{t('footer.services')}</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/services#web" className="text-gray-300 hover:text-secondary transition-colors">
-                  {t('services.web.title')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/services#mobile" className="text-gray-300 hover:text-secondary transition-colors">
-                  {t('services.mobile.title')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/services#desktop" className="text-gray-300 hover:text-secondary transition-colors">
-                  {t('services.desktop.title')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/services#consulting" className="text-gray-300 hover:text-secondary transition-colors">
-                  {t('services.consulting.title')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/services#products" className="text-gray-300 hover:text-secondary transition-colors">
-                  {t('services.products.title')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/services#support" className="text-gray-300 hover:text-secondary transition-colors">
-                  {t('services.support.title')}
-                </Link>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Contact */}
-          <div>
-            <h3 className="text-xl font-semibold mb-6">{t('contact.title')}</h3>
-            <ul className="space-y-4">
-              <li className="flex">
-                <MapPin className="w-5 h-5 text-secondary mr-3 flex-shrink-0" />
-                <span className="text-gray-300">
-                  <a href="https://g.co/kgs/mqZayvp" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    Jl. Asia Afrika No. 8, Bandung, Indonesia
-                  </a>
-                </span>
-              </li>
-              <li className="flex">
-                <Phone className="w-5 h-5 text-secondary mr-3 flex-shrink-0" />
-                <span className="text-gray-300">
-                  <a href="tel:+6281234567890" target="_blank" rel="noopener noreferrer" className="hover:underline">+62 812-3456-7890</a>
-                </span>
-              </li>
-              <li className="flex">
-                <Mail className="w-5 h-5 text-secondary mr-3 flex-shrink-0" />
-                <span className="text-gray-300">
-                  <a href="mailto:info@aiti.co.id" target="_blank" rel="noopener noreferrer" className="hover:underline">info@aiti.co.id</a>
-                </span>
-              </li>
-            </ul>
+          {/* Nav Links */}
+          <nav className="flex-1 flex flex-col items-center">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="uppercase text-lg md:text-2xl font-semibold tracking-wide mb-2 md:mb-1 hover:underline"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+          {/* Social Links */}
+          <div className="flex-1 flex flex-col items-end space-y-2">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-base md:text-lg flex items-center gap-1 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.label} <span className="inline-block">↗</span>
+              </a>
+            ))}
           </div>
         </div>
-        
-        {/* Bottom Footer */}
-        <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            {t('footer.copyright')}
-          </p>
-          <div className="flex space-x-6">
-            <Link to="/privacy-policy" className="text-gray-400 text-sm hover:text-secondary transition-colors">
-              {t('footer.privacy')}
-            </Link>
-            <Link to="/terms-of-service" className="text-gray-400 text-sm hover:text-secondary transition-colors">
-              {t('footer.terms')}
-            </Link>
-          </div>
+
+        {/* Large Get In Touch Row */}
+        <div className="flex flex-col md:flex-row items-center justify-between mt-16 mb-8 w-full">
+          <span className="text-lg text-white/80 mb-4 md:mb-0">Have any Questions?</span>
+          <span className="text-[10vw] md:text-[7vw] font-extrabold uppercase leading-none tracking-tight text-white text-center md:text-left">GET IN TOUCH</span>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-white/20 w-full mb-4" />
+
+        {/* Copyright */}
+        <div className="flex flex-col md:flex-row justify-between items-center w-full">
+          <span className="text-sm text-white/80">© Copyright 2025 - <span className="font-medium">Techbros GmbH</span></span>
         </div>
       </div>
     </footer>

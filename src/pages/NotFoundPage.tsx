@@ -8,16 +8,16 @@ const NotFoundPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
-      <div className="text-center p-8 bg-white rounded-lg shadow-lg"> {/* Added padding, background, rounded corners, and shadow */}
-        <h1 className="text-9xl font-bold text-secondary">404</h1>
-        <h2 className="text-3xl font-semibold text-primary mt-4 mb-6">Page Not Found</h2>
-        <p className="text-neutral mb-8 max-w-md mx-auto">
+    <div className="flex items-center justify-center min-h-screen bg-gray-50 px-4">
+      <div className="text-center p-6 bg-white rounded-xl border border-gray-200 shadow-sm">
+        <h1 className="text-7xl font-bold text-gray-800">404</h1>
+        <h2 className="text-2xl font-semibold text-gray-700 mt-4 mb-6">Page Not Found</h2>
+        <p className="text-sm text-gray-600 mb-8 max-w-md mx-auto">
           The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
         </p>
         <Link
           to="/"
-          className="btn btn-primary transition duration-300 ease-in-out hover:bg-primary-darker hover:shadow-md" // Added transition and hover effects
+          className="inline-flex items-center bg-primary text-white font-medium px-6 py-3 rounded-lg hover:opacity-80 transition"
         >
           Return to Homepage
         </Link>

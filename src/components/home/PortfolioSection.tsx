@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink } from 'lucide-react';
 import SectionHeader from '../common/SectionHeader';
@@ -14,7 +13,6 @@ interface PortfolioItem {
 }
 
 const PortfolioSection: React.FC = () => {
-  const { t } = useTranslation();
   const [activeFilter, setActiveFilter] = useState('all');
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -74,18 +72,18 @@ const PortfolioSection: React.FC = () => {
   
   // Filter categories
   const filters = [
-    { id: 'all', name: t('portfolio.all') },
-    { id: 'web', name: t('portfolio.web') },
-    { id: 'mobile', name: t('portfolio.mobile') },
-    { id: 'desktop', name: t('portfolio.desktop') }
+    { id: 'all', name: 'All' },
+    { id: 'web', name: 'Web' },
+    { id: 'mobile', name: 'Mobile' },
+    { id: 'desktop', name: 'Desktop' }
   ];
   
   return (
-    <section id="portfolio" className="section">
+    <section id="portfolio" className="section font-sans font-light">
       <div className="container mx-auto px-4">
         <SectionHeader 
-          title={t('portfolio.title')} 
-          subtitle={t('portfolio.subtitle')} 
+          title="Portfolio" 
+          subtitle="Our Latest Projects" 
         />
         
         {/* Filter buttons */}
@@ -129,13 +127,13 @@ const PortfolioSection: React.FC = () => {
                 className="w-full h-64 object-cover"
               />
               <div className="portfolio-overlay">
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-200 mb-4 capitalize">{item.category}</p>
+                <h3 className="text-xl font-normal font-sans mb-2">{item.title}</h3>
+                <p className="text-sm font-light font-sans text-gray-200 mb-4 capitalize">{item.category}</p>
                 <a 
                   href={item.link} 
-                  className="flex items-center text-secondary hover:underline"
+                  className="flex items-center text-secondary hover:underline font-sans font-light"
                 >
-                  {t('portfolio.view')}
+                  View
                   <ExternalLink className="w-4 h-4 ml-1" />
                 </a>
               </div>

@@ -1,12 +1,11 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { useInView } from 'react-intersection-observer';
 import { 
   Globe, 
   Smartphone, 
   Monitor, 
   HelpingHand, 
-  Package, 
+  Map, 
   Headset 
 } from 'lucide-react';
 import SectionHeader from '../common/SectionHeader';
@@ -23,85 +22,88 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, del
     threshold: 0.1,
     triggerOnce: true,
   });
-  
+
   return (
     <div 
       ref={ref} 
-      className={`service-card ${
+      className={`flex flex-col items-center text-center font-sans font-light transition-all duration-700 ease-out ${
         inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      } transition-all duration-700 ease-out`}
-      style={{ transitionDelay: `${delay * 100}ms` }}
+      }`}
+      style={{
+        transitionDelay: `${delay * 150}ms`,
+        willChange: 'opacity, transform',
+      }}
     >
-      <div className="bg-secondary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-        <div className="text-secondary">
+      <div className="rounded-full border-2 border-white w-20 h-20 flex items-center justify-center mb-4">
+        <div className="text-[#0cc1c0]">
           {icon}
         </div>
       </div>
-      <h3 className="text-xl font-bold text-primary mb-3">{title}</h3>
-      <p className="text-neutral">{description}</p>
+      <h3 className="text-2xl font-light font-sans text-white mb-2">
+        {title}
+      </h3>
+      <p className="text-lg font-light font-sans text-white">
+        {description}
+      </p>
     </div>
   );
 };
 
 const ServicesSection: React.FC = () => {
-  const { t } = useTranslation();
-  
   const services = [
     {
-      icon: <Globe className="w-8 h-8" />,
-      title: t('services.web.title'),
-      description: t('services.web.description'),
+      icon: <HelpingHand className="w-8 h-8" />,
+      title: 'Konsultasi IT & AI',
+      description: 'Pendampingan strategis dalam transformasi digital, pemetaan kebutuhan teknologi, perencanaan sistem berbasis AI, dan pengembangan roadmap teknologi berkelanjutan.',
       delay: 0
     },
     {
-      icon: <Smartphone className="w-8 h-8" />,
-      title: t('services.mobile.title'),
-      description: t('services.mobile.description'),
+      icon: <Globe className="w-8 h-8" />,
+      title: 'Pengembangan Aplikasi Web',
+      description: 'Aplikasi web modern dengan desain responsif, performa optimal, dan skalabilitas tinggi untuk mendukung kebutuhan bisnis digital masa kini.',
       delay: 1
     },
     {
-      icon: <Monitor className="w-8 h-8" />,
-      title: t('services.desktop.title'),
-      description: t('services.desktop.description'),
+      icon: <Smartphone className="w-8 h-8" />,
+      title: 'Pengembangan Aplikasi Mobile',
+      description: 'Aplikasi mobile berbasis AI dengan UX unggul dan kompatibel lintas platform (Android & iOS).',
       delay: 2
     },
     {
-      icon: <HelpingHand className="w-8 h-8" />,
-      title: t('services.consulting.title'),
-      description: t('services.consulting.description'),
+      icon: <Monitor className="w-8 h-8" />,
+      title: 'Pengembangan Aplikasi Desktop',
+      description: 'Perangkat lunak desktop yang tangguh, aman, dan terintegrasi sesuai kebutuhan spesifik organisasi atau instansi.',
       delay: 3
     },
     {
-      icon: <Package className="w-8 h-8" />,
-      title: t('services.products.title'),
-      description: t('services.products.description'),
+      icon: <Map className="w-8 h-8" />,
+      title: 'Pengembangan Sistem Informasi Geografis (GIS)',
+      description: 'Solusi GIS untuk visualisasi lokasi, analisis spasial, dan pengambilan keputusan berbasis data geospasial yang akurat dan interaktif.',
       delay: 4
     },
     {
       icon: <Headset className="w-8 h-8" />,
-      title: t('services.support.title'),
-      description: t('services.support.description'),
+      title: 'Dukungan Teknis (Technical Support)',
+      description: 'Layanan bantuan teknis profesional 24/7 guna memastikan operasional sistem berjalan lancar dan minim gangguan.',
       delay: 5
     }
   ];
-  
+
   return (
-    <section id="services" className="section bg-gray-50">
-      <div className="container mx-auto px-4">
-        <SectionHeader 
-          title={t('services.title')} 
-          subtitle={t('services.subtitle')} 
-        />
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <ServiceCard 
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-              delay={service.delay}
-            />
+    <section id="services" className="bg-black text-white py-24 px-4">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+        {/* Left: Main Content */}
+        <div>
+          <p className="uppercase tracking-widest text-lg mb-4">Layanan Kami</p>
+          <h2 className="text-5xl font-light mb-8">Ruang Lingkup Layanan</h2>
+          <p className="text-2xl font-light mb-12">
+            Sebagai perusahaan yang mengintegrasikan kecerdasan buatan dan teknologi informasi, AITISERVE menyediakan layanan lengkap yang dirancang untuk menjawab tantangan era digital.
+          </p>
+        </div>
+        {/* Right: Services Grid */}
+        <div className="grid grid-cols-1 gap-10">
+          {services.map((service, idx) => (
+            <ServiceCard key={service.title} {...service} />
           ))}
         </div>
       </div>

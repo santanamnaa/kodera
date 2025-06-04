@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
 import { ExternalLink } from 'lucide-react';
 import SectionHeader from '../components/common/SectionHeader';
 
@@ -16,7 +15,6 @@ interface PortfolioItem {
 }
 
 const PortfolioPage: React.FC = () => {
-  const { t } = useTranslation();
   const [activeFilter, setActiveFilter] = useState('all');
   
   useEffect(() => {
@@ -28,92 +26,92 @@ const PortfolioPage: React.FC = () => {
   const portfolioItems: PortfolioItem[] = [
     {
       id: 1,
-      title: t('portfolio.item.1.title'),
-      description: t('portfolio.item.1.description'),
+      title: 'Project 1',
+      description: 'Description of Project 1',
       category: 'web',
       image: '/images/imagehere.png',
-      client: t('portfolio.item.1.client'),
-      date: t('portfolio.item.1.date'),
+      client: 'Client 1',
+      date: 'Date 1',
       link: '#'
     },
     {
       id: 2,
-      title: t('portfolio.item.2.title'),
-      description: t('portfolio.item.2.description'),
+      title: 'Project 2',
+      description: 'Description of Project 2',
       category: 'mobile',
       image: '/images/imagehere.png',
-      client: t('portfolio.item.2.client'),
-      date: t('portfolio.item.2.date'),
+      client: 'Client 2',
+      date: 'Date 2',
       link: '#'
     },
     {
       id: 3,
-      title: t('portfolio.item.3.title'),
-      description: t('portfolio.item.3.description'),
+      title: 'Project 3',
+      description: 'Description of Project 3',
       category: 'desktop',
       image: '/images/imagehere.png',
-      client: t('portfolio.item.3.client'),
-      date: t('portfolio.item.3.date'),
+      client: 'Client 3',
+      date: 'Date 3',
       link: '#'
     },
     {
       id: 4,
-      title: t('portfolio.item.4.title'),
-      description: t('portfolio.item.4.description'),
+      title: 'Project 4',
+      description: 'Description of Project 4',
       category: 'web',
       image: '/images/imagehere.png',
-      client: t('portfolio.item.4.client'),
-      date: t('portfolio.item.4.date'),
+      client: 'Client 4',
+      date: 'Date 4',
       link: '#'
     },
     {
       id: 5,
-      title: t('portfolio.item.5.title'),
-      description: t('portfolio.item.5.description'),
+      title: 'Project 5',
+      description: 'Description of Project 5',
       category: 'mobile',
       image: '/images/imagehere.png',
-      client: t('portfolio.item.5.client'),
-      date: t('portfolio.item.5.date'),
+      client: 'Client 5',
+      date: 'Date 5',
       link: '#'
     },
     {
       id: 6,
-      title: t('portfolio.item.6.title'),
-      description: t('portfolio.item.6.description'),
+      title: 'Project 6',
+      description: 'Description of Project 6',
       category: 'desktop',
       image: '/images/imagehere.png',
-      client: t('portfolio.item.6.client'),
-      date: t('portfolio.item.6.date'),
+      client: 'Client 6',
+      date: 'Date 6',
       link: '#'
     },
     {
       id: 7,
-      title: t('portfolio.item.7.title'),
-      description: t('portfolio.item.7.description'),
+      title: 'Project 7',
+      description: 'Description of Project 7',
       category: 'web',
       image: '/images/imagehere.png',
-      client: t('portfolio.item.7.client'),
-      date: t('portfolio.item.7.date'),
+      client: 'Client 7',
+      date: 'Date 7',
       link: '#'
     },
     {
       id: 8,
-      title: t('portfolio.item.8.title'),
-      description: t('portfolio.item.8.description'),
+      title: 'Project 8',
+      description: 'Description of Project 8',
       category: 'mobile',
       image: '/images/imagehere.png',
-      client: t('portfolio.item.8.client'),
-      date: t('portfolio.item.8.date'),
+      client: 'Client 8',
+      date: 'Date 8',
       link: '#'
     },
     {
       id: 9,
-      title: t('portfolio.item.9.title'),
-      description: t('portfolio.item.9.description'),
+      title: 'Project 9',
+      description: 'Description of Project 9',
       category: 'desktop',
       image: '/images/imagehere.png',
-      client: t('portfolio.item.9.client'),
-      date: t('portfolio.item.9.date'),
+      client: 'Client 9',
+      date: 'Date 9',
       link: '#'
     }
   ];
@@ -125,10 +123,10 @@ const PortfolioPage: React.FC = () => {
   
   // Filter categories
   const filters = [
-    { id: 'all', name: t('portfolio.all') },
-    { id: 'web', name: t('portfolio.web') },
-    { id: 'mobile', name: t('portfolio.mobile') },
-    { id: 'desktop', name: t('portfolio.desktop') }
+    { id: 'all', name: 'All' },
+    { id: 'web', name: 'Web' },
+    { id: 'mobile', name: 'Mobile' },
+    { id: 'desktop', name: 'Desktop' }
   ];
   
   return (
@@ -137,10 +135,10 @@ const PortfolioPage: React.FC = () => {
       <section className="pt-32 pb-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            {t('portfolio.title')}
+            Portfolio
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            {t('portfolio.subtitle')}
+            Showcase of our projects
           </p>
         </div>
       </section>
@@ -170,32 +168,19 @@ const PortfolioPage: React.FC = () => {
             {filteredItems.map((item) => (
               <div 
                 key={item.id}
-                className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300"
               >
-                <div className="portfolio-item group">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="w-full h-64 object-cover"
-                  />
-                  <div className="portfolio-overlay">
-                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                    <p className="text-sm text-gray-200 mb-4 capitalize">{item.category}</p>
-                    <a 
-                      href={item.link} 
-                      className="flex items-center text-secondary hover:underline"
-                    >
-                      {t('portfolio.view')}
-                      <ExternalLink className="w-4 h-4 ml-1" />
-                    </a>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-2">{item.title}</h3>
-                  <p className="text-neutral mb-4">{item.description}</p>
-                  <div className="flex flex-wrap justify-between text-sm">
-                    <span className="text-secondary font-medium">{item.client}</span>
-                    <span className="text-neutral">{item.date}</span>
+                <img 
+                  src={item.image} 
+                  alt={item.title} 
+                  className="w-full h-48 object-cover rounded-md mb-4"
+                />
+                <div className="pt-0">
+                  <h3 className="text-lg font-semibold text-primary mb-1">{item.title}</h3>
+                  <p className="text-sm text-gray-600 mb-3">{item.description}</p>
+                  <div className="flex justify-between text-xs text-gray-400">
+                    <span>{item.client}</span>
+                    <span>{item.date}</span>
                   </div>
                 </div>
               </div>
