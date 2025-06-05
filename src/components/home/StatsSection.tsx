@@ -18,7 +18,7 @@ const StatItem: React.FC<StatItemProps> = ({ value, label, delay }) => {
     <div 
       ref={ref} 
       className={`text-center font-sans font-light ${
-        inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        inView ? 'opacity-100 translate-y-0' : 'opacity-0{} translate-y-10'
       } transition-all duration-700 ease-out`}
       style={{ transitionDelay: `${delay * 150}ms` }}
     >
@@ -28,7 +28,6 @@ const StatItem: React.FC<StatItemProps> = ({ value, label, delay }) => {
         ) : (
           value
         )}
-        <span>{typeof value === 'number' ? '+' : ''}</span>
       </div>
       <p className="text-white font-light font-sans">{label}</p>
     </div>
