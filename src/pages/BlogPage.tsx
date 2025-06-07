@@ -32,20 +32,20 @@ const BlogPage: React.FC = () => {
     <>
       <div className="min-h-[100px] bg-black" />
       {/* Hero Section */}
-      <section className="bg-black py-24 px-4 text-center">
+      <section className="bg-black py-16 md:py-24 px-4 text-center">
         <div className="max-w-2xl mx-auto">
           <div className="uppercase text-white/70 tracking-widest text-sm mb-4">Blog</div>
-          <h1 className="text-5xl md:text-6xl font-light text-white mb-6">Insights & Articles</h1>
-          <p className="text-lg text-white/80 mb-2">
+          <h1 className="text-3xl md:text-5xl font-light text-white mb-6">Insights & Articles</h1>
+          <p className="text-base md:text-lg text-white/80 mb-2">
             Explore the latest trends, insights, and stories in technology, AI, and digital transformation.
           </p>
         </div>
       </section>
 
       {/* Blog Grid */}
-      <section className="bg-black min-h-screen py-16 px-4">
+      <section className="bg-black min-h-screen py-12 md:py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
             {blogPosts.map((post) => (
               <div
                 key={post.id}

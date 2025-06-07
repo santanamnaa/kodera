@@ -79,20 +79,20 @@ const PortfolioSection: React.FC = () => {
   ];
   
   return (
-    <section id="portfolio" className="section font-sans font-light">
-      <div className="container mx-auto px-4">
+    <section id="portfolio" className="section font-sans font-light px-4">
+      <div className="container mx-auto">
         <SectionHeader 
           title="Portfolio" 
           subtitle="Our Latest Projects" 
         />
         
         {/* Filter buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12">
           {filters.map(filter => (
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-6 py-2 rounded-full transition-all duration-300 ${
+              className={`px-4 sm:px-6 py-2 rounded-full transition-all duration-300 ${
                 activeFilter === filter.id 
                   ? 'bg-secondary text-white' 
                   : 'bg-gray-100 text-neutral hover:bg-gray-200'
@@ -106,7 +106,7 @@ const PortfolioSection: React.FC = () => {
         {/* Portfolio grid */}
         <div 
           ref={ref}
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ${
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 ${
             inView ? 'opacity-100' : 'opacity-0'
           } transition-opacity duration-1000`}
         >

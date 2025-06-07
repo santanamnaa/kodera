@@ -3,23 +3,23 @@ import { motion } from 'framer-motion';
 
 const AboutUsSection: React.FC = () => {
   return (
-    <section className="bg-gray-100 py-16 px-4">
+    <section className="bg-gray-100 py-12 md:py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left label */}
-          <div className="lg:col-span-3 flex items-start">
-            <span className="text-gray-400 text-xl font-medium mt-2 block">Tentang Kami</span>
+          <div className="lg:col-span-3 flex items-start mb-4 lg:mb-0">
+            <span className="text-gray-400 text-lg md:text-xl font-medium mt-2 block">Tentang Kami</span>
           </div>
 
           {/* Main content */}
           <div className="lg:col-span-9 mx-auto max-w-3xl text-left">
             <div className="lg:col-span-9">
-              <h1 className="text-4xl md:text-4xl font leading-tight mb-8">
+              <h1 className="text-2xl md:text-4xl font leading-tight mb-6 md:mb-8">
                 <span className="text-gray-400 font">AITISERVE</span>{' '}adalah perusahaan teknologi yang mengintegrasikan kecerdasan buatan (AI) dan teknologi informasi (TI) untuk membentuk masa depan digital yang lebih cerdas, adaptif, dan berkelanjutan. Kami hadir sebagai mitra transformasi digital yang berfokus pada inovasi, efisiensi, dan dampak nyata bagi klien dan masyarakat.
               </h1>
               <a
                 href="#more-about-us"
-                className="inline-flex items-center text-base font-medium mb-12 border-b border-black pb-1 hover:opacity-80 transition"
+                className="inline-flex items-center text-base font-medium mb-8 md:mb-12 border-b border-black pb-1 hover:opacity-80 transition"
               >
                 Selengkapnya <span className="ml-2">↗</span>
               </a>

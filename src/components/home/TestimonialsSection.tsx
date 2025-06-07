@@ -55,14 +55,14 @@ const TestimonialsSection: React.FC = () => {
   };
 
   return (
-    <section className="section bg-gray-50 font-sans font-light">
-      <div className="container mx-auto px-4">
+    <section className="section bg-gray-50 font-sans font-light px-4">
+      <div className="container mx-auto max-w-4xl">
         <SectionHeader 
           title="Testimonials" 
           subtitle="What our clients say about us" 
         />
 
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative w-full">
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}

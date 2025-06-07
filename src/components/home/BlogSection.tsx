@@ -51,11 +51,11 @@ const BlogSection: React.FC = () => {
         </div>
 
         {/* Container Kartu: scroll horizontal */}
-        <div className="flex space-x-6 overflow-x-auto scrollbar-thin scrollbar-thumb-black scrollbar-track-transparent pb-2">
+        <div className="flex space-x-4 sm:space-x-6 overflow-x-auto scrollbar-thin scrollbar-thumb-black scrollbar-track-transparent pb-2">
           {blogPosts.map((post) => (
             <article
               key={post.id}
-              className="min-w-[300px] max-w-[300px] bg-white rounded-xl shadow-sm overflow-hidden flex-shrink-0 border border-gray-200 flex flex-col transition-transform duration-200 hover:-translate-y-1 hover:shadow-md"
+              className="min-w-[80vw] max-w-xs sm:min-w-[300px] sm:max-w-[300px] bg-white rounded-xl shadow-sm overflow-hidden flex-shrink-0 border border-gray-200 flex flex-col transition-transform duration-200 hover:-translate-y-1 hover:shadow-md"
             >
               {/* Gambar */}
               <div className="relative w-full h-44">

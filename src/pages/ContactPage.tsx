@@ -64,8 +64,8 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <section className="py-16 bg-black">
-      <div className="min-h-[100px] bg-black" />
+    <section className="py-12 md:py-16 bg-black">
+      <div className="min-h-[60px] md:min-h-[100px] bg-black" />
 
       <div className="mx-auto max-w-7xl px-4">
         <SectionHeader
@@ -74,7 +74,7 @@ const ContactPage: React.FC = () => {
           titleClassName="text-white"
           subtitleClassName="text-gray-300"
         />
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {/* Contact Info */}
           <div className="lg:col-span-1 bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
             <h3 className="text-2xl md:text-3xl tracking-tight leading-snug font-semibold text-gray-800 mb-6">Get in Touch</h3>

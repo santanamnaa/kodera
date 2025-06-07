@@ -37,13 +37,13 @@ const Header: React.FC = () => {
 
   return (
     <header className={headerClasses}>
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/" className="flex items-center">
+      <div className="container mx-auto px-4 flex flex-wrap justify-between items-center min-h-[64px]">
+        <Link to="/" className="flex items-center min-w-[48px]">
           <Logo />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-8">
+        <nav className="hidden lg:flex items-center flex-wrap space-x-4 md:space-x-8">
           <NavLink to="/" className={({ isActive }) => isActive ? 'nav-link nav-link-active' : 'nav-link'}>
             Beranda
           </NavLink>
@@ -100,24 +100,24 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Mobile Navigation Toggle */}
-        <div className="lg:hidden flex items-center">
-          <button onClick={toggleMenu} className="text-gray-200 hover:text-white">
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        <div className="lg:hidden flex items-center ml-auto">
+          <button onClick={toggleMenu} className="text-gray-200 hover:text-white p-2 focus:outline-none focus:ring-2 focus:ring-secondary rounded">
+            {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-primary-light absolute w-full">
-          <nav className="container mx-auto px-4 py-4 flex flex-col">
-            <NavLink to="/" className={({ isActive }) => `py-3 ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Beranda</NavLink>
-            <NavLink to="/services" className={({ isActive }) => `py-3 ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Layanan</NavLink>
-            <NavLink to="/products" className={({ isActive }) => `py-3 ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Produk</NavLink>
-            <NavLink to="/blog" className={({ isActive }) => `py-3 ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Blog</NavLink>
-            <NavLink to="/about" className={({ isActive }) => `py-3 ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Tentang</NavLink>
-            <NavLink to="/careers" className={({ isActive }) => `py-3 ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Karir</NavLink>
-            <NavLink to="/contact" className={({ isActive }) => `py-3 ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Kontak</NavLink>
+        <div className="lg:hidden fixed top-0 left-0 w-full h-full bg-primary-light z-50 flex flex-col pt-20">
+          <nav className="px-6 py-4 flex flex-col gap-2">
+            <NavLink to="/" className={({ isActive }) => `py-4 text-lg ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Beranda</NavLink>
+            <NavLink to="/services" className={({ isActive }) => `py-4 text-lg ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Layanan</NavLink>
+            <NavLink to="/products" className={({ isActive }) => `py-4 text-lg ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Produk</NavLink>
+            <NavLink to="/blog" className={({ isActive }) => `py-4 text-lg ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Blog</NavLink>
+            <NavLink to="/about" className={({ isActive }) => `py-4 text-lg ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Tentang</NavLink>
+            <NavLink to="/careers" className={({ isActive }) => `py-4 text-lg ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Karir</NavLink>
+            <NavLink to="/contact" className={({ isActive }) => `py-4 text-lg ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Kontak</NavLink>
           </nav>
         </div>
       )}

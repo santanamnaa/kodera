@@ -119,21 +119,14 @@ const ProductsPage: React.FC = () => {
                   key={product.id}
                   ref={ref}
                   id={product.id}
-                  className="relative rounded-3xl overflow-hidden group"
-                  style={{
-                    height: '450px',
-                    width: '1100px',
-                    margin: '30px auto',
-                  }}
+                  className="relative rounded-3xl overflow-hidden group w-full max-w-4xl mx-auto my-8 md:my-12"
                   onMouseEnter={() => setHoveredIdx(idx)}
                   onMouseLeave={() => setHoveredIdx(null)}
                 >
                   <div
-                    className="absolute inset-0 transition-transform duration-700 scale-100 group-hover:scale-105"
+                    className="absolute inset-0 transition-transform duration-700 scale-100 group-hover:scale-105 bg-cover bg-center"
                     style={{
                       backgroundImage: `url(${product.image})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
                     }}
                   />
                   <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-all duration-500" />

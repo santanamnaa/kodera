@@ -4,6 +4,7 @@ import ImageShowcaseSection from '../components/home/ImageShowcaseSection';
 import ServicesSection from '../components/home/ServicesSection';
 import CtaSection from '../components/home/CtaSection';
 import AboutUsSection from '../components/home/AboutUsSection';
+import AboutSection from '../components/home/AboutSection';
 import BlogSection from '../components/home/BlogSection';
 import FaqSection from '../components/home/FaqSection';
 import VisionMissionSection from '../components/home/VisionMissionSection';
@@ -19,16 +20,14 @@ const HomePage: React.FC = () => {
     <>
       <HeroSection />
       {/* <DirectorGreetingSection /> */}
-      <div className="min-h-[100px] bg-black" />
-      {/* <AboutSection /> */}
-      <div className="min-h-[100px] bg-black" />
+      <AboutSection />
       <ImageShowcaseSection />
-      <div className="min-h-[180px] bg-black" />
       <ServicesSection />
       <div className="min-h-[180px] bg-gray-100" />
-      <CoreTechSection />
-      <div className="min-h-[180px] bg-gray-100" />
       <AboutUsSection />
+      <div className="min-h-[180px] bg-black" />
+      <div className="min-h-[180px] bg-gray-100" />
+      <CoreTechSection />
       <div className="min-h-[180px] bg-gray-100" />
       <VisionMissionSection />
       <div className="min-h-[140px] bg-gray-100" />

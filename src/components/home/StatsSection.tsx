@@ -36,9 +36,9 @@ const StatItem: React.FC<StatItemProps> = ({ value, label, delay }) => {
 
 const StatsSection: React.FC = () => {
   return (
-    <section className="py-16 bg-black font-sans font-light">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <section className="py-12 md:py-16 bg-black font-sans font-light px-4">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           <StatItem 
             value={2024} 
             label="Tahun Berdiri" 
