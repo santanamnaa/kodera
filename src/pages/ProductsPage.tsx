@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useInView } from 'react-intersection-observer';
 import CtaSection from '../components/home/CtaSection';
 
 interface Product {
@@ -105,56 +104,50 @@ const ProductsPage: React.FC = () => {
 
       {/* Products */}
       <section className="py-20 bg-black">
-        <div className="relative rounded-3xl container mx-auto px-4">
-          
-          <div className="space-y-16">
-            {products.map((product, idx) => {
-              const { ref } = useInView({
-                threshold: 0.1,
-                triggerOnce: true,
-              });
-              
-              return (
+        <div className="container mx-auto px-4">
+          <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+            {products.map((product, idx) => (
+              <div
+                key={product.id}
+                id={product.id}
+                className="relative rounded-2xl overflow-hidden bg-black group shadow-md transition-transform duration-300 hover:scale-[1.02] min-h-[360px] flex flex-col justify-between"
+                onMouseEnter={() => setHoveredIdx(idx)}
+                onMouseLeave={() => setHoveredIdx(null)}
+              >
+                {/* Background Image */}
                 <div
-                  key={product.id}
-                  ref={ref}
-                  id={product.id}
-                  className="relative rounded-3xl overflow-hidden group w-full max-w-4xl mx-auto my-8 md:my-12"
-                  onMouseEnter={() => setHoveredIdx(idx)}
-                  onMouseLeave={() => setHoveredIdx(null)}
-                >
-                  <div
-                    className="absolute inset-0 transition-transform duration-700 scale-100 group-hover:scale-105 bg-cover bg-center"
-                    style={{
-                      backgroundImage: `url(${product.image})`,
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-all duration-500" />
-                  <div className="relative z-10 h-full text-white">
-                    <h2 className="absolute top-4 left-4 text-2xl font-semibold">{product.title}</h2>
-                    <p className="absolute bottom-4 left-4 text-sm text-gray-300 max-w-md">{product.description}</p>
-                    {/* Animated portfolio arrow icon */}
-                    <div
-                      className="absolute bottom-15 right-0 z-20 portfolio-icon-container"
-                      style={{ width: 40, height: 40 }}
-                    >
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${product.image})` }}
+                />
+                {/* Black Tint */}
+                <div className="absolute inset-0 bg-black/60 z-0" />
+
+                {/* Content */}
+                <div className="relative z-10 h-full flex flex-col justify-between px-6 py-6">
+                  {/* Top Title */}
+                  <div className="text-white text-2xl font-medium mb-4">{product.title}</div>
+
+                  {/* Bottom Section */}
+                  <div className="flex justify-between items-end">
+                    <p className="text-gray-300 text-sm max-w-[80%] leading-relaxed">
+                      {product.description}
+                    </p>
+                    <div className="flex-shrink-0">
                       <img
                         src="https://cdn.prod.website-files.com/674f0bffd16800a9ec56609d/674f1695d93dcf98795b50e8_arrow-top-right-white.png"
                         alt=""
-                        className="portfolio-arrow-icon w-7 h-7 absolute transition-transform duration-500"
+                        className="w-6 h-6 transition-transform duration-500"
                         style={{
-                          left: 0,
-                          top: 0,
                           transform: hoveredIdx === idx
-                            ? 'translate3d(0,0,0) scale3d(0.5,0.5,0.5)'
-                            : 'translate3d(-100%,100%,0) scale3d(1,1,1)',
+                            ? 'translate3d(0px, 0px, 0px) scale(0.6)'
+                            : 'translate3d(10px, 10px, 0px) scale(1)',
                         }}
                       />
                     </div>
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -45,7 +45,7 @@ const BlogSection: React.FC = () => {
           <span className="uppercase text-black text-sm font-light block mb-2">
             BERITA
           </span>
-          <h2 className="text-4xl md:text-5xl font-light text-black">
+          <h2 className="text-3xl md:text-5xl font-light text-black">
             Wawasan & Kolaborasi Terbaru
           </h2>
         </div>
@@ -88,16 +88,16 @@ const BlogSection: React.FC = () => {
                     {post.readTime}
                   </span>
                 </div>
-                <h3 className="text-sm font-medium text-black leading-snug mb-4 flex-grow">
+                <h3 className="text-sm font-light text-black leading-snug mb-4 flex-grow">
                   {post.title}
                 </h3>
                 <div className="mt-auto">
                   <a
                     href={post.link}
-                    className="inline-flex items-center text-sm font-medium text-black border-b border-black pb-0.5 hover:opacity-80 transition"
+                    className="inline-flex items-center text-sm font-light text-black border-b border-black pb-0.5 hover:opacity-80 transition"
                   >
                     Selengkapnya&nbsp;
-                    <ArrowUpRight className="w-4 h-4" />
+                    <span className="text-base font-normal">↗</span>
                   </a>
                 </div>
               </div>
@@ -109,9 +109,10 @@ const BlogSection: React.FC = () => {
         <div className="flex justify-center mt-4">
           <a
             href="/blog"
-            className="text-sm font-medium text-black border-b border-black pb-0.5 hover:opacity-80 transition inline-flex items-center"
+            className="text-sm font-light text-black border-b border-black pb-0.5 hover:opacity-80 transition inline-flex items-center"
           >
-            Lihat semua berita&nbsp;<span className="text-base">↗</span>
+            Lihat semua berita&nbsp;
+            <span className="text-base font-normal">↗</span>
           </a>
         </div>
       </div>

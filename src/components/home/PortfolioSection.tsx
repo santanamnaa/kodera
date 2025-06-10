@@ -82,8 +82,8 @@ const PortfolioSection: React.FC = () => {
     <section id="portfolio" className="section font-sans font-light px-4">
       <div className="container mx-auto">
         <SectionHeader 
-          title="Portfolio" 
-          subtitle="Our Latest Projects" 
+          title={<span className="text-3xl md:text-5xl font-light">Portfolio</span>} 
+          subtitle={<span className="font-light">Our Latest Projects</span>} 
         />
         
         {/* Filter buttons */}

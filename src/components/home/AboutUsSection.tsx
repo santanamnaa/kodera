@@ -8,7 +8,7 @@ const AboutUsSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left label */}
           <div className="lg:col-span-3 flex items-start mb-4 lg:mb-0">
-            <span className="text-gray-400 text-lg md:text-xl font-medium mt-2 block">Tentang Kami</span>
+            <span className="text-gray-400 text-lg md:text-xl font-medium mt-2 block">Our Company</span>
           </div>
 
           {/* Main content */}

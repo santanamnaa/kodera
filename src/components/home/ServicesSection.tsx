@@ -26,7 +26,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, del
   return (
     <div 
       ref={ref} 
-      className={`flex flex-col items-center text-center font-sans font-light transition-all duration-700 ease-out ${
+      className={`bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-md p-6 hover:shadow-lg hover:scale-[1.02] transition duration-500 ease-out ${
         inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
       style={{
@@ -34,15 +34,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, del
         willChange: 'opacity, transform',
       }}
     >
-      <div className="rounded-full border-2 border-white w-20 h-20 flex items-center justify-center mb-4">
-        <div className="text-[#0cc1c0]">
-          {icon}
-        </div>
+      <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mb-4 text-teal-400">
+        {icon}
       </div>
-      <h3 className="text-2xl font-light font-sans text-white mb-2">
+      <h3 className="text-base font-semibold text-white mb-1">
         {title}
       </h3>
-      <p className="text-lg font-light font-sans text-white">
+      <p className="text-sm text-gray-300 leading-relaxed">
         {description}
       </p>
     </div>
@@ -91,20 +89,22 @@ const ServicesSection: React.FC = () => {
 
   return (
     <section id="services" className="bg-black text-white py-24 px-4">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16">
         {/* Left: Main Content */}
-        <div>
-          <p className="uppercase tracking-widest text-lg mb-4">Layanan Kami</p>
-          <h2 className="text-5xl font-light mb-8">Ruang Lingkup Layanan</h2>
+        <div className="w-full md:w-[45%] md:sticky md:top-24 self-start">
+          <p className="uppercase tracking-widest text-lg mb-4 font-light">Layanan Kami</p>
+          <h2 className="text-3xl md:text-5xl font-light mb-8">Ruang Lingkup Layanan</h2>
           <p className="text-2xl font-light mb-12">
-            Sebagai perusahaan yang mengintegrasikan kecerdasan buatan dan teknologi informasi, AITISERVE menyediakan layanan lengkap yang dirancang untuk menjawab tantangan era digital.
+            Sebagai perusahaan yang mengintegrasikan kecerdasan buatan dan teknologi informasi, <span className="font-normal">AITISERVE</span> menyediakan layanan lengkap yang dirancang untuk menjawab tantangan era digital.
           </p>
         </div>
         {/* Right: Services Grid */}
-        <div className="grid grid-cols-1 gap-10">
-          {services.map((service, idx) => (
-            <ServiceCard key={service.title} {...service} />
-          ))}
+        <div className="w-full bg-black md:w-[55%]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, idx) => (
+              <ServiceCard key={service.title} {...service} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

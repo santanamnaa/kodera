@@ -4,26 +4,29 @@ const blogPosts = [
   {
     id: 1,
     title: 'The Future of 5G in Telecommunications',
+    slug: 'future-of-5g',
     date: '2024-06-01',
     excerpt: 'Explore how 5G technology is revolutionizing the telecom industry and what it means for businesses and consumers.',
     image: '/images/blog/5g.png',
-    link: '#',
+    link: '/blog/future-of-5g',
   },
   {
     id: 2,
     title: 'AI-Driven Network Optimization',
+    slug: 'ai-driven-network-optimization',
     date: '2024-05-20',
     excerpt: 'Discover the impact of artificial intelligence on optimizing network performance and reliability.',
     image: '/images/blog/ai_driven.png',
-    link: '#',
+    link: '/blog/ai-driven-network-optimization',
   },
   {
     id: 3,
     title: 'Cloud Solutions for Modern Enterprises',
+    slug: 'cloud-solutions-modern-enterprises',
     date: '2024-05-10',
     excerpt: 'Learn how cloud-based solutions are enabling enterprises to scale and innovate faster than ever before.',
     image: '/images/blog/cloud.png',
-    link: '#',
+    link: '/blog/cloud-solutions-modern-enterprises',
   },
 ];
 
@@ -70,7 +73,7 @@ const BlogPage: React.FC = () => {
                   <span className="text-xs text-white/60 mb-2">{new Date(post.date).toLocaleDateString()}</span>
                   <a
                     href={post.link}
-                    className="block text-2xl font-semibold text-white mb-2 border-b-2 border-transparent hover:border-success-light transition-all duration-200"
+                    className="block text-2xl font-semibold text-white mb-2 border-b-2 border-transparent hover:border-hijau transition-all duration-200"
                     tabIndex={0}
                   >
                     {post.title}
@@ -78,7 +81,7 @@ const BlogPage: React.FC = () => {
                   <p className="text-base text-white/80 mb-6 flex-1">{post.excerpt}</p>
                   <a
                     href={post.link}
-                    className="inline-block mt-auto text-success-light font-medium border-b border-success-light hover:text-success hover:border-success transition-colors duration-200 text-base"
+                    className="inline-block mt-auto text-hijau font-medium border-b border-hijau hover:text-hijau hover:border-hijau transition-colors duration-200 text-base"
                   >
                     Read more <span className="ml-1">↗</span>
                   </a>

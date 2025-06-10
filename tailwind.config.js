@@ -39,6 +39,16 @@ export default {
           light: '#5ff6f5',
           dark: '#0ab3b1',
         },
+        abu: {
+          DEFAULT: '#7f7f81',
+          light: '#b9b9bd',
+          dark: '#3d3d3d',
+        },
+        birutua: {
+          DEFAULT: '#12192c',
+          light: '#001549',
+          dark: '#080c16',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

@@ -20,15 +20,15 @@ const CtaSection: React.FC = () => {
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           } transition-all duration-700 ease-out`}
         >
-          <h2 className="text-3xl md:text-4xl font-light font-light text-white mb-4">
+          <h2 className="text-3xl md:text-5xl font-light text-white mb-4">
             Siap Memulai Transformasi Digital Anda?
           </h2>
-          <p className="text-xl font-light font-light text-gray-300 mb-8">
+          <p className="text-xl font-light text-gray-300 mb-8">
             Hubungi tim AITISERVE sekarang untuk konsultasi dan solusi digital yang disesuaikan dengan kebutuhan bisnis Anda.
           </p>
           <Link 
             to="/contact" 
-            className="btn btn-primary px-8 py-3 text-lg font-light font-light"
+            className="btn btn-primary px-8 py-3 text-lg font-light"
           >
             Hubungi Kami
           </Link>

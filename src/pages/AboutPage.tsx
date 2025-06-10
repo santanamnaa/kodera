@@ -1,36 +1,37 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Lightbulb, Handshake } from 'lucide-react';
+import FaqSection from '../components/home/FaqSection';
 
 const coreValues = [
   {
-    icon: <Lightbulb className="w-8 h-8 text-primary" />, 
+    icon: <Lightbulb className="w-8 h-8 text-hijau" />, 
     title: 'Innovation & Excellence',
     desc: 'We are committed to delivering cutting-edge solutions and maintaining the highest standards in engineering consulting and telecommunications. Our goal is to drive progress by consistently improving network performance and customer satisfaction.'
   },
   {
-    icon: <Handshake className="w-8 h-8 text-primary" />,
+    icon: <Handshake className="w-8 h-8 text-hijau" />,
     title: 'Precision & Reliability',
     desc: 'We ensure accuracy and dependability in every project, from meticulous drive testing to comprehensive benchmarking. Our clients trust us to provide data-driven insights and actionable recommendations that enhance network efficiency.'
   },
   // Add more values as needed
 ];
 
-const faqs = [
+const aboutFaqs = [
   {
-    q: 'What services does your company offer?',
-    a: 'We offer end-to-end digital transformation, AI-driven solutions, IT consulting, application development, and technical support.'
+    question: 'What services does your company offer?',
+    answer: 'We offer end-to-end digital transformation, AI-driven solutions, IT consulting, application development, and technical support.'
   },
   {
-    q: 'Who do you work with?',
-    a: 'We partner with businesses, enterprises, and organizations seeking to innovate and excel in the digital era.'
+    question: 'Who do you work with?',
+    answer: 'We partner with businesses, enterprises, and organizations seeking to innovate and excel in the digital era.'
   },
   {
-    q: 'Why should I choose your company?',
-    a: 'We combine deep industry expertise, a passion for innovation, and a commitment to delivering measurable results for our clients.'
+    question: 'Why should I choose your company?',
+    answer: 'We combine deep industry expertise, a passion for innovation, and a commitment to delivering measurable results for our clients.'
   },
   {
-    q: 'How do your services benefit my business?',
-    a: 'Our solutions drive efficiency, growth, and competitive advantage through technology, automation, and data-driven decision making.'
+    question: 'How do your services benefit my business?',
+    answer: 'Our solutions drive efficiency, growth, and competitive advantage through technology, automation, and data-driven decision making.'
   },
 ];
 
@@ -55,7 +56,7 @@ const AboutPage: React.FC = () => {
 
       {/* Image Showcase */}
       <section className="w-full relative">
-        <img src="/images/teamwork-1.png" alt="Showcase" className="w-full h-48 md:h-[60vh] object-cover object-center" />
+        <img src="/images/branding/logo.svg" alt="Showcase" className="w-full h-48 md:h-[60vh] object-cover object-center" />
         <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black/80 to-transparent" />
       </section>
 
@@ -83,10 +84,10 @@ const AboutPage: React.FC = () => {
               {coreValues.map((v, i) => (
                 <div key={v.title} className="flex items-start gap-4 md:gap-5">
                   <div className="flex-shrink-0 mt-1">{v.icon}</div>
-                  <div>
-                    <div className="text-primary font-semibold mb-1">#{(i+1).toString().padStart(2,'0')}</div>
-                    <h3 className="text-lg md:text-xl font-semibold text-white mb-1">{v.title}</h3>
-                    <p className="text-white/80 text-sm md:text-base">{v.desc}</p>
+                  <div className="bg-white rounded-xl shadow-lg p-5 md:p-6 w-full">
+                    <div className="text-primary font-bold mb-1">#{(i+1).toString().padStart(2,'0')}</div>
+                    <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-1">{v.title}</h3>
+                    <p className="text-gray-700 text-sm md:text-base">{v.desc}</p>
                   </div>
                 </div>
               ))}
@@ -96,31 +97,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-black py-12 md:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-8 md:mb-12">
-            <div className="uppercase text-white/70 tracking-widest text-sm mb-2">FAQ</div>
-            <h2 className="text-2xl md:text-4xl font-light text-white mb-4">Commonly asked questions</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {faqs.map((faq, idx) => (
-              <div key={faq.q} className="bg-black border-b border-white/10 py-6">
-                <button
-                  className="flex items-center justify-between w-full text-left text-base md:text-lg text-white/90 font-medium focus:outline-none"
-                  onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  aria-expanded={openFaq === idx}
-                >
-                  <span>{faq.q}</span>
-                  {openFaq === idx ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
-                </button>
-                {openFaq === idx && (
-                  <div className="mt-3 text-white/70 text-sm md:text-base">{faq.a}</div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FaqSection faqs={aboutFaqs} title="FAQ" subtitle="Commonly asked questions" />
     </>
   );
 };

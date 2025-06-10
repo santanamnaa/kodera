@@ -20,14 +20,14 @@ const techs = [
 ];
 
 const CoreTechSection: React.FC = () => (
-  <section className="bg-gray-100 py-16 px-4">
+  <section className="bg-black text-white py-20 px-6 md:px-10">
     <div className="max-w-5xl mx-auto">
-      <h2 className="text-3xl font-bold mb-8 text-center">Teknologi & Kompetensi Inti</h2>
+      <h2 className="text-3xl md:text-5xl font-light tracking-tight text-center mb-12">Teknologi & Kompetensi Inti</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {techs.map((t) => (
-          <div key={t.title} className="bg-gray-50 rounded-lg shadow p-6">
-            <h4 className="font-bold text-primary mb-2">{t.title}</h4>
-            <p>{t.desc}</p>
+          <div key={t.title} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-md hover:shadow-lg hover:scale-[1.02] transition duration-300">
+            <h4 className="text-lg font-light text-teal-400 mb-2">{t.title}</h4>
+            <p className="text-gray-300 text-sm font-light leading-relaxed">{t.desc}</p>
           </div>
         ))}
       </div>

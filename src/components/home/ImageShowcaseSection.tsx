@@ -50,14 +50,14 @@ const ImageShowcaseSection: React.FC = () => {
                 className="w-full h-full object-cover object-center"
               />
               <div className="absolute inset-0 flex flex-col justify-center items-start md:items-start px-4 md:pl-16 py-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-                <h2 className="text-white text-2xl sm:text-3xl md:text-5xl font-light mb-2 md:mb-4 break-words max-w-full">{slide.title}</h2>
+                <h2 className="text-white text-3xl sm:text-3xl md:text-5xl font-light mb-2 md:mb-4 break-words max-w-full">{slide.title}</h2>
                 <a
                   href={slide.report}
-                  className="text-white text-base md:text-xl underline flex items-center mb-2"
+                  className="text-white text-base md:text-xl underline flex items-center mb-2 font-light"
                 >
-                  View full report <span className="ml-2">↗</span>
+                  View full report <span className="ml-2 font-normal">↗</span>
                 </a>
-                <p className="text-white text-sm md:text-lg max-w-xs md:max-w-md opacity-80">
+                <p className="text-white text-sm md:text-lg font-light max-w-xs md:max-w-md opacity-80">
                   {slide.description}
                 </p>
               </div>

@@ -57,22 +57,22 @@ const faqs = [
 
 const culture = [
   {
-    icon: <Briefcase className="w-7 h-7 text-success" />, 
+    icon: <Briefcase className="w-7 h-7 text-hijau" />,
     title: 'Inovasi & Kolaborasi',
     desc: 'Kami mendorong inovasi, kolaborasi, dan pengembangan diri di setiap lini perusahaan.'
   },
   {
-    icon: <Briefcase className="w-7 h-7 text-success" />, 
+    icon: <Briefcase className="w-7 h-7 text-hijau" />,
     title: 'Work-Life Balance',
     desc: 'Fleksibilitas kerja dan keseimbangan antara kehidupan pribadi dan profesional.'
   },
   {
-    icon: <Briefcase className="w-7 h-7 text-success" />, 
+    icon: <Briefcase className="w-7 h-7 text-hijau" />,
     title: 'Pengembangan Karir',
     desc: 'Dukungan pelatihan, sertifikasi, dan peluang berkembang bersama tim AITISERVE.'
   },
   {
-    icon: <Briefcase className="w-7 h-7 text-success" />, 
+    icon: <Briefcase className="w-7 h-7 text-hijau" />,
     title: 'Benefit Kompetitif',
     desc: 'Gaji, tunjangan, dan fasilitas kerja yang kompetitif di industri teknologi.'
   },
@@ -139,7 +139,7 @@ const CareersPage: React.FC = () => {
                   <p className="text-white/80 text-base mb-4 flex-1">{job.desc}</p>
                   <a
                     href={`mailto:hr@aitiserve.co.id?subject=Lamaran%20${encodeURIComponent(job.title)}`}
-                    className="inline-block mt-auto text-success-light font-medium border-b border-success-light hover:text-success hover:border-success transition-colors duration-200 text-base"
+                    className="inline-block mt-auto text-hijau font-medium border-b border-hijau hover:text-hijau hover:border-green-500 transition-colors duration-200 text-base"
                   >
                     Apply Now <span className="ml-1">↗</span>
                   </a>

@@ -2,71 +2,87 @@ import React from 'react';
 import Logo from '../common/Logo';
 
 const navLinks = [
-  { label: 'HOME', href: '/' },
-  { label: 'ABOUT US', href: '/about' },
-  { label: 'PORTFOLIO', href: '/portfolio' },
-  { label: 'CAREER', href: '/career' },
-  { label: 'BLOG', href: '/blog' },
-  { label: 'IMPRESSUM', href: '/impressum' },
-  { label: 'CONTACT', href: '/contact' },
+  { label: 'Beranda', href: '/' },
+  { label: 'Layanan', href: '/services' },
+  { label: 'Produk', href: '/products' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Tentang', href: '/about' },
+  { label: 'Karir', href: '/careers' },
+  { label: 'Kontak', href: '/contact' },
 ];
 
 const socialLinks = [
-  { label: 'Instagram', href: '#'},
-  { label: 'Youtube', href: '#'},
-  { label: 'LinkedIn', href: '#'},
+  { label: 'Instagram', href: 'https://instagram.com/yourbrand' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/company/yourbrand' },
+  { label: 'Youtube', href: 'https://youtube.com/@yourbrand' },
+];
+
+const contactInfo = [
+  { label: 'Email', value: 'info@yourbrand.com', href: 'mailto:info@yourbrand.com' },
+  { label: 'Alamat', value: 'Jl. Contoh No. 123, Jakarta, Indonesia' },
 ];
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-white pt-10 pb-4">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col min-h-[60vh]">
+    <footer className="bg-black text-white pt-8 pb-4">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col min-h-[40vh]">
         {/* Top Row: Logo, Nav, Social */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center w-full gap-8 md:gap-0">
+        <div className="flex flex-col sm:flex-col md:flex-row justify-between items-center md:items-center w-full gap-8 md:gap-0">
           {/* Logo */}
-          <div className="flex-1 flex justify-start mb-8 md:mb-0">
+          <div className="w-full md:w-1/3 flex justify-center md:justify-start mb-4 md:mb-0">
             <Logo />
           </div>
           {/* Nav Links */}
-          <nav className="flex-1 flex flex-col md:flex-row items-center md:justify-center gap-2 md:gap-6">
+          <nav className="w-full md:w-1/3 flex flex-wrap flex-col xs:flex-row md:flex-row items-center justify-center gap-2 md:gap-4 lg:gap-6 mb-4 md:mb-0">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="uppercase text-lg md:text-2xl font-semibold tracking-wide mb-2 md:mb-0 hover:underline"
+                className="uppercase text-base xs:text-sm sm:text-base md:text-lg lg:text-xl font-semibold tracking-wide px-2 py-1 rounded hover:underline focus:outline-none focus:ring-2 focus:ring-secondary transition"
               >
                 {link.label}
               </a>
             ))}
           </nav>
-          {/* Social Links */}
-          <div className="flex-1 flex flex-col md:items-end items-center space-y-2 md:space-y-2">
-            {socialLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-base md:text-lg flex items-center gap-1 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {link.label} <span className="inline-block">↗</span>
-              </a>
-            ))}
+          {/* Social Links & Contact Info */}
+          <div className="w-full md:w-1/3 flex flex-col items-center md:items-end gap-3 md:gap-2">
+            <div className="flex flex-row md:flex-col justify-center md:items-end items-center gap-3 md:gap-2">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-base md:text-lg flex items-center gap-1 hover:underline focus:outline-none focus:ring-2 focus:ring-secondary px-2 py-1 rounded transition"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {link.label} <span className="inline-block">↗</span>
+                </a>
+              ))}
+            </div>
+            <div className="mt-2 flex flex-col items-center md:items-end gap-1 text-xs md:text-sm text-white/80">
+              {contactInfo.map((info) => (
+                info.href ? (
+                  <a key={info.label} href={info.href} className="hover:underline">{info.label}: {info.value}</a>
+                ) : (
+                  <span key={info.label}>{info.label}: {info.value}</span>
+                )
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Large Get In Touch Row */}
-        <div className="flex flex-col md:flex-row items-center justify-between mt-16 mb-8 w-full text-center md:text-left gap-4 md:gap-0">
-          <span className="text-lg text-white/80 mb-2 md:mb-0">Have any Questions?</span>
-          <span className="text-[10vw] md:text-[7vw] lg:text-6xl font-extrabold uppercase leading-none tracking-tight text-white">GET IN TOUCH</span>
+        <div className="flex flex-col md:flex-row items-center justify-between mt-10 md:mt-16 mb-6 md:mb-8 w-full text-center md:text-left gap-2 md:gap-0">
+          <span className="text-base xs:text-sm sm:text-base md:text-lg text-white/80 mb-2 md:mb-0">Ada pertanyaan?</span>
+          <span className="text-3xl xs:text-4xl sm:text-5xl md:text-[7vw] lg:text-6xl font-extrabold uppercase leading-none tracking-tight text-white">Hubungi Kami</span>
         </div>
 
         {/* Divider */}
         <div className="border-t border-white/20 w-full mb-4" />
 
         {/* Copyright */}
-        <div className="flex flex-col md:flex-row justify-between items-center w-full">
-          <span className="text-sm text-white/80">© Copyright 2025 - <span className="font-medium">Techbros GmbH</span></span>
+        <div className="flex flex-col md:flex-row justify-between items-center w-full gap-2 md:gap-0">
+          <span className="text-xs xs:text-sm md:text-base text-white/80 text-center">© {new Date().getFullYear()} - <span className="font-medium">YourBrand</span>. All rights reserved.</span>
         </div>
       </div>
     </footer>

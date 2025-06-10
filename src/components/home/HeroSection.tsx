@@ -10,14 +10,14 @@ const HeroSection: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center" 
         style={{ 
-          backgroundImage: "url('/images/hero_bg.png')",
+          backgroundImage: "url('/images/home/hero_background.webp')",
           backgroundAttachment: 'fixed'
         }}
       >
         <div className="absolute inset-0 bg-primary bg-opacity-10"></div>
       </div>
       
-      <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row justify-end items-center md:items-end h-full">
+      {/* <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row justify-end items-center md:items-end h-full">
         <div className="w-full max-w-3xl md:text-right text-center py-24 md:py-0 hidden md:block">
           <motion.h1 
             className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-bold font-sans text-white mb-6"
@@ -58,7 +58,7 @@ const HeroSection: React.FC = () => {
             </Link>
           </motion.div>
         </div>
-      </div>
+      </div> */}
 
 
       {/* Scrolling AITISERVE text */}
@@ -68,12 +68,21 @@ const HeroSection: React.FC = () => {
       >
         <div className="w-full overflow-hidden">
           <div className="whitespace-nowrap animate-scrollText">
-            <span className="text-[24vw] md:text-[20vw] font-extrabold uppercase text-white opacity-10 tracking-widest select-none mx-8">
-              AITISERVE              AITISERVE
+            <span className=" md:text-[30vw] font-extrabold uppercase text-white opacity-20 tracking-widest select-none mx-8">
+              AITISERVE
             </span>
           </div>
         </div>
       </div>
+
+      <motion.h1 
+        className="text-3xl sm:text-3xl md:text-5xl lg:text-5xl font-light font-sans text-white mb-6"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        Solusi Digital Cerdas Berbasis AI & Teknologi untuk Masa Depan yang Berkelanjutan
+      </motion.h1>
     </section>
   );
 };

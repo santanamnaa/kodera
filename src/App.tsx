@@ -9,6 +9,9 @@ import ContactPage from './pages/ContactPage';
 import CompanyProfilePage from './pages/CompanyProfilePage';
 import NotFoundPage from './pages/NotFoundPage';
 import BlogPage from './pages/BlogPage';
+import FutureOf5G from './pages/blog/future-of-5g';
+import AIDrivenNetworkOptimization from './pages/blog/ai-driven-network-optimization';
+import CloudSolutionsModernEnterprises from './pages/blog/cloud-solutions-modern-enterprises';
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
         <Route path="services" element={<ServicesPage />} />
         <Route path="products" element={<ProductsPage />} />
         <Route path="blog" element={<BlogPage />} />
+        <Route path="blog/future-of-5g" element={<FutureOf5G />} />
+        <Route path="blog/ai-driven-network-optimization" element={<AIDrivenNetworkOptimization />} />
+        <Route path="blog/cloud-solutions-modern-enterprises" element={<CloudSolutionsModernEnterprises />} />
         <Route path="about" element={<AboutPage />} />
         <Route path="careers" element={<CareersPage />} />
         <Route path="contact" element={<ContactPage />} />

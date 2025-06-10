@@ -11,25 +11,31 @@ const values = [
 ];
 
 const VisionMissionSection: React.FC = () => (
-  <section className="bg-gray-100 py-12 md:py-16 px-4">
-    <div className="max-w-5xl mx-auto text-center">
-      <h2 className="text-2xl md:text-3xl font-bold mb-4">Visi, Misi, dan Nilai Perusahaan</h2>
-      <div className="mb-6 md:mb-8">
-        <h3 className="font-semibold">Visi</h3>
-        <p className="mb-4">Menjadi mitra terpercaya dalam transformasi digital yang unggul dan inovatif, serta perusahaan teknologi terdepan yang menghadirkan solusi berbasis kecerdasan buatan dan teknologi informasi untuk masa depan yang berkelanjutan dan berdampak nyata.</p>
-        <h3 className="font-semibold mt-4">Misi</h3>
-        <ul className="list-disc list-inside text-left max-w-xl mx-auto mb-4">
-          <li>Menghadirkan solusi AI dan TI yang efisien, bernilai tambah, dan berorientasi pada masa depan.</li>
-          <li>Mendukung transformasi digital melalui layanan konsultasi, implementasi teknologi, dan kemitraan strategis.</li>
-          <li>Meningkatkan kualitas sumber daya manusia dengan menanamkan budaya inovatif dan pengembangan kompetensi berkelanjutan.</li>
-        </ul>
+  <section className="bg-black text-white py-20 px-6 md:px-10">
+    <div className="max-w-7xl mx-auto text-center space-y-10">
+      <h2 className="text-3xl md:text-5xl font-light tracking-tight">Visi, Misi & Nilai</h2>
+      <div className="grid md:grid-cols-2 gap-8 text-left text-gray-300 text-base leading-relaxed max-w-5xl mx-auto">
+        <div>
+          <h3 className="text-xl font-light text-white mb-3">Visi</h3>
+          <p>Menjadi mitra terpercaya dalam transformasi digital yang unggul dan inovatif, serta perusahaan teknologi terdepan yang menghadirkan solusi berbasis kecerdasan buatan dan teknologi informasi untuk masa depan yang berkelanjutan dan berdampak nyata.</p>
+        </div>
+        <div>
+          <h3 className="text-xl font-light text-white mb-3">Misi</h3>
+          <p>Menghadirkan solusi AI dan TI yang efisien, bernilai tambah, dan berorientasi pada masa depan. Mendukung transformasi digital melalui layanan konsultasi, implementasi teknologi, dan kemitraan strategis. Meningkatkan kualitas sumber daya manusia dengan menanamkan budaya inovatif dan pengembangan kompetensi berkelanjutan.</p>
+        </div>
       </div>
-      <h3 className="font-semibold mt-6 md:mt-8 mb-4">Nilai Perusahaan: <span className="font-bold">TANGGUH</span></h3>
+      <h3 className="text-2xl font-light text-white mt-20 mb-10">Nilai Inti: <span className="text-teal-400 tracking-widest font-normal">TANGGUH</span></h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
         {values.map((v) => (
-          <div key={v.title} className="bg-white rounded-lg shadow p-4">
-            <h4 className="font-bold text-primary mb-2">{v.title}</h4>
-            <p className="text-sm">{v.desc}</p>
+          <div
+            key={v.title}
+            className="bg-white/5 border border-white/10 rounded-xl p-6 shadow-sm hover:shadow-md hover:scale-[1.01] transition duration-300 text-left"
+          >
+            <h4 className="text-white text-lg font-light mb-2">
+              <span className="text-teal-400 mr-1 font-normal">{v.title.charAt(0)}</span>
+              {v.title.slice(1)}
+            </h4>
+            <p className="text-gray-400 text-sm leading-relaxed">{v.desc}</p>
           </div>
         ))}
       </div>

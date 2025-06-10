@@ -3,9 +3,11 @@ import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import ScrollToTop from '../common/ScrollToTop';
+import MobileSidebar from './MobileSidebar';
 
 const Layout: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     // Simulate loading
@@ -30,7 +32,8 @@ const Layout: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <ScrollToTop />
-      <Header />
+      <Header onOpenSidebar={() => setIsMenuOpen(true)} />
+      {isMenuOpen && <MobileSidebar onClose={() => setIsMenuOpen(false)} />}
       <main className="flex-grow">
         <Outlet />
       </main>

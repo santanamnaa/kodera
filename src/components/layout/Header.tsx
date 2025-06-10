@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import Logo from '../common/Logo';
 
-const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+interface HeaderProps {
+  onOpenSidebar: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onOpenSidebar }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
@@ -12,34 +15,44 @@ const Header: React.FC = () => {
   const isHomePage = location.pathname === '/';
   const isProductPage = location.pathname.startsWith('/products');
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
-    setIsMenuOpen(false);
     setIsDropdownOpen(false);
   }, [location]);
+
+  // Tutup dropdown saat klik di luar
+  useEffect(() => {
+    if (!isDropdownOpen) return;
+    const handleClickOutside = (event: MouseEvent) => {
+      const dropdown = document.getElementById('desktop-dropdown-layanan');
+      if (dropdown && !dropdown.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isDropdownOpen]);
 
   const headerClasses = `fixed w-full z-40 transition-all duration-300 backdrop-blur-md ${
     isProductPage
       ? 'bg-transparent py-5'
       : isHomePage
-        ? (isScrolled ? 'bg-black/70 shadow-lg py-3' : 'bg-transparent py-5')
-        : 'bg-transparent py-3'
+        ? (isScrolled ? 'bg-black/100 shadow-lg py-3' : 'bg-transparent py-5 shadow-none')
+        : 'bg-transparent py-3 shadow-none'
   }`;
 
   return (
     <header className={headerClasses}>
       <div className="container mx-auto px-4 flex flex-wrap justify-between items-center min-h-[64px]">
         <Link to="/" className="flex items-center min-w-[48px]">
-          <Logo />
+          <span className="ml-2 text-xl font-bold">
+            <img src="/images/branding/logo_white.svg" alt="AITISERVE" className="inline-block w-20 h-20" />
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -53,12 +66,16 @@ const Header: React.FC = () => {
             <button
               className="nav-link flex items-center"
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              aria-haspopup="true"
+              aria-expanded={isDropdownOpen}
+              aria-controls="desktop-dropdown-layanan"
+              type="button"
             >
               Layanan
               <ChevronDown className="w-4 h-4 ml-1" />
             </button>
             {isDropdownOpen && (
-              <div className="absolute left-0 mt-2 w-52 bg-white rounded-md shadow-lg py-2 z-50">
+              <div id="desktop-dropdown-layanan" className="absolute left-0 mt-2 w-52 bg-white rounded-md shadow-lg py-2 z-50">
                 <Link to="/services#web" className="block px-4 py-2 text-sm text-primary hover:bg-gray-100">
                   Aplikasi Web
                 </Link>
@@ -81,7 +98,6 @@ const Header: React.FC = () => {
             )}
           </div>
 
-
           <NavLink to="/products" className={({ isActive }) => isActive ? 'nav-link nav-link-active' : 'nav-link'}>
             Produk
           </NavLink>
@@ -101,26 +117,14 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation Toggle */}
         <div className="lg:hidden flex items-center ml-auto">
-          <button onClick={toggleMenu} className="text-gray-200 hover:text-white p-2 focus:outline-none focus:ring-2 focus:ring-secondary rounded">
-            {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+          <button
+            onClick={onOpenSidebar}
+            className="text-gray-200 hover:text-white p-2 focus:outline-none focus:ring-2 focus:ring-secondary rounded"
+          >
+            <Menu className="w-7 h-7" />
           </button>
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="lg:hidden fixed top-0 left-0 w-full h-full bg-primary-light z-50 flex flex-col pt-20">
-          <nav className="px-6 py-4 flex flex-col gap-2">
-            <NavLink to="/" className={({ isActive }) => `py-4 text-lg ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Beranda</NavLink>
-            <NavLink to="/services" className={({ isActive }) => `py-4 text-lg ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Layanan</NavLink>
-            <NavLink to="/products" className={({ isActive }) => `py-4 text-lg ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Produk</NavLink>
-            <NavLink to="/blog" className={({ isActive }) => `py-4 text-lg ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Blog</NavLink>
-            <NavLink to="/about" className={({ isActive }) => `py-4 text-lg ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Tentang</NavLink>
-            <NavLink to="/careers" className={({ isActive }) => `py-4 text-lg ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Karir</NavLink>
-            <NavLink to="/contact" className={({ isActive }) => `py-4 text-lg ${isActive ? 'nav-link nav-link-active' : 'nav-link'}`}>Kontak</NavLink>
-          </nav>
-        </div>
-      )}
     </header>
   );
 };
