@@ -3,19 +3,19 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const slides = [
   {
-    image: '/images/project/kodera-project-management.png',
+    image: '/images/showcase/1.svg',
     title: 'Manajemen Proyek Terpadu',
     report: '#',
     description: 'Kodera mengelola seluruh proses pengembangan website, mulai dari analisis kebutuhan hingga pengawasan timeline dan kualitas hasil.'
   },
   {
-    image: '/images/project/kodera-quality-control.png',
+    image: '/images/showcase/2.svg',
     title: 'Jaminan Kualitas & Konsistensi',
     report: '#',
     description: 'Setiap hasil kerja developer dikurasi dan ditinjau oleh tim Kodera untuk memastikan standar teknis dan estetika terpenuhi.'
   },
   {
-    image: '/images/project/kodera-consulting-support.png',
+    image: '/images/showcase/3.svg',
     title: 'Layanan Konsultatif & Dukungan',
     report: '#',
     description: 'Kodera menyediakan strategi digital dan pendampingan teknis berkelanjutan agar klien merasa didampingi secara profesional.'
