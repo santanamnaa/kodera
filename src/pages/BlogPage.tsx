@@ -38,9 +38,9 @@ const BlogPage: React.FC = () => {
       <section className="bg-black py-16 md:py-24 px-4 text-center">
         <div className="max-w-2xl mx-auto">
           <div className="uppercase text-white/70 tracking-widest text-sm mb-4">Blog</div>
-          <h1 className="text-3xl md:text-5xl font-light text-white mb-6">Insights & Articles</h1>
+          <h1 className="text-3xl md:text-5xl font-light text-white mb-6">Artikel & Wawasan</h1>
           <p className="text-base md:text-lg text-white/80 mb-2">
-            Explore the latest trends, insights, and stories in technology, AI, and digital transformation.
+            Temukan artikel, tips, dan inspirasi seputar pengembangan website dan kehadiran digital.
           </p>
         </div>
       </section>
@@ -83,7 +83,7 @@ const BlogPage: React.FC = () => {
                     href={post.link}
                     className="inline-block mt-auto text-hijau font-medium border-b border-hijau hover:text-hijau hover:border-hijau transition-colors duration-200 text-base"
                   >
-                    Read more <span className="ml-1">↗</span>
+                    Baca selengkapnya <span className="ml-1">↗</span>
                   </a>
                 </div>
               </div>

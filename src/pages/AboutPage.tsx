@@ -5,33 +5,33 @@ import FaqSection from '../components/home/FaqSection';
 const coreValues = [
   {
     icon: <Lightbulb className="w-8 h-8 text-hijau" />, 
-    title: 'Innovation & Excellence',
-    desc: 'We are committed to delivering cutting-edge solutions and maintaining the highest standards in engineering consulting and telecommunications. Our goal is to drive progress by consistently improving network performance and customer satisfaction.'
+    title: 'Inovasi & Kualitas',
+    desc: 'Kami berkomitmen untuk terus berinovasi dalam pengembangan website dan menjaga kualitas hasil kerja melalui proses yang sistematis dan kolaboratif.'
   },
   {
     icon: <Handshake className="w-8 h-8 text-hijau" />,
-    title: 'Precision & Reliability',
-    desc: 'We ensure accuracy and dependability in every project, from meticulous drive testing to comprehensive benchmarking. Our clients trust us to provide data-driven insights and actionable recommendations that enhance network efficiency.'
+    title: 'Presisi & Keandalan',
+    desc: 'Setiap proyek dijalankan dengan ketelitian dan tanggung jawab tinggi untuk memastikan hasil yang dapat diandalkan dan sesuai ekspektasi klien.'
   },
   // Add more values as needed
 ];
 
 const aboutFaqs = [
   {
-    question: 'What services does your company offer?',
-    answer: 'We offer end-to-end digital transformation, AI-driven solutions, IT consulting, application development, and technical support.'
+    question: 'Apa itu Kodera?',
+    answer: 'Kodera adalah agensi pengembangan website yang membantu klien terhubung dengan developer profesional melalui manajemen proyek yang terstruktur dan efisien.',
   },
   {
-    question: 'Who do you work with?',
-    answer: 'We partner with businesses, enterprises, and organizations seeking to innovate and excel in the digital era.'
+    question: 'Apa saja layanan yang ditawarkan Kodera?',
+    answer: 'Kami menawarkan manajemen proyek pembuatan website, koordinasi tim developer, kurasi kualitas dan UI/UX, serta layanan konsultasi digital berkelanjutan.',
   },
   {
-    question: 'Why should I choose your company?',
-    answer: 'We combine deep industry expertise, a passion for innovation, and a commitment to delivering measurable results for our clients.'
+    question: 'Apakah Kodera cocok untuk usaha kecil dan individu?',
+    answer: 'Ya. Kami mendampingi berbagai skala klien, mulai dari UMKM, komunitas, hingga profesional individu untuk membangun website yang efektif dan representatif.',
   },
   {
-    question: 'How do your services benefit my business?',
-    answer: 'Our solutions drive efficiency, growth, and competitive advantage through technology, automation, and data-driven decision making.'
+    question: 'Bagaimana cara memulai proyek dengan Kodera?',
+    answer: 'Hubungi kami melalui formulir di website atau WhatsApp. Tim kami akan mengatur sesi konsultasi awal dan menyusun proposal proyek untuk Anda.',
   },
 ];
 
@@ -43,13 +43,13 @@ const AboutPage: React.FC = () => {
       {/* Hero Section */}
       <section className="min-h-screen bg-black flex flex-col justify-center items-center text-center px-4 relative">
         <div className="max-w-3xl mx-auto pt-24 md:pt-30 pb-16 md:pb-20">
-          <div className="uppercase text-white/70 tracking-widest text-sm mb-4">About Us</div>
-          <h1 className="text-3xl md:text-5xl font-light text-white mb-6">"Driving Innovation,<br />Together"</h1>
+          <div className="uppercase text-white/70 tracking-widest text-sm mb-4">Tentang Kami</div>
+          <h1 className="text-3xl md:text-5xl font-light text-white mb-6">"Bersama Membangun Inovasi"</h1>
           <p className="text-base md:text-lg text-white/80 mb-8">
-            Our mission is to push the boundaries of what's possible, leveraging AI advancements and IT to empower businesses with unparalleled connectivity, automation, and intelligence.
+            Kodera hadir untuk menjembatani kebutuhan digital klien dengan solusi pengembangan website yang efisien, kolaboratif, dan berkualitas tinggi.
           </p>
           <a href="/contact" className="inline-block text-white/90 border-b border-white/40 hover:opacity-80 transition text-base md:text-lg">
-            Contact us here <span className="ml-1">↗</span>
+            Hubungi kami di sini <span className="ml-1">↗</span>
           </a>
         </div>
       </section>
@@ -64,9 +64,9 @@ const AboutPage: React.FC = () => {
       <section className="bg-black py-12 md:py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <blockquote className="text-xl md:text-2xl lg:text-3xl italic text-white font-light mb-8">
-            "In this industry, every innovation stems from technology—our future depends on leveraging AI, data, and cutting-edge networks to reshape customer experiences and uncover new avenues for sustainable growth."
+            "Di dunia digital saat ini, kehadiran online yang kuat bukan lagi pilihan—melainkan kebutuhan. Kodera berkomitmen membantu klien membangun website yang bukan hanya tampil menarik, tapi juga fungsional dan berdampak."
           </blockquote>
-          <div className="text-white/70 text-base md:text-lg">Achmad Faizal, CEO &amp; Founder</div>
+          <div className="text-white/70 text-base md:text-lg">Achmad Faizal, Direktur Utama</div>
         </div>
       </section>
 
@@ -75,9 +75,9 @@ const AboutPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
             <div>
-              <h2 className="text-2xl md:text-4xl font-light text-white mb-6">Our core values</h2>
+              <h2 className="text-2xl md:text-4xl font-light text-white mb-6">Nilai Inti Kami</h2>
               <p className="text-white/80 text-base md:text-lg mb-10">
-                The foundation of our success lies in the principles that guide everything we do. From delivering innovative solutions to fostering trusted partnerships, our values drive us to excel and empower our clients to achieve their goals.
+                Prinsip yang kami pegang menjadi fondasi setiap proyek yang kami jalankan. Kodera menjunjung tinggi profesionalisme, transparansi, dan kualitas dalam mendampingi klien membangun kehadiran digital mereka.
               </p>
             </div>
             <div className="space-y-8 md:space-y-10">
@@ -97,7 +97,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <FaqSection faqs={aboutFaqs} title="FAQ" subtitle="Commonly asked questions" />
+      <FaqSection faqs={aboutFaqs} title="TANYA JAWAB" subtitle="Pertanyaan umum seputar Kodera" />
     </>
   );
 };

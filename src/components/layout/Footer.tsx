@@ -12,14 +12,14 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { label: 'Instagram', href: 'https://instagram.com/yourbrand' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/company/yourbrand' },
-  { label: 'Youtube', href: 'https://youtube.com/@yourbrand' },
+  { label: 'Instagram', href: '#' },
+  { label: 'LinkedIn', href: '#' },
+  { label: 'Youtube', href: '#' },
 ];
 
 const contactInfo = [
-  { label: 'Email', value: 'hello@kodera.id', href: 'mailto:hello@kodera.id' },
-  { label: 'Alamat', value: 'Jl. Pembangunan No. 21, Jakarta' },
+  { label: 'Email', value: 'santanamnaa.dev@gmail.com', href: 'mailto:hello@kodera.id' },
+  // { label: 'Alamat', value: 'Jl. Pembangunan No. 21, Jakarta' },
 ];
 
 const Footer: React.FC = () => {
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-white/20 w-full mb-4" />
 
         {/* Copyright */}
-        <div className="flex flex-col md:flex-row justify-between items-center w-full gap-2 md:gap-0">
+        <div className="flex flex-col md:flex-row justify-center items-center w-full gap-2 md:gap-0">
           <span className="text-xs xs:text-sm md:text-base text-white/80 text-center">© {new Date().getFullYear()} - <span className="font-medium">KODERA</span>. All rights reserved.</span>
         </div>
       </div>

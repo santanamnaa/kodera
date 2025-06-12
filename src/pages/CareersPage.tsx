@@ -38,20 +38,20 @@ const positions = [
 
 const faqs = [
   {
-    q: 'Bagaimana proses rekrutmen di AITISERVE?',
-    a: 'Proses rekrutmen meliputi seleksi administrasi, wawancara, tes teknis (jika diperlukan), dan penawaran kerja.'
+    q: 'Bagaimana proses rekrutmen di Kodera?',
+    a: 'Proses rekrutmen meliputi seleksi CV, wawancara, uji kemampuan (jika diperlukan), dan penawaran kerja resmi.'
   },
   {
-    q: 'Apakah AITISERVE mendukung remote working?',
-    a: 'Ya, sebagian besar posisi mendukung remote working dan fleksibilitas waktu.'
+    q: 'Apakah Kodera mendukung kerja remote?',
+    a: 'Ya, sebagian besar posisi di Kodera mendukung fleksibilitas lokasi dan waktu kerja.'
   },
   {
-    q: 'Apa saja nilai budaya kerja di AITISERVE?',
-    a: 'Budaya kerja kami berlandaskan nilai TANGGUH: Transformasi, Amanah, Nyata, Gigih, Gesit, Unggul, Harmonis.'
+    q: 'Nilai budaya kerja seperti apa yang diterapkan Kodera?',
+    a: 'Kami menjunjung tinggi kolaborasi, transparansi, dan pembelajaran berkelanjutan dalam setiap proses kerja.'
   },
   {
-    q: 'Bagaimana cara melamar?',
-    a: 'Kirim CV dan portofolio Anda ke email resmi kami atau melalui form rekrutmen di website.'
+    q: 'Bagaimana cara melamar ke Kodera?',
+    a: 'Kirim CV dan portofolio Anda ke email resmi kami atau isi formulir rekrutmen di halaman kontak.'
   },
 ];
 
@@ -88,10 +88,9 @@ const CareersPage: React.FC = () => {
       <section className="bg-black py-24 px-4 text-center">
         <div className="max-w-2xl mx-auto">
           <div className="uppercase text-white/70 tracking-widest text-sm mb-4">Careers</div>
-          <h1 className="text-5xl md:text-6xl font-light text-white mb-6">Join AITISERVE</h1>
+          <h1 className="text-5xl md:text-6xl font-light text-white mb-6">Bergabung dengan Kodera</h1>
           <p className="text-lg text-white/80 mb-2">
-            Bergabunglah bersama tim AITISERVE dan jadilah bagian dari transformasi digital Indonesia.<br />
-            Temukan peluang karir, budaya kerja inovatif, dan pengembangan diri tanpa batas.
+            Bergabunglah bersama tim Kodera dan jadilah bagian dari perjalanan membangun website berkualitas untuk klien dari berbagai latar belakang. Temukan budaya kerja yang mendukung pertumbuhan dan kolaborasi.
           </p>
         </div>
       </section>
@@ -100,9 +99,9 @@ const CareersPage: React.FC = () => {
       <section className="bg-black py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-light text-white mb-4">Our Culture & Values</h2>
+            <h2 className="text-4xl font-light text-white mb-4">Budaya & Nilai Kami</h2>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              Kami percaya bahwa budaya kerja yang sehat dan nilai perusahaan yang kuat adalah kunci keberhasilan bersama. Di AITISERVE, setiap individu didorong untuk tumbuh, berinovasi, dan berkontribusi nyata.
+              Kami percaya bahwa lingkungan kerja yang suportif dan nilai yang kuat adalah fondasi dari hasil kerja yang bermakna. Di Kodera, setiap individu didorong untuk belajar, berinovasi, dan bertumbuh bersama.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -111,39 +110,6 @@ const CareersPage: React.FC = () => {
                 <div className="mb-3">{item.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
                 <p className="text-white/80 text-base">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Open Positions Section */}
-      <section className="bg-black py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-light text-white mb-4">Open Positions</h2>
-            <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              Temukan posisi yang sesuai dengan minat dan keahlian Anda. Kami mencari talenta terbaik untuk tumbuh bersama AITISERVE.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {positions.map((job) => (
-              <div key={job.id} className="bg-white/5 border border-white/10 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col overflow-hidden group">
-                <div className="p-6 flex flex-col flex-1">
-                  <h3 className="text-2xl font-semibold text-white mb-2">{job.title}</h3>
-                  <div className="flex items-center text-white/70 text-sm mb-2 gap-4">
-                    <span className="flex items-center gap-1"><MapPin className="w-4 h-4" />{job.location}</span>
-                    <span className="flex items-center gap-1"><Clock className="w-4 h-4" />{job.type}</span>
-                    <span className="flex items-center gap-1"><DollarSign className="w-4 h-4" />{job.salary}</span>
-                  </div>
-                  <p className="text-white/80 text-base mb-4 flex-1">{job.desc}</p>
-                  <a
-                    href={`mailto:hr@aitiserve.co.id?subject=Lamaran%20${encodeURIComponent(job.title)}`}
-                    className="inline-block mt-auto text-hijau font-medium border-b border-hijau hover:text-hijau hover:border-green-500 transition-colors duration-200 text-base"
-                  >
-                    Apply Now <span className="ml-1">↗</span>
-                  </a>
-                </div>
               </div>
             ))}
           </div>
