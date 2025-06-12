@@ -12,7 +12,7 @@ const CtaSection: React.FC = () => {
   return (
     <section 
       ref={ref}
-      className="py-20   bg-cover bg-center font-serif font-light bg-black"
+      className="py-20 bg-cover bg-center bg-black"
     >
       <div className="container mx-auto px-4 text-center">
         <div 
@@ -21,14 +21,14 @@ const CtaSection: React.FC = () => {
           } transition-all duration-700 ease-out`}
         >
           <h2 className="text-3xl md:text-5xl font-light text-white mb-4">
-            Siap Memulai Transformasi Digital Anda?
+            Siap Bangun Website Profesional Bersama Kodera?
           </h2>
           <p className="text-xl font-light text-gray-300 mb-8">
-            Hubungi tim AITISERVE sekarang untuk konsultasi dan solusi digital yang disesuaikan dengan kebutuhan bisnis Anda.
+            Hubungi tim Kodera hari ini untuk mulai merancang website yang sesuai dengan kebutuhan dan identitas bisnis Anda.
           </p>
           <Link 
             to="/contact" 
-            className="btn btn-primary px-8 py-3 text-lg font-light"
+            className="px-8 py-3 text-lg font-light bg-white text-black border border-black rounded hover:bg-neutral-100 transition"
           >
             Hubungi Kami
           </Link>

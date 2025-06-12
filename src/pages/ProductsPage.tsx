@@ -11,65 +11,30 @@ interface Product {
 
 const ProductsPage: React.FC = () => {
   useEffect(() => {
-    document.title = 'Produk Digital - PT AITISERVE DJAYA NARAYA';
+    document.title = 'Produk - Kodera';
   }, []);
   
   const products: Product[] = [
     {
-      id: 'aitiserve-erp',
-      title: 'AITISERVE ERP',
-      description: 'Sistem ERP terintegrasi untuk otomasi proses bisnis, pengelolaan keuangan, SDM, inventaris, dan operasional perusahaan.',
-      features: [
-        'Manajemen keuangan & akuntansi',
-        'Pengelolaan SDM & payroll',
-        'Manajemen inventaris & gudang',
-        'Otomasi proses bisnis',
-        'Integrasi dengan sistem lain',
-        'Dashboard analitik real-time'
-      ],
-      image: '/images/products/products_erp.png'
+      id: 'suma-barber-booking',
+      title: 'Suma Barber Booking Management',
+      description: 'Sistem manajemen booking barbershop berbasis web untuk mengatur jadwal, pelanggan, dan layanan secara efisien.',
+      features: [],
+      image: '/images/products/suma-booking.png'
     },
     {
-      id: 'aitiserve-crm',
-      title: 'AITISERVE CRM',
-      description: 'Solusi CRM untuk pengelolaan relasi pelanggan, penjualan, pemasaran, dan layanan purna jual berbasis data.',
-      features: [
-        'Manajemen data pelanggan',
-        'Otomasi penjualan & pipeline',
-        'Pelacakan aktivitas & komunikasi',
-        'Analitik perilaku pelanggan',
-        'Integrasi email & telepon',
-        'Laporan performa tim sales'
-      ],
-      image: '/images/products/products_crm.png'
+      id: 'aitiserve-company-profile',
+      title: 'Company Profile PT AITISERVE',
+      description: 'Website company profile informatif dan profesional untuk PT AITISERVE, menampilkan layanan, portofolio, dan identitas perusahaan.',
+      features: [],
+      image: '/images/products/aitiserve-profile.png'
     },
     {
-      id: 'aitiserve-hris',
-      title: 'AITISERVE HRIS',
-      description: 'Sistem HRIS modern untuk pengelolaan data karyawan, absensi, cuti, rekrutmen, dan pengembangan SDM.',
-      features: [
-        'Manajemen data karyawan',
-        'Absensi & cuti online',
-        'Rekrutmen & onboarding',
-        'Penilaian kinerja & KPI',
-        'Pengembangan & pelatihan SDM',
-        'Self-service portal karyawan'
-      ],
-      image: '/images/products/products_hris.png'
-    },
-    {
-      id: 'aitiserve-analytics',
-      title: 'AITISERVE Analytics',
-      description: 'Platform analitik bisnis berbasis AI untuk visualisasi data, prediksi tren, dan pengambilan keputusan berbasis data.',
-      features: [
-        'Dashboard visual interaktif',
-        'Analisis data real-time',
-        'Prediksi tren bisnis dengan AI',
-        'Integrasi multi-sumber data',
-        'Laporan otomatis & kustom',
-        'Keamanan data tingkat lanjut'
-      ],
-      image: '/images/products/products_ai.png'
+      id: 'menanti-giliran-coffee',
+      title: 'Menanti Giliran Coffee Shop',
+      description: 'Website branding untuk kedai kopi lokal dengan desain minimalis, menampilkan menu, lokasi, dan sistem antrian pelanggan.',
+      features: [],
+      image: '/images/products/menanti-giliran.png'
     }
   ];
   
@@ -93,10 +58,10 @@ const ProductsPage: React.FC = () => {
         <div className="absolute inset-0 bg-black/60 z-20" style={{ backgroundAttachment: 'fixed' }} />
         {/* Hero text (sharp, not blurred) */}
         <div className="relative z-30">
-          <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Our Products</p>
-          <h1 className="text-5xl md:text-6xl font-light text-white mb-6">Produk Digital</h1>
+          <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Produk Kodera</p>
+          <h1 className="text-5xl md:text-6xl font-light text-white mb-6">Solusi Siap Pakai</h1>
           <p className="max-w-2xl text-lg text-gray-300">
-            AITISERVE menghadirkan rangkaian produk digital inovatif untuk mendukung efisiensi, pertumbuhan, dan transformasi bisnis Anda.
+            Kodera menghadirkan solusi digital siap pakai untuk membantu UMKM, komunitas, dan profesional membangun kehadiran online yang efektif dan efisien.
           </p>
         </div>
       </section>

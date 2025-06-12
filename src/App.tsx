@@ -10,7 +10,7 @@ import CompanyProfilePage from './pages/CompanyProfilePage';
 import NotFoundPage from './pages/NotFoundPage';
 import BlogPage from './pages/BlogPage';
 import FutureOf5G from './pages/blog/future-of-5g';
-import AIDrivenNetworkOptimization from './pages/blog/ai-driven-network-optimization';
+import FiturWebsiteUntukBisnisKecil from './pages/blog/fitur-website-bisnis-kecil';
 import CloudSolutionsModernEnterprises from './pages/blog/cloud-solutions-modern-enterprises';
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
         <Route path="products" element={<ProductsPage />} />
         <Route path="blog" element={<BlogPage />} />
         <Route path="blog/future-of-5g" element={<FutureOf5G />} />
-        <Route path="blog/ai-driven-network-optimization" element={<AIDrivenNetworkOptimization />} />
+        <Route path="blog/fitur-website-bisnis-kecil" element={<FiturWebsiteUntukBisnisKecil />} />
         <Route path="blog/cloud-solutions-modern-enterprises" element={<CloudSolutionsModernEnterprises />} />
         <Route path="about" element={<AboutPage />} />
         <Route path="careers" element={<CareersPage />} />

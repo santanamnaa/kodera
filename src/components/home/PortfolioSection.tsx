@@ -23,44 +23,44 @@ const PortfolioSection: React.FC = () => {
   const portfolioItems: PortfolioItem[] = [
     {
       id: 1,
-      title: 'E-commerce Web Platform',
+      title: 'Website UMKM Kuliner',
       category: 'web',
-      image: '/images/imagehere.png',
+      image: '/images/portfolio/umkm-kuliner.png',
       link: '#'
     },
     {
       id: 2,
-      title: 'Banking Mobile App',
-      category: 'mobile',
-      image: '/images/imagehere.png',
+      title: 'Landing Page Event Komunitas',
+      category: 'web',
+      image: '/images/portfolio/event-komunitas.png',
       link: '#'
     },
     {
       id: 3,
-      title: 'Inventory Management System',
-      category: 'desktop',
-      image: '/images/imagehere.png',
+      title: 'Sistem Booking Freelance',
+      category: 'web',
+      image: '/images/portfolio/booking-freelance.png',
       link: '#'
     },
     {
       id: 4,
-      title: 'Travel Booking Website',
+      title: 'Website Portofolio Arsitek',
       category: 'web',
-      image: '/images/imagehere.png',
+      image: '/images/portfolio/portofolio-arsitek.png',
       link: '#'
     },
     {
       id: 5,
-      title: 'Fitness Tracking App',
-      category: 'mobile',
-      image: '/images/imagehere.png',
+      title: 'Company Profile Startup Teknologi',
+      category: 'web',
+      image: '/images/portfolio/company-startup.png',
       link: '#'
     },
     {
       id: 6,
-      title: 'Point of Sale System',
-      category: 'desktop',
-      image: '/images/imagehere.png',
+      title: 'Web Katalog Produk Handmade',
+      category: 'web',
+      image: '/images/portfolio/katalog-handmade.png',
       link: '#'
     }
   ];
@@ -82,8 +82,8 @@ const PortfolioSection: React.FC = () => {
     <section id="portfolio" className="section font-sans font-light px-4">
       <div className="container mx-auto">
         <SectionHeader 
-          title={<span className="text-3xl md:text-5xl font-light">Portfolio</span>} 
-          subtitle={<span className="font-light">Our Latest Projects</span>} 
+          title="Portfolio"
+          subtitle="Our Latest Projects"
         />
         
         {/* Filter buttons */}

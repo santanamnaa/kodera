@@ -4,34 +4,34 @@ import { ArrowUpRight, Calendar, Clock } from 'lucide-react';
 const blogPosts = [
   {
     id: 1,
-    title: 'TDN dan ZTE Sepakati Rencana Implementasi Proyek XLSmart',
+    title: 'Tips Membuat Website Profesional untuk Bisnis Kecil',
     date: '2025-05-22',
     readTime: '3 min. read',
-    image: '/images/teamwork-1.png',
+    image: '/images/blog/tips-website-bisnis.png',
     link: '#',
   },
   {
     id: 2,
-    title: 'AITISERVE dan Kencana Group Jajaki Kemitraan Smart City & Infrastruktur',
-    date: '2025-05-21',
-    readTime: '3 min. read',
-    image: '/images/teamwork-2.png',
+    title: 'Pentingnya Desain Mobile-First dalam Pengembangan Web',
+    date: '2025-05-18',
+    readTime: '2 min. read',
+    image: '/images/blog/mobile-first.png',
     link: '#',
   },
   {
     id: 3,
-    title: 'AITISERVE Kunjungi Kemenlu Bahas Kolaborasi Digital',
-    date: '2025-05-16',
-    readTime: '3 min. read',
-    image: '/images/teamwork-3.png',
+    title: 'Panduan Singkat Memahami Domain & Hosting',
+    date: '2025-05-15',
+    readTime: '4 min. read',
+    image: '/images/blog/domain-hosting.png',
     link: '#',
   },
   {
     id: 4,
-    title: 'AITISERVE Adakan Pertemuan Strategis dengan Telkomsel, PSSI, KOMDIGI, dan Smartfren',
-    date: '2025-05-09',
+    title: 'Kenapa Website Masih Penting di Era Media Sosial?',
+    date: '2025-05-10',
     readTime: '3 min. read',
-    image: '/images/teamwork-1.png',
+    image: '/images/blog/website-vs-sosmed.png',
     link: '#',
   },
 ];
@@ -43,7 +43,7 @@ const BlogSection: React.FC = () => {
         {/* Judul Section */}
         <div className="text-center">
           <span className="uppercase text-black text-sm font-light block mb-2">
-            BERITA
+            BLOG
           </span>
           <h2 className="text-3xl md:text-5xl font-light text-black">
             Wawasan & Kolaborasi Terbaru
@@ -111,7 +111,7 @@ const BlogSection: React.FC = () => {
             href="/blog"
             className="text-sm font-light text-black border-b border-black pb-0.5 hover:opacity-80 transition inline-flex items-center"
           >
-            Lihat semua berita&nbsp;
+            Lihat semua&nbsp;
             <span className="text-base font-normal">↗</span>
           </a>
         </div>

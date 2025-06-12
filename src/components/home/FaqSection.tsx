@@ -14,8 +14,8 @@ interface FaqSectionProps {
 
 const FaqSection: React.FC<FaqSectionProps> = ({
   faqs,
-  title = 'FAQ',
-  subtitle = 'Commonly asked questions',
+  title = 'TANYA JAWAB',
+  subtitle = 'Pertanyaan umum seputar layanan Kodera',
 }) => {
   const [open, setOpen] = useState<number | null>(null);
 

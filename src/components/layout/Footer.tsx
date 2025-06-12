@@ -18,8 +18,8 @@ const socialLinks = [
 ];
 
 const contactInfo = [
-  { label: 'Email', value: 'info@yourbrand.com', href: 'mailto:info@yourbrand.com' },
-  { label: 'Alamat', value: 'Jl. Contoh No. 123, Jakarta, Indonesia' },
+  { label: 'Email', value: 'hello@kodera.id', href: 'mailto:hello@kodera.id' },
+  { label: 'Alamat', value: 'Jl. Pembangunan No. 21, Jakarta' },
 ];
 
 const Footer: React.FC = () => {
@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
 
         {/* Copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center w-full gap-2 md:gap-0">
-          <span className="text-xs xs:text-sm md:text-base text-white/80 text-center">© {new Date().getFullYear()} - <span className="font-medium">YourBrand</span>. All rights reserved.</span>
+          <span className="text-xs xs:text-sm md:text-base text-white/80 text-center">© {new Date().getFullYear()} - <span className="font-medium">KODERA</span>. All rights reserved.</span>
         </div>
       </div>
     </footer>

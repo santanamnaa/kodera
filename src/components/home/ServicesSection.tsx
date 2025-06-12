@@ -51,39 +51,27 @@ const ServicesSection: React.FC = () => {
   const services = [
     {
       icon: <HelpingHand className="w-8 h-8" />,
-      title: 'Konsultasi IT & AI',
-      description: 'Pendampingan strategis dalam transformasi digital, pemetaan kebutuhan teknologi, perencanaan sistem berbasis AI, dan pengembangan roadmap teknologi berkelanjutan.',
+      title: 'Manajemen Proyek Terpadu',
+      description: 'Kodera menangani seluruh tahapan proyek pembuatan website secara end-to-end, dari identifikasi kebutuhan hingga pengawasan timeline dan hasil akhir.',
       delay: 0
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: 'Pengembangan Aplikasi Web',
-      description: 'Aplikasi web modern dengan desain responsif, performa optimal, dan skalabilitas tinggi untuk mendukung kebutuhan bisnis digital masa kini.',
+      title: 'Koordinasi Developer Profesional',
+      description: 'Kami bekerja sama dengan developer berpengalaman dan memastikan komunikasi yang efektif serta hasil yang sesuai dengan harapan klien.',
       delay: 1
     },
     {
-      icon: <Smartphone className="w-8 h-8" />,
-      title: 'Pengembangan Aplikasi Mobile',
-      description: 'Aplikasi mobile berbasis AI dengan UX unggul dan kompatibel lintas platform (Android & iOS).',
+      icon: <Monitor className="w-8 h-8" />,
+      title: 'Kurasi & Jaminan Kualitas',
+      description: 'Kodera melakukan review dan verifikasi hasil kerja developer agar memenuhi standar teknis dan estetika yang telah ditentukan.',
       delay: 2
     },
     {
-      icon: <Monitor className="w-8 h-8" />,
-      title: 'Pengembangan Aplikasi Desktop',
-      description: 'Perangkat lunak desktop yang tangguh, aman, dan terintegrasi sesuai kebutuhan spesifik organisasi atau instansi.',
-      delay: 3
-    },
-    {
-      icon: <Map className="w-8 h-8" />,
-      title: 'Pengembangan Sistem Informasi Geografis (GIS)',
-      description: 'Solusi GIS untuk visualisasi lokasi, analisis spasial, dan pengambilan keputusan berbasis data geospasial yang akurat dan interaktif.',
-      delay: 4
-    },
-    {
       icon: <Headset className="w-8 h-8" />,
-      title: 'Dukungan Teknis (Technical Support)',
-      description: 'Layanan bantuan teknis profesional 24/7 guna memastikan operasional sistem berjalan lancar dan minim gangguan.',
-      delay: 5
+      title: 'Layanan Konsultatif Berkelanjutan',
+      description: 'Kodera menyediakan pendampingan strategis dan bantuan teknis kepada klien, bahkan setelah proyek selesai.',
+      delay: 3
     }
   ];
 
@@ -93,9 +81,9 @@ const ServicesSection: React.FC = () => {
         {/* Left: Main Content */}
         <div className="w-full md:w-[45%] md:sticky md:top-24 self-start">
           <p className="uppercase tracking-widest text-lg mb-4 font-light">Layanan Kami</p>
-          <h2 className="text-3xl md:text-5xl font-light mb-8">Ruang Lingkup Layanan</h2>
+          <h2 className="text-3xl md:text-5xl font-light mb-8">Apa yang Kodera Tawarkan</h2>
           <p className="text-2xl font-light mb-12">
-            Sebagai perusahaan yang mengintegrasikan kecerdasan buatan dan teknologi informasi, <span className="font-normal">AITISERVE</span> menyediakan layanan lengkap yang dirancang untuk menjawab tantangan era digital.
+            <span className="font-normal">Kodera</span> adalah agensi pengembangan website yang berfokus pada pengelolaan proyek, kurasi hasil, dan dukungan jangka panjang. Kami memastikan proses berjalan lancar dan hasil akhir berkualitas.
           </p>
         </div>
         {/* Right: Services Grid */}

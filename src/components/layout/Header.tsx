@@ -51,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ onOpenSidebar }) => {
       <div className="container mx-auto px-4 flex flex-wrap justify-between items-center min-h-[64px]">
         <Link to="/" className="flex items-center min-w-[48px]">
           <span className="ml-2 text-xl font-bold">
-            <img src="/images/branding/logo_white.svg" alt="AITISERVE" className="inline-block w-20 h-20" />
+            <img src="/images/branding/logo_white.svg" alt="AITISERVE" className="inline-block w-50 h-20" />
           </span>
         </Link>
 
@@ -61,42 +61,9 @@ const Header: React.FC<HeaderProps> = ({ onOpenSidebar }) => {
             Beranda
           </NavLink>
 
-          {/* Dropdown */}
-          <div className="relative">
-            <button
-              className="nav-link flex items-center"
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              aria-haspopup="true"
-              aria-expanded={isDropdownOpen}
-              aria-controls="desktop-dropdown-layanan"
-              type="button"
-            >
-              Layanan
-              <ChevronDown className="w-4 h-4 ml-1" />
-            </button>
-            {isDropdownOpen && (
-              <div id="desktop-dropdown-layanan" className="absolute left-0 mt-2 w-52 bg-white rounded-md shadow-lg py-2 z-50">
-                <Link to="/services#web" className="block px-4 py-2 text-sm text-primary hover:bg-gray-100">
-                  Aplikasi Web
-                </Link>
-                <Link to="/services#mobile" className="block px-4 py-2 text-sm text-primary hover:bg-gray-100">
-                  Aplikasi Mobile
-                </Link>
-                <Link to="/services#desktop" className="block px-4 py-2 text-sm text-primary hover:bg-gray-100">
-                  Aplikasi Desktop
-                </Link>
-                <Link to="/services#consulting" className="block px-4 py-2 text-sm text-primary hover:bg-gray-100">
-                  Konsultasi IT & AI
-                </Link>
-                <Link to="/services#products" className="block px-4 py-2 text-sm text-primary hover:bg-gray-100">
-                  Produk Digital
-                </Link>
-                <Link to="/services#support" className="block px-4 py-2 text-sm text-primary hover:bg-gray-100">
-                  Dukungan Teknis
-                </Link>
-              </div>
-            )}
-          </div>
+          <NavLink to="/services" className={({ isActive }) => isActive ? 'nav-link nav-link-active' : 'nav-link'}>
+            Layanan
+          </NavLink>
 
           <NavLink to="/products" className={({ isActive }) => isActive ? 'nav-link nav-link-active' : 'nav-link'}>
             Produk

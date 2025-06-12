@@ -16,29 +16,30 @@ const HomePage: React.FC = () => {
     document.title = 'AITI - Innovative Technology Services';
   }, []);
 
-  const homeFaqs = [
-    {
-      question: 'What services does your company offer?',
-      answer: 'We provide end-to-end telecom services, ensuring optimal network performance, reliability, and innovation. Our expertise covers: Engineering Consulting, Drive & Field Testing, Benchmarking & Performance Analysis, Network Deployment & Implementation, Optimization & Managed Services and Future-Proof Solutions',
-    },
-    {
-      question: 'Who do you work with?',
-      answer: 'We collaborate with telecom operators, infrastructure providers, and other industry stakeholders, offering tailored solutions to meet their specific needs and challenges.',
-    },
-    {
-      question: 'Why should I choose your company?',
-      answer: 'AITISERVE combines expertise in AI and IT to deliver relevant, efficient, and impactful digital solutions. We have a track record in national-scale projects, supported by an experienced professional team, and a value- and innovation-based approach.',
-    },
-    {
-      question: 'How do your services benefit my business?',
-      answer: 'Our services help increase operational efficiency, accelerate digital transformation, and strengthen business competitiveness through the application of advanced technology tailored to your needs.',
-    },
-  ];
+const homeFaqs = [
+  {
+    question: 'Apa itu Kodera?',
+    answer: 'Kodera adalah agensi pengembangan website yang membantu klien terhubung dengan developer profesional melalui manajemen proyek yang terstruktur dan efisien.',
+  },
+  {
+    question: 'Bagaimana cara memulai proyek di Kodera?',
+    answer: 'Klien dapat menghubungi kami melalui website atau WhatsApp. Tim Kodera kemudian akan melakukan analisis kebutuhan dan memberikan proposal penawaran resmi.',
+  },
+  {
+    question: 'Apakah Kodera hanya membuat website?',
+    answer: 'Fokus utama Kodera adalah pengembangan website, tetapi kami juga menyediakan layanan konsultasi digital dan dukungan teknis berkelanjutan.',
+  },
+  {
+    question: 'Apakah saya bisa memilih developer sendiri?',
+    answer: 'Kodera akan memilih developer yang paling sesuai dengan kebutuhan proyek Anda, namun kami terbuka untuk mendiskusikan preferensi tim jika ada.',
+  },
+];
 
   return (
     <>
       <HeroSection />
       {/* <DirectorGreetingSection /> */}
+      <div className="min-h-[180px] bg-black" />
       <AboutSection />
       <div className="min-h-[180px] bg-black" />
       <ImageShowcaseSection />

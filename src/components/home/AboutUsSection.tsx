@@ -15,7 +15,7 @@ const AboutUsSection: React.FC = () => {
           <div className="lg:col-span-9 mx-auto max-w-3xl text-left">
             <div className="lg:col-span-9">
               <h1 className="text-2xl md:text-4xl font leading-tight mb-6 md:mb-8">
-                <span className="text-gray-400 font">AITISERVE</span>{' '}adalah perusahaan teknologi yang mengintegrasikan kecerdasan buatan (AI) dan teknologi informasi (TI) untuk membentuk masa depan digital yang lebih cerdas, adaptif, dan berkelanjutan. Kami hadir sebagai mitra transformasi digital yang berfokus pada inovasi, efisiensi, dan dampak nyata bagi klien dan masyarakat.
+                <span className="text-gray-400 font">Kodera</span>{' '}adalah agensi pengembangan website yang berperan sebagai penghubung antara klien dan developer profesional. Kami mengelola proyek secara end-to-end dengan pendekatan kolaboratif dan transparan untuk menghasilkan website yang berkualitas dan sesuai kebutuhan.
               </h1>
               <a
                 href="#more-about-us"

@@ -17,11 +17,11 @@ const VisionMissionSection: React.FC = () => (
       <div className="grid md:grid-cols-2 gap-8 text-left text-gray-300 text-base leading-relaxed max-w-5xl mx-auto">
         <div>
           <h3 className="text-xl font-light text-white mb-3">Visi</h3>
-          <p>Menjadi mitra terpercaya dalam transformasi digital yang unggul dan inovatif, serta perusahaan teknologi terdepan yang menghadirkan solusi berbasis kecerdasan buatan dan teknologi informasi untuk masa depan yang berkelanjutan dan berdampak nyata.</p>
+          <p>Menjadi agensi pengembangan website terpercaya yang menjembatani kebutuhan digital klien dengan solusi berkualitas tinggi melalui pengelolaan proyek yang efisien, transparan, dan kolaboratif.</p>
         </div>
         <div>
           <h3 className="text-xl font-light text-white mb-3">Misi</h3>
-          <p>Menghadirkan solusi AI dan TI yang efisien, bernilai tambah, dan berorientasi pada masa depan. Mendukung transformasi digital melalui layanan konsultasi, implementasi teknologi, dan kemitraan strategis. Meningkatkan kualitas sumber daya manusia dengan menanamkan budaya inovatif dan pengembangan kompetensi berkelanjutan.</p>
+          <p>Mengelola proses pengembangan website secara end-to-end dengan fokus pada kualitas, komunikasi efektif, dan dukungan berkelanjutan. Menyediakan layanan konsultasi strategis serta memastikan hasil akhir sesuai dengan tujuan dan identitas klien.</p>
         </div>
       </div>
       <h3 className="text-2xl font-light text-white mt-20 mb-10">Nilai Inti: <span className="text-teal-400 tracking-widest font-normal">TANGGUH</span></h3>

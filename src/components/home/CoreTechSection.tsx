@@ -2,20 +2,20 @@ import React from 'react';
 
 const techs = [
   {
-    title: 'Arsitektur Sistem & Pengembangan Solusi',
-    desc: 'Rancangan sistem Telco & IT, OSS/BSS, AI RAG, pengembangan full-stack (Java, Kotlin, Python, Go, Node.js), serta frontend modern (React Native, Flutter).',
+    title: 'Manajemen Proyek Web',
+    desc: 'Perencanaan, pengorganisasian, dan pengawasan proyek pembuatan website dengan sistem milestone dan timeline yang transparan.',
   },
   {
-    title: 'Basis Data & Infrastruktur',
-    desc: 'Database relasional & graph (Oracle, PostgreSQL, Neo4j), cloud & vector database (Supabase, Pinecone), server & storage (Linux, NGINX, MiniO), serta GeoServer untuk spasial.',
+    title: 'Pengembangan Frontend & Backend',
+    desc: 'Kolaborasi dengan developer profesional untuk membangun website modern menggunakan stack populer seperti React, Next.js, Node.js, dan Laravel.',
   },
   {
-    title: 'DevOps & Keamanan Sistem',
-    desc: 'Manajemen server Linux, scripting, Docker, Kafka, CI/CD (GitLab, Jenkins), Agile, serta keamanan (OWASP, SSL/TLS, SSH, SFTP).',
+    title: 'Kurasi & Review Kode',
+    desc: 'Setiap kode yang dikembangkan akan melalui proses review dan validasi untuk menjamin kualitas, keamanan, dan performa.',
   },
   {
-    title: 'Desain & Antarmuka Pengguna',
-    desc: 'UI/UX dengan Figma, pengembangan aplikasi mobile AI lintas platform (Flutter, React Native).',
+    title: 'Desain Antarmuka & Pengalaman Pengguna',
+    desc: 'Desain UI/UX profesional menggunakan Figma, dengan pendekatan mobile-first dan fokus pada usability serta estetika.',
   },
 ];
 

@@ -3,22 +3,22 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const slides = [
   {
-    image: '/images/project/solusi-berbasis-ai.png',
-    title: 'Solusi Berbasis AI',
+    image: '/images/project/kodera-project-management.png',
+    title: 'Manajemen Proyek Terpadu',
     report: '#',
-    description: 'AITISERVE mengintegrasikan AI dalam pengembangan aplikasi dan sistem untuk menciptakan solusi digital yang adaptif dan cerdas.'
+    description: 'Kodera mengelola seluruh proses pengembangan website, mulai dari analisis kebutuhan hingga pengawasan timeline dan kualitas hasil.'
   },
   {
-    image: '/images/project/pengembangan-aplikasi-inovatif.png',
-    title: 'Pengembangan Aplikasi Inovatif',
+    image: '/images/project/kodera-quality-control.png',
+    title: 'Jaminan Kualitas & Konsistensi',
     report: '#',
-    description: 'Kami merancang aplikasi web, mobile, dan desktop dengan performa tinggi serta pengalaman pengguna terbaik.'
+    description: 'Setiap hasil kerja developer dikurasi dan ditinjau oleh tim Kodera untuk memastikan standar teknis dan estetika terpenuhi.'
   },
   {
-    image: '/images/project/geospasial.png',
-    title: 'Sistem Informasi Geospasial (GIS)',
+    image: '/images/project/kodera-consulting-support.png',
+    title: 'Layanan Konsultatif & Dukungan',
     report: '#',
-    description: 'AITISERVE menghadirkan solusi GIS interaktif untuk visualisasi spasial, analisis lokasi, dan pengambilan keputusan berbasis data.'
+    description: 'Kodera menyediakan strategi digital dan pendampingan teknis berkelanjutan agar klien merasa didampingi secara profesional.'
   }
 ];
 

@@ -22,93 +22,59 @@ interface Service {
 
 const services: Service[] = [
   {
-    id: 'consulting',
-    title: 'IT & AI Consulting',
+    id: 'manajemen',
+    title: 'Manajemen Proyek',
     description:
-      'Strategic guidance for digital transformation, technology needs assessment, AI-based system planning, and sustainable technology roadmap development.',
+      'Kodera mengelola proyek pengembangan website dari awal hingga akhir secara terstruktur dan efisien.',
     icon: HelpingHand,
     features: [
-      'Business & technology needs analysis',
-      'Digital transformation strategy',
-      'AI & IT implementation consulting',
-      'Long-term technology roadmap',
-      'Adoption of new technologies',
-      'Training & knowledge transfer'
+      'Analisis kebutuhan klien',
+      'Perencanaan milestone & timeline',
+      'Koordinasi lintas peran',
+      'Pengawasan dan update progres',
+      'Evaluasi pascaproyek'
     ]
   },
   {
-    id: 'web',
-    title: 'Web Application Development',
+    id: 'developer',
+    title: 'Koordinasi Developer',
     description:
-      "Modern web applications with responsive design, optimal performance, and high scalability to support today's digital business needs.",
-    icon: Globe,
-    features: [
-      'Modern, responsive UI/UX',
-      'Cloud-based app development',
-      'API & third-party integration',
-      'Advanced app security',
-      'Performance & scalability optimization',
-      'Continuous maintenance & development'
-    ]
-  },
-  {
-    id: 'mobile',
-    title: 'Mobile Application Development',
-    description:
-      'AI-powered mobile apps with excellent UX and cross-platform compatibility (Android & iOS).',
-    icon: Smartphone,
-    features: [
-      'Native & hybrid app development',
-      'AI integration for smart features',
-      'Intuitive mobile UX/UI',
-      'Backend system integration',
-      'Testing & deployment to Play Store/App Store',
-      'Update & maintenance support'
-    ]
-  },
-  {
-    id: 'desktop',
-    title: 'Desktop Application Development',
-    description:
-      'Robust, secure, and integrated desktop software tailored to the specific needs of organizations or institutions.',
+      'Kami menugaskan developer profesional yang sesuai dengan kebutuhan proyek Anda.',
     icon: Monitor,
     features: [
-      'Windows, Mac, Linux app development',
-      'Internal system integration',
-      'Data & access security',
-      'Professional desktop UI',
-      'Multi-user & multi-role support',
-      'Technical maintenance & support'
+      'Kurasi developer berdasarkan kebutuhan',
+      'Distribusi tugas berbasis keahlian',
+      'Pemantauan produktivitas tim',
+      'Komunikasi dua arah dengan klien',
+      'Pengelolaan revisi & eskalasi'
     ]
   },
   {
-    id: 'products',
-    title: 'Digital Product Development',
+    id: 'kurasi',
+    title: 'Kurasi & QA',
     description:
-      'Innovative digital product solutions to support business efficiency and growth across sectors.',
-    icon: Package,
+      'Kodera menjamin setiap produk akhir melewati proses verifikasi kualitas teknis dan estetika.',
+    icon: Check,
     features: [
-      'SaaS & digital platform development',
-      'Payment & e-commerce integration',
-      'Business data & analytics',
-      'Market-driven product design',
-      'Product launch & scaling support',
-      'Feature R&D'
+      'Review kode & dokumentasi',
+      'Uji fungsional & UAT',
+      'Checklist teknis & estetika',
+      'Feedback multi-pihak',
+      'Standarisasi hasil akhir'
     ]
   },
   {
-    id: 'support',
-    title: 'Technical Support',
+    id: 'konsultasi',
+    title: 'Konsultasi & Dukungan',
     description:
-      '24/7 professional technical assistance to ensure smooth system operations and minimal disruption.',
+      'Kami menyediakan layanan konsultatif dan bantuan teknis selama dan setelah proyek berjalan.',
     icon: Headset,
     features: [
-      'Helpdesk & troubleshooting',
-      'System & app monitoring',
-      'Routine maintenance & updates',
-      'Rapid incident response',
-      'Remote & onsite support',
-      'Issue reporting & documentation'
+      'Konsultasi strategi digital',
+      'Pendampingan teknis pascaproyek',
+      'Dokumentasi panduan klien',
+      'Respons terhadap kendala teknis',
+      'Pembaruan & pemeliharaan sistem'
     ]
   }
 ];
@@ -138,9 +104,9 @@ const ServicesPage: React.FC = () => {
       <section className="pt-32 pb-20 bg-black text-center">
         <div className="max-w-2xl mx-auto">
           <div className="uppercase text-white/70 tracking-widest text-sm mb-4">Services</div>
-          <h1 className="text-5xl md:text-6xl font-light text-white mb-6">Our Services</h1>
+          <h1 className="text-5xl md:text-6xl font-light text-white mb-6">Layanan dari Kodera</h1>
           <p className="text-lg text-white/80 mb-2">
-            AITISERVE delivers comprehensive solutions for the digital era, integrating artificial intelligence and information technology to empower your business.
+            Kodera menyediakan layanan pengembangan website secara menyeluruh, mulai dari manajemen proyek hingga pendampingan teknis berkelanjutan.
           </p>
         </div>
       </section>

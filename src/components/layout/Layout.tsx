@@ -20,7 +20,7 @@ const Layout: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 bg-primary flex items-center justify-center z-50">
+      <div className="fixed inset-0 bg-black flex items-center justify-center z-50">
         <div className="flex flex-col items-center">
           <div className="w-16 h-16 border-4 border-secondary border-t-transparent rounded-full animate-spin mb-4"></div>
           <h2 className="text-xl text-white font-medium">Loading...</h2>
