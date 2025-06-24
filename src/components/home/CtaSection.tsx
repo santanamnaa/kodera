@@ -21,7 +21,7 @@ const CtaSection: React.FC = () => {
           } transition-all duration-700 ease-out`}
         >
           <h2 className="text-3xl md:text-5xl font-light text-white mb-4">
-            Siap Bangun Website Profesional Bersama Kodera?
+            Siap Bangun Aplikasi Profesional Bersama Kodera?
           </h2>
           <p className="text-xl font-light text-gray-300 mb-8">
             Hubungi tim Kodera hari ini untuk mulai merancang website yang sesuai dengan kebutuhan dan identitas bisnis Anda.

@@ -20,21 +20,21 @@ const ProductsPage: React.FC = () => {
       title: 'Suma Barber Booking Management',
       description: 'Sistem manajemen booking barbershop berbasis web untuk mengatur jadwal, pelanggan, dan layanan secara efisien.',
       features: [],
-      image: '/images/products/suma-booking.png'
+      image: '/images/products/sumabarber.png'
     },
     {
       id: 'aitiserve-company-profile',
       title: 'Company Profile PT AITISERVE',
       description: 'Website company profile informatif dan profesional untuk PT AITISERVE, menampilkan layanan, portofolio, dan identitas perusahaan.',
       features: [],
-      image: '/images/products/aitiserve-profile.png'
+      image: '/images/products/aitiserve.png'
     },
     {
       id: 'menanti-giliran-coffee',
       title: 'Menanti Giliran Coffee Shop',
       description: 'Website branding untuk kedai kopi lokal dengan desain minimalis, menampilkan menu, lokasi, dan sistem antrian pelanggan.',
       features: [],
-      image: '/images/products/menanti-giliran.png'
+      image: '/images/products/menantigiliran.png'
     }
   ];
   
@@ -44,7 +44,7 @@ const ProductsPage: React.FC = () => {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[80vh] bg-black text-white flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+      <section className="relative h-[50vh] bg-black text-white flex flex-col items-center justify-center text-center px-6 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -65,7 +65,7 @@ const ProductsPage: React.FC = () => {
           </p>
         </div>
       </section>
-      <div className="min-h-[80px] bg-black" />
+
 
       {/* Products */}
       <section className="py-20 bg-black">
